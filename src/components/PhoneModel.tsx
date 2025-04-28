@@ -1,30 +1,36 @@
-import React, { useRef } from 'react';
-import { useFrame, useThree } from '@react-three/fiber';
-import { useGLTF, Html } from '@react-three/drei';
-import { Mesh, Vector3 } from 'three';
+import { useRef } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
+import { Html } from "@react-three/drei";
+import { Mesh, Vector3 } from "three";
 
 // Since we don't have the actual model, we'll create a simple phone
-function PhoneModel({ position = [0, 0, 0] }: { position?: [number, number, number] }) {
+function PhoneModel({
+  position = [0, 0, 0],
+}: {
+  position?: [number, number, number];
+}) {
   const phoneRef = useRef<Mesh>(null);
-  const { viewport, mouse } = useThree();
-  
+  const { mouse } = useThree();
+
   // Use mouse position to rotate the phone slightly
   useFrame(() => {
     if (!phoneRef.current) return;
-    
+
     // Calculate target rotation based on mouse position
     const targetRotationY = (mouse.x * Math.PI) / 10;
     const targetRotationX = (mouse.y * Math.PI) / 10;
-    
+
     // Smoothly rotate to target position
-    phoneRef.current.rotation.y += (targetRotationY - phoneRef.current.rotation.y) * 0.1;
-    phoneRef.current.rotation.x += (targetRotationX - phoneRef.current.rotation.x) * 0.1;
-    
+    phoneRef.current.rotation.y +=
+      (targetRotationY - phoneRef.current.rotation.y) * 0.1;
+    phoneRef.current.rotation.x +=
+      (targetRotationX - phoneRef.current.rotation.x) * 0.1;
+
     // Add slight floating animation
     const time = Date.now() * 0.001;
     phoneRef.current.position.y = Math.sin(time) * 0.1;
   });
-  
+
   return (
     <group position={new Vector3(...position)}>
       {/* Hand */}
@@ -32,24 +38,24 @@ function PhoneModel({ position = [0, 0, 0] }: { position?: [number, number, numb
         <sphereGeometry args={[0.3, 16, 16]} />
         <meshStandardMaterial color="#f0d0b5" />
       </mesh>
-      
+
       {/* Wrist/Arm */}
       <mesh position={[0, -1.6, 0.3]} rotation={[0.5, 0, 0]}>
         <cylinderGeometry args={[0.2, 0.25, 0.8, 16]} />
         <meshStandardMaterial color="#f0d0b5" />
       </mesh>
-      
+
       {/* Phone */}
       <mesh ref={phoneRef} position={[0, 0, 0]}>
         {/* Phone Body */}
         <boxGeometry args={[1.2, 2.4, 0.1]} />
         <meshStandardMaterial color="black" />
-        
+
         {/* Phone Screen */}
         <mesh position={[0, 0, 0.06]}>
           <boxGeometry args={[1.1, 2.3, 0.01]} />
           <meshStandardMaterial color="#333" />
-          
+
           {/* App Interface */}
           <Html
             transform
