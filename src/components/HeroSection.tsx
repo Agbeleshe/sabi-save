@@ -2,7 +2,10 @@ import React, { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import PhoneModelScene from "./PhoneModelScene";
-
+import appStore from "../assets/appStore.png";
+import playStore from "../assets/playStore.png";
+// Import your background image
+import backgroundImage from "../assets/PictureBg.png";
 // Styled button component
 const Button: React.FC<
   {
@@ -16,7 +19,7 @@ const Button: React.FC<
       ${
         primary
           ? "bg-[#FFBD59] text-black hover:bg-black hover:text-[#FFBD59]"
-          : "bg-black text-white hover:bg-[#FFBD59] hover:text-black"
+          : "bg-black text-white hover:text-[#FFBD59]"
       } 
       ${className}`}
       {...props}
@@ -60,92 +63,133 @@ class ErrorBoundary extends React.Component<
   }
 }
 
+const ThreeDModel: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  return (
+    <div className="h-[400px] lg:h-[450px] relative">
+      {/* 3D model container */}
+      <div className="absolute inset-0  pointer-events-none rounded-xl"></div>
+      <ErrorBoundary
+        fallback={
+          <div className="h-full flex items-center justify-center">
+            <div className="text-center p-8 bg-gray-50 rounded-lg shadow-md">
+              <p className="text-xl font-medium text-gray-800 mb-2">
+                Oops! Something went wrong
+              </p>
+              <p className="text-gray-600">
+                We're unable to display the 3D model right now
+              </p>
+            </div>
+          </div>
+        }
+      >
+        <Suspense fallback={<LoadingSpinner />}>
+          <Canvas
+            ref={canvasRef}
+            className="w-full h-full rounded-xl"
+            shadows
+            gl={{
+              antialias: true,
+              alpha: true,
+              preserveDrawingBuffer: true,
+            }}
+            dpr={[1, 2]}
+          >
+            <PerspectiveCamera makeDefault position={[0, 0, 6]} fov={45} />
+            <ambientLight intensity={0.8} />
+            <spotLight
+              position={[10, 10, 10]}
+              angle={0.15}
+              penumbra={1}
+              intensity={1}
+              castShadow
+            />
+            <directionalLight position={[-50, 20, -56]} intensity={0.6} />
+            <PhoneModelScene />
+            <hemisphereLight intensity={0.3} groundColor="#FFBD59" />
+            <OrbitControls
+              enableZoom={false}
+              autoRotate={false}
+              minPolarAngle={Math.PI / 2 - 0.5}
+              maxPolarAngle={Math.PI / 2 + 0.5}
+              enablePan={true}
+            />
+          </Canvas>
+        </Suspense>
+      </ErrorBoundary>
+    </div>
+  );
+};
+
 // Hero section component
 export default function HeroSection() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  // Background style with the image
+  const backgroundStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center pt-24 pb-16 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen flex flex-col justify-center pt-24 pb-16 relative">
+      {/* Overlay to ensure text readability */}
+      <div
+        className="absolute inset-0 bg-white  opacity-50"
+        style={backgroundStyle}
+      ></div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6">
-              Seamless Savings for{" "}
-              <span className="text-[#FFBD59]">Traders</span>
+              Let us <span className="text-[#FFBD59]">Save</span> <br />
+              daily together.
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-800 max-w-lg">
-              An online solution that provides seamless savings to traders,
-              eliminating the risk of cash handling and guaranteeing access to
-              micro-credit facilities.
+              Sabi save is a digital platform that gives power to the trader to
+              save daily, send money and manage their business at their
+              convenience, and from their mobile phones for free
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button>Download App</Button>
-              <Button primary={false}>Learn More</Button>
+            <div className="flex flex-wrap gap-4 animated-border">
+              <Button>
+                <div className="flex justify-start align-middle items-center min-w-[205px]">
+                  {" "}
+                  <span>
+                    <img
+                      src={appStore}
+                      height={40}
+                      width={40}
+                      alt="app store icon "
+                    />
+                  </span>
+                  <p> Download for IOS</p>
+                </div>
+              </Button>
+              <Button primary={false}>
+                {" "}
+                <div className="flex justify-start align-middle items-center min-w-[205px]">
+                  {" "}
+                  <span>
+                    <img
+                      src={playStore}
+                      height={40}
+                      width={40}
+                      alt="app store icon "
+                    />
+                  </span>
+                  <p> Download for Android</p>
+                </div>
+              </Button>
+            </div>
+            <div className="container">
+              <p className="text-[10px] inline-block bg-black text-white p-2 rounded-[10px] font-thin md:text-[13px] mt-4 md:mt-5 cursor-pointer">
+                Today is a good day to start, so create a free account 😊👍
+              </p>
             </div>
           </div>
-
-          {/* 3D model container */}
-          <div className="h-[400px] lg:h-[600px] relative">
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-[#FFBD59] opacity-10 pointer-events-none rounded-xl"></div>
-            <ErrorBoundary
-              fallback={
-                <div className="h-full flex items-center justify-center">
-                  <div className="text-center p-8 bg-gray-50 rounded-lg shadow-md">
-                    <p className="text-xl font-medium text-gray-800 mb-2">
-                      Oops! Something went wrong
-                    </p>
-                    <p className="text-gray-600">
-                      We're unable to display the 3D model right now
-                    </p>
-                  </div>
-                </div>
-              }
-            >
-              <Suspense fallback={<LoadingSpinner />}>
-                <Canvas
-                  ref={canvasRef}
-                  className="w-full h-full rounded-xl"
-                  shadows
-                  gl={{
-                    antialias: true,
-                    alpha: true,
-                    preserveDrawingBuffer: true,
-                  }}
-                  dpr={[1, 2]}
-                >
-                  <PerspectiveCamera
-                    makeDefault
-                    position={[0, 0, 6]}
-                    fov={45}
-                  />
-                  <ambientLight intensity={0.8} />
-                  <spotLight
-                    position={[10, 10, 10]}
-                    angle={0.15}
-                    penumbra={1}
-                    intensity={1}
-                    castShadow
-                  />
-                  <directionalLight position={[-50, 20, -56]} intensity={0.6} />
-                  <PhoneModelScene />
-                  <hemisphereLight intensity={0.3} groundColor="#FFBD59" />
-                  <OrbitControls
-                    enableZoom={false}
-                    autoRotate={false}
-                    minPolarAngle={Math.PI / 2 - 0.5}
-                    maxPolarAngle={Math.PI / 2 + 0.5}
-                    enablePan={true}
-                  />
-                </Canvas>
-              </Suspense>
-            </ErrorBoundary>
-
-            {/* Overlay text */}
-            {/* <div className="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white text-sm p-2 rounded">
-              Move your cursor to interact with the model
-            </div> */}
-          </div>
+          <ThreeDModel />
         </div>
       </div>
     </section>
