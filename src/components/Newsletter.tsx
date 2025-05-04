@@ -52,7 +52,7 @@ function Newsletter() {
               required
               className="flex-grow px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-dark"
             />
-            <button className="bg-black px-3 rounded-md hover:text-primary text-light border-dark">
+            <button className="bg-black p-3 rounded-md hover:text-primary text-light border-dark">
               {isSubmitting ? "Subscribing..." : "Subscribe"}
             </button>
           </form>
