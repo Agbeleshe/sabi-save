@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "./Button";
 
 function Newsletter() {
   const [email, setEmail] = useState("");
@@ -53,13 +52,9 @@ function Newsletter() {
               required
               className="flex-grow px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-dark"
             />
-            <Button
-              type="submit"
-              variant="outline"
-              className="bg-dark text-light border-dark hover:bg-dark/80"
-            >
+            <button className="bg-black px-3 rounded-md hover:text-primary text-light border-dark">
               {isSubmitting ? "Subscribing..." : "Subscribe"}
-            </Button>
+            </button>
           </form>
         </div>
       </div>

@@ -1,8 +1,7 @@
-import React from 'react';
-import { DivideIcon as LucideIcon } from 'lucide-react';
+import { DivideIcon as LucideIcon } from "lucide-react";
 
 interface FeatureCardProps {
-  icon: LucideIcon;
+  icon: typeof LucideIcon;
   title: string;
   description: string;
 }
