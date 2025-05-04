@@ -8,6 +8,7 @@ import FAQ from "../components/FAQ";
 import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import Features from "../components/Features";
+import FinancialInclusionComponent from "../components/FinancialInclusionComponent";
 
 function Home() {
   // const features = [
@@ -41,7 +42,13 @@ function Home() {
     <>
       <HeroSection />
 
+      <FinancialInclusionComponent />
+
       <Features />
+
+      <DownloadCTA />
+
+      <FAQ />
 
       {/* <Section id="features">
         <SectionTitle
@@ -108,9 +115,7 @@ function Home() {
         </div>
       </Section>
 
-      <FAQ />
       <Newsletter />
-      <DownloadCTA />
     </>
   );
 }
