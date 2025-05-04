@@ -30,7 +30,6 @@ function About() {
     <>
       <Section className="pt-32">
         <SectionTitle title="About SabiSave" subtitle="" />
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <p className="mb-6 text-lg">
@@ -40,24 +39,6 @@ function About() {
               making positive impact in financial consulting, software design
               and IT product development.
             </p>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-bold mb-2">Our Vision</h3>
-                <p>
-                  To become the leading financial technology solution provider
-                  for traders in Africa, creating financial inclusion and
-                  empowerment through our innovative products.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Our Mission</h3>
-                <p>
-                  To provide secure, accessible and user-friendly financial
-                  solutions that meet the unique needs of traders, while
-                  fostering economic growth and financial stability.
-                </p>
-              </div>
-            </div>
           </div>
           <div className="flex justify-center lg:justify-end">
             <img
