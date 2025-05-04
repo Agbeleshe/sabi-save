@@ -1,8 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Instagram, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
-import Logo from './Logo';
-import Button from './Button';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Instagram,
+  Twitter,
+  Facebook,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import Logo from "../assets/sabiSaveLogo.png";
+import playStore from "../assets/playStore.png";
+import appStore from "../assets/appStore.png";
+import Button from "./Button";
 
 function Footer() {
   return (
@@ -12,19 +21,29 @@ function Footer() {
           {/* Brand and Social */}
           <div>
             <div className="mb-6">
-              <Logo />
+              <img src={Logo} alt="Logo" height={100} width={100} />
             </div>
             <p className="mb-6 opacity-80">
-              Creating cutting-edge technology solutions for the financial services sector.
+              Creating cutting-edge technology solutions for the financial
+              services sector.
             </p>
             <div className="flex space-x-4">
-              <a href="https://instagram.com" className="text-light hover:text-primary transition-colors">
+              <a
+                href="https://instagram.com"
+                className="text-light hover:text-primary transition-colors"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="https://twitter.com" className="text-light hover:text-primary transition-colors">
+              <a
+                href="https://twitter.com"
+                className="text-light hover:text-primary transition-colors"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="https://facebook.com" className="text-light hover:text-primary transition-colors">
+              <a
+                href="https://facebook.com"
+                className="text-light hover:text-primary transition-colors"
+              >
                 <Facebook size={20} />
               </a>
             </div>
@@ -35,22 +54,34 @@ function Footer() {
             <h4 className="text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <Link
+                  to="/"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <Link
+                  to="/about"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/solution" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <Link
+                  to="/solution"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Our Solution
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <Link
+                  to="/contact"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -62,22 +93,34 @@ function Footer() {
             <h4 className="text-lg font-bold mb-6">Legal</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#terms" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#terms"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Terms and Conditions
                 </a>
               </li>
               <li>
-                <a href="#privacy" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#privacy"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#cookie" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#cookie"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Cookie Policy
                 </a>
               </li>
               <li>
-                <a href="#safety" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#safety"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Safety and Security
                 </a>
               </li>
@@ -111,11 +154,13 @@ function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="mb-4 sm:mb-0 opacity-80">Download our app:</p>
             <div className="flex space-x-4">
-              <Button href="#app-store" variant="outline" size="sm">
-                App Store
+              <Button href="#app-store" size="sm">
+                <img src={playStore} height={30} width={30} />{" "}
+                <span>App Store</span>
               </Button>
-              <Button href="#play-store" variant="outline" size="sm">
-                Play Store
+              <Button href="#play-store" size="sm">
+                <img src={appStore} height={30} width={30} />{" "}
+                <span> Play Store</span>
               </Button>
             </div>
           </div>
