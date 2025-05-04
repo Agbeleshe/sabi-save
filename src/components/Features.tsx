@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import marketWoman from "../assets/MarketWoman.jpg";
-import longImgOne from "../assets/longImg.jpg";
+//import marketWoman from "../assets/MarketWoman.jpg";
+//import longImgOne from "../assets/longImg.jpg";
 import longImgTwo from "../assets/longImggTwo.jpg";
 import mockPhone from "../assets/phone.png";
 import marketWomanTwo from "../assets/marketWomanTwo.jpg";
@@ -104,80 +104,86 @@ const FeaturesCardTwo = ({
 
 const Features = () => {
   // Sample data for the FeaturesCardOne component
-  const featureOneData = {
-    header: "Get our mobile application now",
-    description:
-      "Our mobile application is designed to provide traders with a user-friendly mobile app allows traders to manage their savings on the go, with real-time balance updates and transaction history.",
-    tag: "Mobile Application",
-    img: marketWoman,
-    link: "Get it now",
-  };
+  // const featureOneData = {
+  //   header: "Get our mobile application now",
+  //   description:
+  //     "Our mobile application is designed to provide traders with a user-friendly mobile app allows traders to manage their savings on the go, with real-time balance updates and transaction history.",
+  //   tag: "Mobile Application",
+  //   img: marketWoman,
+  //   link: "Get it now",
+  // };
 
   // Sample data for the FeaturesCardTwo component
-  const featureTwoData = {
-    header: "Easy Registration of traders",
-    description:
-      "Easy and secure registration process for traders with minimal documentation required to get started.",
-    tag: "Trader Registration",
-    img: mockPhone,
-    link: "Get it now",
-    bgColor: "bg-primary",
-    textColor: "text-black",
-  };
+  // const featureTwoData = {
+  //   header: "Easy Registration of traders",
+  //   description:
+  //     "Easy and secure registration process for traders with minimal documentation required to get started.",
+  //   tag: "Trader Registration",
+  //   img: mockPhone,
+  //   link: "Get it now",
+  //   bgColor: "bg-primary",
+  //   textColor: "text-black",
+  // };
 
   // Sample data for the FeaturesCardOne component
   const featureThreeData = {
-    header: "Admin (Agent) Dashboard",
-    description:
-      "Comprehensive dashboard for agents to monitor and manage trader accounts, transactions, and performance metrics.",
+    header: "Your money is safe",
+    description: "Registration is easy, seamless and fast.",
     img: marketWomanTwo,
-    tag: "Our Admin Dashboard",
+    tag: "Digital Wallet",
     link: "Get it now",
   };
 
   // Sample data for the FeaturesCardTwo component
   const featureFourData = {
-    header: "Wallet",
+    header: "Easy to use dahsboard",
     description:
-      "Secure digital wallet for handling cash deposits, withdrawals, and fund transfers with instant confirmation.",
-    tag: "Wallet Functionality",
+      "A robust dashboard for the registration of traders, and for agents to monitor and manage trader accounts",
+    tag: "Agent Account",
     img: mockPhone,
     link: "Get it now",
     bgColor: "bg-primary",
     textColor: "text-black",
   };
 
+  //Removed data
+
+  // <>
+  //   <FeaturesCardOne
+  //     header={featureOneData.header}
+  //     description={featureOneData.description}
+  //     tag={featureOneData.tag}
+  //     img={featureOneData.img}
+  //     link={featureOneData.link}
+  //   />
+
+  //   <div className="flex flex-col w-full gap-5 md:flex-row mt-5">
+  //     {/* Left column - Image */}
+  //     <div className="w-full hidden md:flex md:w-[40%] bg-red-500 rounded-[20px] h-80 md:h-[600px] overflow-hidden cursor-pointer hover:scale-[1.02] transition-all ease-in-out duration-1000">
+  //       <img
+  //         src={longImgOne}
+  //         className="w-full h-full object-cover"
+  //         alt="Feature image"
+  //       />
+  //     </div>
+
+  //     {/* Right column - Using FeaturesCardTwo */}
+  //     <FeaturesCardTwo
+  //       header={featureTwoData.header}
+  //       description={featureTwoData.description}
+  //       tag={featureTwoData.tag}
+  //       img={featureTwoData.img}
+  //       link={featureTwoData.link}
+  //       bgColor={featureTwoData.bgColor}
+  //       textColor={featureTwoData.textColor}
+  //     />
+  //   </div>
+  // </>;
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen max-w-[1500px] p-4 md:p-10 mx-auto">
-      <FeaturesCardOne
-        header={featureOneData.header}
-        description={featureOneData.description}
-        tag={featureOneData.tag}
-        img={featureOneData.img}
-        link={featureOneData.link}
-      />
+      {/* Removed data */}
 
-      <div className="flex flex-col w-full gap-5 md:flex-row mt-5">
-        {/* Left column - Image */}
-        <div className="w-full hidden md:flex md:w-[40%] bg-red-500 rounded-[20px] h-80 md:h-[600px] overflow-hidden cursor-pointer hover:scale-[1.02] transition-all ease-in-out duration-1000">
-          <img
-            src={longImgOne}
-            className="w-full h-full object-cover"
-            alt="Feature image"
-          />
-        </div>
-
-        {/* Right column - Using FeaturesCardTwo */}
-        <FeaturesCardTwo
-          header={featureTwoData.header}
-          description={featureTwoData.description}
-          tag={featureTwoData.tag}
-          img={featureTwoData.img}
-          link={featureTwoData.link}
-          bgColor={featureTwoData.bgColor}
-          textColor={featureTwoData.textColor}
-        />
-      </div>
       <FeaturesCardOne
         header={featureThreeData.header}
         description={featureThreeData.description}

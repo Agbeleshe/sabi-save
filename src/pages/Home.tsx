@@ -1,7 +1,7 @@
 // import React from "react";
 // import { Smartphone, Users, Coins, BarChart3 } from "lucide-react";
 import HeroSection from "../components/HeroSection";
-import Section from "../components/Section";
+//import Section from "../components/Section";
 // import SectionTitle from "../components/SectionTitle";
 // import FeatureCard from "../components/FeatureCard";
 import FAQ from "../components/FAQ";
@@ -68,8 +68,9 @@ function Home() {
           ))}
         </div>
       </Section> */}
+      <Newsletter />
 
-      <Section background="primary">
+      {/* <Section background="primary">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6">Our Value Proposition</h2>
@@ -113,9 +114,7 @@ function Home() {
             />
           </div>
         </div>
-      </Section>
-
-      <Newsletter />
+      </Section> */}
     </>
   );
 }

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState } from "react";
+import { Minus, Plus } from "lucide-react";
 
 interface FAQItemProps {
   question: string;
@@ -7,27 +7,33 @@ interface FAQItemProps {
   isOpen?: boolean;
 }
 
-function FAQItem({ question, answer, isOpen = false }: FAQItemProps) {
+const FAQItem = ({ question, answer, isOpen = false }: FAQItemProps) => {
   const [expanded, setExpanded] = useState(isOpen);
 
   return (
-    <div className="border-b border-gray-200 py-4">
+    <div className="mb-4 bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="flex justify-between items-center w-full text-left font-medium focus:outline-none"
+        className="flex justify-between items-center w-full p-4 text-left focus:outline-none"
       >
-        <span>{question}</span>
-        <span>{expanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}</span>
+        <span className="font-medium text-lg text-gray-800">{question}</span>
+        <span className="text-primary ml-2">
+          {expanded ? (
+            <Minus size={20} className="text-red-600" />
+          ) : (
+            <Plus size={20} className="text-red-600" />
+          )}
+        </span>
       </button>
       <div
-        className={`mt-2 transition-all duration-300 overflow-hidden ${
-          expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`transition-all duration-300 overflow-hidden bg-gray-50 ${
+          expanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="opacity-80 pb-2">{answer}</p>
+        <p className="p-4 text-gray-700">{answer}</p>
       </div>
     </div>
   );
-}
+};
 
 export default FAQItem;
