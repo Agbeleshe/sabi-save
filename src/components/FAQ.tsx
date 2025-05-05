@@ -2,6 +2,7 @@ import SectionTitle from "./SectionTitle";
 import FAQItem from "./FAQItem";
 import { ArrowDown, ArrowUp } from "lucide-react";
 import { useState } from "react";
+import MotionAnimation from "../motion/MotionAnimation";
 
 export default function FAQ() {
   const [showAll, setShowAll] = useState(false);
@@ -40,29 +41,35 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle
-          title="Everything you need to know about SabiSave"
-          subtitle="Find answers to common questions about SabiSave"
-          centered
-        />
+        <MotionAnimation>
+          <SectionTitle
+            title="Everything you need to know about SabiSave"
+            subtitle="Find answers to common questions about SabiSave"
+            centered
+          />
+        </MotionAnimation>
 
         <div className="max-w-3xl mx-auto space-y-4">
           {displayedItems.map((item, index) => (
-            <FAQItem
-              key={index}
-              question={item.question}
-              answer={item.answer}
-              isOpen={index === 0}
-            />
+            <MotionAnimation delay={0.2 * index} motion="slide-up">
+              <FAQItem
+                key={index}
+                question={item.question}
+                answer={item.answer}
+                isOpen={index === 0}
+              />
+            </MotionAnimation>
           ))}
 
           {!showAll && faqItems.length > 3 && (
             <div className="text-center mt-8">
               <button
                 onClick={() => setShowAll(true)}
-                className="px-6 py-3 bg-none text-black rounded-lg font-medium flex items-center mx-auto hover:text-primary transition-colors duration-300"
+                className="px-6 py-3 bg-none text-black rounded-lg font-medium flex items-center mx-auto hover:text-red-800 transition-colors duration-300"
               >
-                <span>See All FAQs</span>
+                <MotionAnimation>
+                  <span>See All FAQs</span>
+                </MotionAnimation>
                 <ArrowDown size={16} className="ml-2" />
               </button>
             </div>

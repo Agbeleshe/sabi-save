@@ -103,9 +103,12 @@ const FeaturesCardTwo = ({
             </p>
           </MotionAnimation>
           <MotionAnimation>
-            <div className="mt-4 md:mt-8 flex gap-3 items-center justify-center md:justify-start cursor-pointer">
-              <p>{link}</p> <ArrowRight size={20} />
-            </div>
+            <a href="#download">
+              {" "}
+              <div className="mt-4 md:mt-8 flex gap-3 items-center justify-center md:justify-start cursor-pointer">
+                <p>{link}</p> <ArrowRight size={20} />
+              </div>
+            </a>
           </MotionAnimation>
         </div>
 
