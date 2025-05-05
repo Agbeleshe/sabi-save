@@ -3,6 +3,7 @@ import appStore from "../assets/appStore.png";
 import playStore from "../assets/playStore.png";
 import backgroundImage from "../assets/mama.png";
 import backgroundImageMobile from "../assets/mamaMobilei.png";
+import MotionAnimation from "../motion/MotionAnimation";
 
 const Button: React.FC<
   {
@@ -68,47 +69,59 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div className={isMobile ? "px-2" : ""}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6">
-              Let us <span className="text-[#FFBD59]">Save</span> <br />
-              daily together.
-            </h1>
-            <p className="text-lg md:text-xl mb-8 text-white max-w-lg">
-              Sabi save is a digital platform that gives power to the trader to
-              save daily, send money and manage their business at their
-              convenience, and from their mobile phones for free
-            </p>
+            <MotionAnimation>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6">
+                Let us <span className="text-[#FFBD59]">Save</span> <br />
+                daily together.
+              </h1>
+            </MotionAnimation>
+            <MotionAnimation delay={0.3}>
+              <p className="text-lg md:text-xl mb-8 text-white max-w-lg">
+                Sabi save is a digital platform that gives power to the trader
+                to save daily, send money and manage their business at their
+                convenience, and from their mobile phones for free
+              </p>
+            </MotionAnimation>
             <div className="flex flex-wrap gap-4 animated-border">
-              <Button>
-                <div className="flex justify-start align-middle items-center min-w-[205px]">
-                  <span>
-                    <img
-                      src={appStore}
-                      height={40}
-                      width={40}
-                      alt="app store icon"
-                    />
-                  </span>
-                  <p className="ml-2">Download for iOS</p>
-                </div>
-              </Button>
-              <Button primary={false}>
-                <div className="flex justify-start align-middle items-center min-w-[205px]">
-                  <span>
-                    <img
-                      src={playStore}
-                      height={40}
-                      width={40}
-                      alt="play store icon"
-                    />
-                  </span>
-                  <p className="ml-2">Download for Android</p>
-                </div>
-              </Button>
+              <MotionAnimation motion="slide-up">
+                <Button>
+                  <div className="flex justify-start align-middle items-center w-[150px] md:min-w-[210px]">
+                    <span>
+                      <img
+                        src={appStore}
+                        height={40}
+                        width={40}
+                        alt="app store icon"
+                      />
+                    </span>
+                    <p className="ml-2 hidden md:block">Download for iOS</p>
+                    <p className="ml-2 md:hidden">iOS App</p>
+                  </div>
+                </Button>
+              </MotionAnimation>
+              <MotionAnimation delay={0.3} motion="slide-up">
+                <Button primary={false}>
+                  <div className="flex justify-start align-middle items-center w-[150px] md:min-w-[210px]">
+                    <span>
+                      <img
+                        src={playStore}
+                        height={40}
+                        width={40}
+                        alt="play store icon"
+                      />
+                    </span>
+                    <p className="ml-2 hidden md:flex">Download for Android</p>
+                    <p className="ml-2 md:hidden">Android App</p>
+                  </div>
+                </Button>
+              </MotionAnimation>
             </div>
             <div className="container mt-6">
-              <p className="text-[10px] inline-block bg-black text-white p-2 rounded-[10px] font-thin md:text-[13px] cursor-pointer hover:bg-opacity-80 transition-all">
-                Today is a good day to start, so create a free account 😊👍
-              </p>
+              <MotionAnimation delay={0.5} motion="slide-up">
+                <p className="text-[10px] inline-block bg-black text-white p-2 rounded-[13px] font-thin md:text-[14px] cursor-pointer hover:bg-opacity-80 transition-all">
+                  Today is a good day to start, so create a free account 😊👍
+                </p>
+              </MotionAnimation>
             </div>
           </div>
         </div>
