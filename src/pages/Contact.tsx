@@ -1,4 +1,3 @@
-import React from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Section from "../components/Section";
 import ContactForm from "../components/ContactForm";
@@ -38,7 +37,7 @@ function Contact() {
         subtitle="We are here to help and get you in contact with our team"
         backgroundImage={bannerImg}
       />
-      <Section className="pt-32">
+      <Section className="">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           <div className="lg:col-span-2">
             <div className="bg-light p-8 rounded-lg shadow-md h-full">

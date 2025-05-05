@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import Button from "./Button";
@@ -33,10 +33,28 @@ function Navbar({ isScrolled }: NavbarProps) {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <NavLink
+              to="/"
+              className={({ isActive }) =>
+                ` font-medium hover:text-primary transition-colors ${
+                  isActive
+                    ? "text-primary"
+                    : isScrolled
+                    ? "text-dark"
+                    : "text-white"
+                }`
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
               to="/about"
               className={({ isActive }) =>
-                `text-dark font-medium hover:text-primary transition-colors ${
-                  isActive ? "text-primary" : ""
+                ` font-medium hover:text-primary transition-colors ${
+                  isActive
+                    ? "text-primary"
+                    : isScrolled
+                    ? "text-dark"
+                    : "text-white"
                 }`
               }
             >
@@ -45,8 +63,12 @@ function Navbar({ isScrolled }: NavbarProps) {
             <NavLink
               to="/solution"
               className={({ isActive }) =>
-                `text-dark font-medium hover:text-primary transition-colors ${
-                  isActive ? "text-primary" : ""
+                ` font-medium hover:text-primary transition-colors ${
+                  isActive
+                    ? "text-primary"
+                    : isScrolled
+                    ? "text-dark"
+                    : "text-white"
                 }`
               }
             >
@@ -55,8 +77,12 @@ function Navbar({ isScrolled }: NavbarProps) {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `text-dark font-medium hover:text-primary transition-colors ${
-                  isActive ? "text-primary" : ""
+                ` font-medium hover:text-primary transition-colors ${
+                  isActive
+                    ? "text-primary"
+                    : isScrolled
+                    ? "text-dark"
+                    : "text-white"
                 }`
               }
             >
@@ -127,13 +153,6 @@ function Navbar({ isScrolled }: NavbarProps) {
               >
                 Contact Us
               </NavLink>
-              <Button
-                href="#download"
-                variant="primary"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Download App
-              </Button>
             </div>
           </div>
         </nav>
