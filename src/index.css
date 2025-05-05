@@ -2,67 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Alternative Gradient Text Animation with better browser support */
-.gradient-text-alt {
-  position: relative;
-  font-weight: bold;
-  color: #000; /* Fallback color */
-}
-/* Create the gradient overlay */
-.gradient-text-alt::before {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+/* p {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+} */
 
-  background: linear-gradient(
-    to right,
-    #ff7e5f,
-    #feb47b,
-    #7ee8fa,
-    #80ff72,
-    #feb47b,
-    #ff7e5f
-  );
-  background-size: 300% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-animation 7s ease infinite;
-}
+/* h1 {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+} */
 
-/* For React component example */
-.gradient-container {
-  overflow: hidden; /* Ensure animations don't cause scrollbars */
-  margin: 1rem 0;
+h1 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900 !important;
 }
-
-/* Animation keyframes */
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% center;
-  }
-  50% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
+body {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
-
-/* Size variants */
-.gradient-text-lg {
-  font-size: 2.5rem;
-}
-
-.gradient-text-md {
-  font-size: 1.75rem;
-}
-
-.gradient-text-sm {
-  font-size: 1.25rem;
+.comic-relief-bold {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
 }
