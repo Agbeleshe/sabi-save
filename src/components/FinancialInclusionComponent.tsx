@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, Wallet, Users, Globe } from "lucide-react";
-import ThreeDmodal from "./threeDmodal";
+import ThreeDmodal from "./ThreeDmodal";
 
 export default function FinancialInclusionComponent() {
   const [activeTab, setActiveTab] = useState("trader");
