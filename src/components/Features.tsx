@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import longImgTwo from "../assets/longImggTwo.jpg";
 import mockPhone from "../assets/phone.png";
 import marketWomanTwo from "../assets/marketWomanTwo.jpg";
+import MotionAnimation from "../motion/MotionAnimation";
 
 // Define interface for FeaturesCardOne props
 interface FeaturesCardOneProps {
@@ -37,25 +38,35 @@ const FeaturesCardOne = ({
       <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-between">
         <div>
           <div>
-            <p className="text-xl inline-block bg-black text-white p-2 rounded-[10px] font-extrabold md:text-2xl mb-4 md:mb-10">
-              {tag}
-            </p>
+            <MotionAnimation motion="slide-right">
+              <p className="text-xl inline-block bg-black text-white p-2 rounded-[10px] font-extrabold md:text-2xl mb-4 md:mb-10">
+                {tag}
+              </p>
+            </MotionAnimation>
           </div>
-          <h1 className="text-3xl md:text-4xl text-primary font-bold my-2 md:my-3">
-            {header}
-          </h1>
-          <p className="text-base md:text-md my-2 md:my-3">{description}</p>
+          <MotionAnimation delay={0.3} motion="slide-right">
+            <h1 className="text-3xl md:text-4xl text-primary font-bold my-2 md:my-3">
+              {header}
+            </h1>
+            <p className="text-base md:text-md my-2 md:my-3">{description}</p>
+          </MotionAnimation>
         </div>
-        <div className="mt-8 md:mt-0 mb-6 md:mb-0 flex gap-3 items-center justify-center md:justify-start cursor-pointer">
-          {link} <ArrowRight size={20} />
-        </div>
+        <MotionAnimation delay={0.5} motion="slide-right">
+          <a href={"#download"}>
+            <div className="mt-8 md:mt-0 mb-6 md:mb-0 flex gap-3 items-center justify-center md:justify-start cursor-pointer">
+              {link} <ArrowRight size={20} />
+            </div>
+          </a>
+        </MotionAnimation>
       </div>
       <div className="cursor-pointer overflow-hidden w-full md:w-1/2 h-64 md:h-auto">
-        <img
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-          src={img}
-          alt={header}
-        />
+        <MotionAnimation motion="slide-left">
+          <img
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            src={img}
+            alt={header}
+          />
+        </MotionAnimation>
       </div>
     </div>
   );
@@ -74,28 +85,38 @@ const FeaturesCardTwo = ({
     <div className="w-full  border border-gray-600 md:w-[60%] bg-gradient-to-br from-gray-200 to-white rounded-[20px] h-auto md:h-[600px] p-6 md:p-10 overflow-hidden cursor-pointer hover:scale-[1.02] transition-all ease-in-out duration-1000 flex flex-col">
       <div className="flex flex-col h-full">
         <div>
-          <p
-            className={`text-lg md:text-xl inline-block ${bgColor} ${textColor} p-2 rounded-[10px] font-extrabold mb-4 md:mb-6`}
-          >
-            {tag}
-          </p>
-          <h1 className="text-2xl md:text-4xl font-bold my-2 md:my-3">
-            {header}
-          </h1>
-          <p className="text-sm md:text-base my-2 md:my-3 max-w-[90%]">
-            {description}
-          </p>
-          <div className="mt-4 md:mt-8 flex gap-3 items-center justify-center md:justify-start cursor-pointer">
-            <p>{link}</p> <ArrowRight size={20} />
-          </div>
+          <MotionAnimation motion="slide-down">
+            <p
+              className={`text-lg md:text-xl inline-block ${bgColor} ${textColor} p-2 rounded-[10px] font-extrabold mb-4 md:mb-6`}
+            >
+              {tag}
+            </p>
+          </MotionAnimation>
+          <MotionAnimation delay={0.3} motion="slide-down">
+            <h1 className="text-2xl md:text-4xl font-bold my-2 md:my-3">
+              {header}
+            </h1>
+          </MotionAnimation>
+          <MotionAnimation delay={0.5} motion="slide-down">
+            <p className="text-sm md:text-base my-2 md:my-3 max-w-[90%]">
+              {description}
+            </p>
+          </MotionAnimation>
+          <MotionAnimation>
+            <div className="mt-4 md:mt-8 flex gap-3 items-center justify-center md:justify-start cursor-pointer">
+              <p>{link}</p> <ArrowRight size={20} />
+            </div>
+          </MotionAnimation>
         </div>
 
         <div className="mt-6 md:mt-auto flex justify-center ">
-          <img
-            src={img}
-            alt={`${header} image`}
-            className="w-2/3 md:w-full max-h-64 md:max-h-96 object-contain"
-          />
+          <MotionAnimation delay={0.5} motion="slide-up">
+            <img
+              src={img}
+              alt={`${header} image`}
+              className="w-2/3 md:w-full max-h-64 md:max-h-96 object-contain"
+            />
+          </MotionAnimation>
         </div>
       </div>
     </div>
@@ -194,12 +215,14 @@ const Features = () => {
 
       <div className="flex flex-col w-full gap-5 md:flex-row mt-5">
         {/* Left column - Image */}
-        <div className="w-full hidden md:flex md:w-[40%] bg-red-500 rounded-[20px] h-80 md:h-[600px] overflow-hidden cursor-pointer hover:scale-[1.02] transition-all ease-in-out duration-1000">
-          <img
-            src={longImgTwo}
-            className="w-full h-full object-cover"
-            alt="Feature image"
-          />
+        <div className="w-full hidden md:flex md:w-[40%] rounded-[20px] h-80 md:h-[600px] overflow-hidden cursor-pointer hover:scale-[1.02] transition-all ease-in-out duration-1000">
+          <MotionAnimation>
+            <img
+              src={longImgTwo}
+              className="w-full h-full object-cover"
+              alt="Feature image"
+            />
+          </MotionAnimation>
         </div>
 
         {/* Right column - Using FeaturesCardTwo */}
