@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MotionAnimation from "../motion/MotionAnimation";
 
 function Newsletter() {
   const [email, setEmail] = useState("");
@@ -26,36 +27,44 @@ function Newsletter() {
     <div className="bg-primary py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 text-dark">
-            Stay Informed and Connected
-          </h2>
-          <p className="mb-8 text-dark/80">
-            Subscribe to our newsletter to receive the latest updates and news
-            about SabiSave.
-          </p>
+          <MotionAnimation motion="slide-down">
+            <h2 className="text-3xl font-bold mb-4 text-dark">
+              Stay Informed and Connected
+            </h2>
+          </MotionAnimation>
+          <MotionAnimation motion="slide-up">
+            <p className="mb-8 text-dark/80 text-center">
+              Subscribe to our newsletter to receive the latest updates and news
+              about SabiSave.
+            </p>
+          </MotionAnimation>
 
           {submitSuccess && (
-            <div className="bg-light/20 text-dark p-4 rounded-md mb-6 max-w-md mx-auto">
-              Thank you for subscribing to our newsletter!
-            </div>
+            <MotionAnimation>
+              <div className="bg-light/20 text-dark p-4 rounded-md mb-6 max-w-md mx-auto">
+                Thank you for subscribing to our newsletter!
+              </div>
+            </MotionAnimation>
           )}
 
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email address"
-              required
-              className="flex-grow px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-dark"
-            />
-            <button className="bg-black p-3 rounded-md hover:text-primary text-light border-dark">
-              {isSubmitting ? "Subscribing..." : "Subscribe"}
-            </button>
-          </form>
+          <MotionAnimation>
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+            >
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email address"
+                required
+                className="flex-grow px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-dark"
+              />
+              <button className="bg-black p-3 rounded-md hover:text-primary text-light border-dark">
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
+              </button>
+            </form>
+          </MotionAnimation>
         </div>
       </div>
     </div>

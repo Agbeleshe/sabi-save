@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
+import MotionAnimation from "../motion/MotionAnimation";
 
 interface FAQItemProps {
   question: string;
@@ -30,7 +31,9 @@ const FAQItem = ({ question, answer, isOpen = false }: FAQItemProps) => {
           expanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="p-4 text-gray-700">{answer}</p>
+        <MotionAnimation>
+          <p className="p-4 text-gray-700">{answer}</p>
+        </MotionAnimation>
       </div>
     </div>
   );

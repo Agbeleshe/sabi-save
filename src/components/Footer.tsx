@@ -11,6 +11,40 @@ import Logo from "../assets/sabiSaveLogo.png";
 import playStore from "../assets/playStore.png";
 import appStore from "../assets/appStore.png";
 import Button from "./Button";
+import MotionAnimation from "../motion/MotionAnimation";
+
+const socialLinks = [
+  { icon: Instagram, href: "https://instagram.com" },
+  { icon: Twitter, href: "https://twitter.com" },
+  { icon: Facebook, href: "https://facebook.com" },
+];
+
+const quickLinks = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About Us" },
+  { to: "/solution", label: "Our Solution" },
+  { to: "/contact", label: "Contact Us" },
+];
+
+const legalLinks = [
+  { href: "#terms", label: "Terms and Conditions" },
+  { href: "#privacy", label: "Privacy Policy" },
+  { href: "#cookie", label: "Cookie Policy" },
+  { href: "#safety", label: "Safety and Security" },
+];
+
+const contactInfo = [
+  {
+    icon: MapPin,
+    text: "123 Financial District, Lagos, Nigeria",
+    verticalAlign: true,
+  },
+  { icon: Phone, text: "+234 123 456 7890" },
+  { icon: Mail, text: "info@sabisave.com" },
+];
+
+const linkClass =
+  "opacity-80 hover:opacity-100 hover:text-primary transition-colors";
 
 function Footer() {
   return (
@@ -19,71 +53,45 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand and Social */}
           <div>
-            <div className="mb-6">
-              <img src={Logo} alt="Logo" height={100} width={100} />
-            </div>
-            <p className="mb-6 opacity-80">
-              Creating cutting-edge technology solutions for the financial
-              services sector.
-            </p>
+            <MotionAnimation>
+              <div className="mb-6">
+                <img src={Logo} alt="Logo" height={100} width={100} />
+              </div>
+            </MotionAnimation>
+            <MotionAnimation delay={0.3}>
+              <p className="mb-6 opacity-80">
+                Creating cutting-edge technology solutions for the financial
+                services sector.
+              </p>
+            </MotionAnimation>
             <div className="flex space-x-4">
-              <a
-                href="https://instagram.com"
-                className="text-light hover:text-primary transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://twitter.com"
-                className="text-light hover:text-primary transition-colors"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="https://facebook.com"
-                className="text-light hover:text-primary transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
+              {socialLinks.map(({ icon: Icon, href }, index) => (
+                <MotionAnimation delay={0.2 * index}>
+                  <a
+                    key={index}
+                    href={href}
+                    className="text-light hover:text-primary transition-colors"
+                  >
+                    <Icon size={20} />
+                  </a>
+                </MotionAnimation>
+              ))}
             </div>
           </div>
 
-          {/* Navigation Links */}
+          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/solution"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  Our Solution
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
+              {quickLinks.map(({ to, label }, index) => (
+                <MotionAnimation delay={0.3 * index} motion="slide-up">
+                  <li key={to}>
+                    <Link to={to} className={linkClass}>
+                      {label}
+                    </Link>
+                  </li>
+                </MotionAnimation>
+              ))}
             </ul>
           </div>
 
@@ -91,38 +99,16 @@ function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6">Legal</h4>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#terms"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  Terms and Conditions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#privacy"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#cookie"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  Cookie Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#safety"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  Safety and Security
-                </a>
-              </li>
+              {legalLinks.map(({ href, label }, index) => (
+                <MotionAnimation delay={0.3 * index} motion="slide-up">
+                  {" "}
+                  <li key={href}>
+                    <a href={href} className={linkClass}>
+                      {label}
+                    </a>
+                  </li>
+                </MotionAnimation>
+              ))}
             </ul>
           </div>
 
@@ -130,20 +116,25 @@ function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6">Contact</h4>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin size={20} className="mr-2 mt-1 text-primary" />
-                <span className="opacity-80">
-                  123 Financial District, Lagos, Nigeria
-                </span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={20} className="mr-2 text-primary" />
-                <span className="opacity-80">+234 123 456 7890</span>
-              </li>
-              <li className="flex items-center">
-                <Mail size={20} className="mr-2 text-primary" />
-                <span className="opacity-80">info@sabisave.com</span>
-              </li>
+              {contactInfo.map(({ icon: Icon, text, verticalAlign }, index) => (
+                <MotionAnimation delay={0.3 * index} motion="slide-up">
+                  {" "}
+                  <li
+                    key={index}
+                    className={`flex items-${
+                      verticalAlign ? "start" : "center"
+                    }`}
+                  >
+                    <Icon
+                      size={20}
+                      className={`mr-2 ${
+                        verticalAlign ? "mt-1" : ""
+                      } text-primary`}
+                    />
+                    <span className="opacity-80">{text}</span>
+                  </li>
+                </MotionAnimation>
+              ))}
             </ul>
           </div>
         </div>
@@ -152,23 +143,27 @@ function Footer() {
         <div className="border-t border-gray-700 mt-12 pt-8 pb-4">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="mb-4 sm:mb-0 opacity-80">Download our app:</p>
-            <div className="flex space-x-4">
-              <Button href="#app-store" size="sm">
-                <img src={playStore} height={30} width={30} />{" "}
-                <span>App Store</span>
-              </Button>
-              <Button href="#play-store" size="sm">
-                <img src={appStore} height={30} width={30} />{" "}
-                <span> Play Store</span>
-              </Button>
-            </div>
+            <MotionAnimation>
+              <div className="flex space-x-4">
+                <Button href="#app-store" size="sm">
+                  <img src={playStore} height={30} width={30} />
+                  <span>App Store</span>
+                </Button>
+                <Button href="#play-store" size="sm">
+                  <img src={appStore} height={30} width={30} />
+                  <span>Play Store</span>
+                </Button>
+              </div>
+            </MotionAnimation>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center opacity-70">
-          <p>© {new Date().getFullYear()} SabiSave. All rights reserved.</p>
-        </div>
+        <MotionAnimation>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center opacity-70">
+            <p>© {new Date().getFullYear()} SabiSave. All rights reserved.</p>
+          </div>
+        </MotionAnimation>
       </div>
     </footer>
   );
