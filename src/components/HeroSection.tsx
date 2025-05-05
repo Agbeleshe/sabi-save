@@ -119,7 +119,7 @@ export default function HeroSection() {
             <div className="container mt-6">
               <MotionAnimation delay={0.5} motion="slide-up">
                 <p className="text-[10px] inline-block bg-black text-white p-2 rounded-[13px] font-thin md:text-[14px] cursor-pointer hover:bg-opacity-80 transition-all">
-                  Today is a good day to start, so create a free account 😊👍
+                  Today is a good day to start. So create a free account 😊👍
                 </p>
               </MotionAnimation>
             </div>
