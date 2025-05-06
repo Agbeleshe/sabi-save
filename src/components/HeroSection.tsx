@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import appStore from "../assets/appStore.png";
 import playStore from "../assets/playStore.png";
-import backgroundImage from "../assets/desktopBG.png";
-import backgroundImageMobile from "../assets/mobileBG.png";
+import backgroundImage from "../assets/desktopBG-min.png";
+import backgroundImageMobile from "../assets/mobileBG-min.png";
 import MotionAnimation from "../motion/MotionAnimation";
 import CircleAnimation from "../HOC/CircleAnimation";
 

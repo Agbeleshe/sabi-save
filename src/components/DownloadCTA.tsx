@@ -12,14 +12,16 @@ function DownloadCTA() {
           <MotionAnimation>
             <div className="relative">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-light">
-                Get saving the <span className=" text-[#FFBD59]">SABI</span> way
-                today!
+                Get saving the{" "}
+                <span className=" text-[#FFBD59] relative">
+                  SABI{" "}
+                  <CircleAnimation
+                    className="w-[80px] md:w-[100px] h-[120px] absolute top-[-40px] right-[1%] md:right-[1%]"
+                    style={{ borderRadius: "50%" }}
+                  />
+                </span>{" "}
+                way today!
               </h2>
-              <CircleAnimation
-                className="w-[100px] h-[120px] absolute top-[-40px] right-[15%] md:right-[41%]"
-                delay={1500}
-                style={{ borderRadius: "50%" }}
-              />
             </div>
           </MotionAnimation>
           <MotionAnimation delay={0.3} motion="slide-up">
