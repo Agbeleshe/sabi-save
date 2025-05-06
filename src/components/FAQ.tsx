@@ -65,7 +65,7 @@ export default function FAQ() {
             <div className="text-center mt-8">
               <button
                 onClick={() => setShowAll(true)}
-                className="px-6 py-3 bg-none text-black rounded-lg font-medium flex items-center mx-auto hover:text-red-800 transition-colors duration-300"
+                className="px-6 py-3 bg-none text-black rounded-lg font-medium flex items-center mx-auto hover:text-red transition-colors duration-300"
               >
                 <MotionAnimation>
                   <span>See All FAQs</span>

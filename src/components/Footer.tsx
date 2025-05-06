@@ -64,9 +64,10 @@ function Footer() {
                 services sector.
               </p>
             </MotionAnimation>
-            <div className="flex space-x-4">
-              {socialLinks.map(({ icon: Icon, href }, index) => (
-                <MotionAnimation delay={0.2 * index}>
+
+            <MotionAnimation>
+              <div className="flex space-x-4">
+                {socialLinks.map(({ icon: Icon, href }, index) => (
                   <a
                     key={index}
                     href={href}
@@ -74,9 +75,9 @@ function Footer() {
                   >
                     <Icon size={20} />
                   </a>
-                </MotionAnimation>
-              ))}
-            </div>
+                ))}
+              </div>
+            </MotionAnimation>
           </div>
 
           {/* Quick Links */}

@@ -110,7 +110,7 @@ function About() {
           </div>
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="absolute -left-4 -top-4 w-full h-full border-2 border-red-800 rounded-lg"></div>
+              <div className="absolute -left-4 -top-4 w-full h-full border-2 border-red rounded-lg"></div>
               <img
                 src={img}
                 alt="SabiSave Team"
@@ -159,7 +159,7 @@ function About() {
           })}
         </div> */}
 
-        <div className="bg-gradient-to-r from-red-800 to-black p-8 rounded-xl text-white shadow-lg flex flex-col md:flex-row lg:flex-row gap-8">
+        <div className="bg-gradient-to-r from-red to-black p-8 rounded-xl text-white shadow-lg flex flex-col md:flex-row lg:flex-row gap-8">
           <div className="flex-1">
             <h3 className="text-xl font-bold mb-4">Income Bracket</h3>
             <p className="text-lg">

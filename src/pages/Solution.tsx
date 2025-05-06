@@ -91,7 +91,7 @@ function Solution() {
           <div>
             <h2 className="text-3xl font-bold mb-4 text-gray-800 relative inline-block">
               Smart Financial Solutions 💰
-              <span className="absolute -bottom-2 left-0 w-[40%] h-1 bg-red-800"></span>
+              <span className="absolute -bottom-2 left-0 w-[40%] h-1 bg-red"></span>
             </h2>
             {/* <p className="mb-6 text-lg text-gray-700 leading-relaxed">
               SabiSave provides a robust financial solution specifically
@@ -112,14 +112,14 @@ function Solution() {
             </p>
             <a
               href="#features"
-              className="inline-flex items-center bg-red-800 text-white px-6 py-3 rounded-lg font-medium hover:text-primary hover:bg-black transition-colors duration-300 mt-6"
+              className="inline-flex items-center bg-red text-white px-6 py-3 rounded-lg font-medium hover:text-primary hover:bg-black transition-colors duration-300 mt-6"
             >
               Explore Features <ArrowRight size={16} className="ml-2" />
             </a>
           </div>
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="absolute -left-4 -top-4 w-full h-full border-2 border-red-800 rounded-lg"></div>
+              <div className="absolute -left-4 -top-4 w-full h-full border-2 border-red rounded-lg"></div>
               <img
                 src={solutionImg}
                 alt="SabiSave Mobile App"
@@ -142,7 +142,7 @@ function Solution() {
             {productFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="bg-black to-white border border-red-800 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="bg-black to-white border border-red p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="inline-flex items-center justify-center p-4 bg-black rounded-full mb-4">
                   {feature.icon}
@@ -157,7 +157,7 @@ function Solution() {
         </div>
       </Section>
 
-      <Section background="primary" className="bg-red-800">
+      <Section background="primary" className="bg-red">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl font-bold mb-6 text-primary">
@@ -198,7 +198,7 @@ function Solution() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center bg-black p-6 rounded-lg hover:bg-black/50 transition-all duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-800 rounded-full mb-4 text-2xl font-bold">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red rounded-full mb-4 text-2xl font-bold">
                 1
               </div>
               <h3 className="text-xl font-bold mb-2">Download the App</h3>
@@ -207,7 +207,7 @@ function Solution() {
               </p>
             </div>
             <div className="text-center bg-black p-6 rounded-lg hover:bg-black/50 transition-all duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-800 rounded-full mb-4 text-2xl font-bold">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red rounded-full mb-4 text-2xl font-bold">
                 2
               </div>
               <h3 className="text-xl font-bold mb-2">Create an Account</h3>
@@ -216,7 +216,7 @@ function Solution() {
               </p>
             </div>
             <div className="text-center bg-black p-6 rounded-lg hover:bg-black/50 transition-all duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-800 rounded-full mb-4 text-2xl font-bold">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red rounded-full mb-4 text-2xl font-bold">
                 3
               </div>
               <h3 className="text-xl font-bold mb-2">Start Saving</h3>
@@ -226,7 +226,7 @@ function Solution() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-red-800 to-black p-8 rounded-lg shadow-lg">
+          <div className="bg-gradient-to-r from-red to-black p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold mb-4 text-center text-white">
               Watch How SabiSave Works
             </h3>
@@ -254,7 +254,7 @@ function Solution() {
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-red-800 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                  <div className="w-16 h-16 bg-red rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-8 w-8 text-white"
@@ -285,7 +285,7 @@ function Solution() {
                 <div className="absolute bottom-4 left-4 bg-black/70 px-3 py-1 rounded text-white text-sm">
                   2:45
                 </div>
-                <div className="absolute bottom-4 right-4 text-white font-medium bg-red-800 px-3 py-1 rounded text-sm">
+                <div className="absolute bottom-4 right-4 text-white font-medium bg-red px-3 py-1 rounded text-sm">
                   Click to Play
                 </div>
               </div>
@@ -294,7 +294,7 @@ function Solution() {
         </div>
       </Section>
 
-      <Section className="py-16 bg-red-800 text-black">
+      <Section className="py-16 bg-red text-black">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-white">
             Ready to Transform Your Trading Experience?
@@ -312,7 +312,7 @@ function Solution() {
             </a>
             <a
               href="#download"
-              className="px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-red-800 transition-colors duration-300"
+              className="px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-red transition-colors duration-300"
             >
               Download App
             </a>

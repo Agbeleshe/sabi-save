@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import appStore from "../assets/appStore.png";
 import playStore from "../assets/playStore.png";
-import backgroundImage from "../assets/mama.png";
-import backgroundImageMobile from "../assets/mamaMobilei.png";
+import backgroundImage from "../assets/desktopBG.png";
+import backgroundImageMobile from "../assets/mobileBG.png";
 import MotionAnimation from "../motion/MotionAnimation";
+import CircleAnimation from "../HOC/CircleAnimation";
 
 const Button: React.FC<
   {
@@ -70,10 +71,17 @@ export default function HeroSection() {
           {/* Text content */}
           <div className={isMobile ? "px-2" : ""}>
             <MotionAnimation>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6">
-                Let us <span className="text-[#FFBD59]">Save</span> <br />
-                daily together.
-              </h1>
+              <div className="relative">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6">
+                  Let us{" "}
+                  <span className="text-primary relative">
+                    Save{" "}
+                    <CircleAnimation className="absolute h-[80px] md:h-[180px] w-[110px] md:w-[180px] top-[-40%] md:top-[-70%] right-[-20%] md:right-[-20%]" />
+                  </span>{" "}
+                  <br />
+                  daily together.
+                </h1>
+              </div>
             </MotionAnimation>
             <MotionAnimation delay={0.3}>
               <p className="text-lg md:text-xl mb-8 text-white max-w-lg">
