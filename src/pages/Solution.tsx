@@ -99,13 +99,13 @@ function Solution() {
               combines ease of use with advanced security features to create a
               seamless experience for all users.
             </p> */}
-            <p className="mb-6">
+            {/* <p className="mb-6">
               The SabiSave mobile application enables users to process cash
               deposits with instant value, withdraw cash, verify account
               balances in real-time, and reconcile banking transactions—all from
               the convenience of their mobile device.
-            </p>
-            <p>
+            </p> */}
+            <p className="text-xl md:text-4xl">
               Our solution addresses the unique challenges faced by traders in
               managing their finances, providing them with a secure and
               efficient alternative to traditional cash handling methods.

@@ -39,7 +39,7 @@ export default function FinancialInclusionComponent() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center px-4 py-2 rounded-lg transition-all ${
                       activeTab === tab.id
-                        ? "bg-yellow-500 text-gray-900 font-medium"
+                        ? "bg-primary text-gray-900 font-medium"
                         : "bg-gray-700 text-gray-300 hover:bg-gray-600"
                     }`}
                   >
@@ -55,20 +55,18 @@ export default function FinancialInclusionComponent() {
               {activeTab === "trader" && (
                 <MotionAnimation>
                   <div className="space-y-4">
-                    <h2 className="text-2xl font-bold text-yellow-400">
-                      Trader
-                    </h2>
+                    <h2 className="text-2xl font-bold text-primary">Trader</h2>
                     <p className="text-gray-200">
                       With ease, traders can conveniently save in a wallet,
                       transfer funds and manage their funds in real time.
                     </p>
                     <div className="flex flex-wrap gap-4 mt-4">
                       <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
-                        <Wallet className="text-yellow-400" />
+                        <Wallet className="text-primary" />
                         <span>Digital Wallet</span>
                       </div>
                       <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
-                        <HandCoins className="text-yellow-400" />
+                        <HandCoins className="text-primary" />
                         <span>Real-time Transfers</span>
                       </div>
                     </div>
@@ -79,20 +77,18 @@ export default function FinancialInclusionComponent() {
               {activeTab === "agent" && (
                 <MotionAnimation>
                   <div className="space-y-4">
-                    <h2 className="text-2xl font-bold text-yellow-400">
-                      Agent
-                    </h2>
+                    <h2 className="text-2xl font-bold text-primary">Agent</h2>
                     <p className="text-gray-200">
                       Beyond saving, we are empowering individuals as agents,
                       and enhancing income growth.
                     </p>
                     <div className="flex flex-wrap gap-4 mt-4">
                       <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
-                        <Users className="text-yellow-400" />
+                        <Users className="text-primary" />
                         <span>Network Building</span>
                       </div>
                       <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
-                        <Globe className="text-yellow-400" />
+                        <Globe className="text-primary" />
                         <span>Community Impact</span>
                       </div>
                     </div>

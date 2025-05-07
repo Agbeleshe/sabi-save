@@ -81,13 +81,15 @@ function About() {
   // const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <>
+    <div className="max-w-[100vw] overflow-hidden">
       {/* Replace the first section with PageBanner */}
-      <PageBanner
-        title="About SabiSave"
-        subtitle="Revolutionizing financial solutions for traders and cash handlers"
-        backgroundImage={bannerImg}
-      />
+      <div className="relative">
+        <PageBanner
+          title="About SabiSave"
+          subtitle="Revolutionizing financial solutions for traders and cash handlers"
+          backgroundImage={bannerImg}
+        />
+      </div>
 
       <Section className="py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
@@ -96,7 +98,7 @@ function About() {
               What We Do❓
               <span className="absolute -bottom-2 left-0 w-[40%] h-1 bg-primary"></span>
             </h2>
-            <p className="mb-6 text-lg text-gray-700 leading-relaxed">
+            <p className="mb-6 text-lg md:text-4xl text-gray-700 leading-relaxed">
               We provide secure, accessible and user-friendly financial
               solutions that meet the unique needs of traders, while fostering
               economic growth and financial stability.
@@ -234,7 +236,7 @@ function About() {
 
       <Newsletter />
       <DownloadCTA />
-    </>
+    </div>
   );
 }
 
