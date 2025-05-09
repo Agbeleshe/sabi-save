@@ -1,6 +1,6 @@
 // import React from "react";
 // import { Smartphone, Users, Coins, BarChart3 } from "lucide-react";
-import HeroSection from "../components/HeroSection";
+// import HeroSection from "../components/HeroSection";
 //import Section from "../components/Section";
 // import SectionTitle from "../components/SectionTitle";
 // import FeatureCard from "../components/FeatureCard";
@@ -9,6 +9,7 @@ import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import Features from "../components/Features";
 import FinancialInclusionComponent from "../components/FinancialInclusionComponent";
+import NewHeroSection from "../components/NewHeroSection";
 
 function Home() {
   // const features = [
@@ -40,7 +41,8 @@ function Home() {
 
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <NewHeroSection />
 
       <FinancialInclusionComponent />
 

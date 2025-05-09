@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import Button from "./Button";
 import sabiLogo from "../assets/sabiSave3.png";
@@ -9,7 +9,8 @@ interface NavbarProps {
 
 function Navbar({ isScrolled }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const pathName = useLocation();
+  const location = pathName.pathname;
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -54,6 +55,8 @@ function Navbar({ isScrolled }: NavbarProps) {
                     ? "text-primary"
                     : isScrolled
                     ? "text-dark"
+                    : location === "/"
+                    ? "text-black"
                     : "text-white"
                 }`
               }
@@ -68,6 +71,8 @@ function Navbar({ isScrolled }: NavbarProps) {
                     ? "text-primary"
                     : isScrolled
                     ? "text-dark"
+                    : location === "/"
+                    ? "text-black"
                     : "text-white"
                 }`
               }
@@ -82,6 +87,8 @@ function Navbar({ isScrolled }: NavbarProps) {
                     ? "text-primary"
                     : isScrolled
                     ? "text-dark"
+                    : location === "/"
+                    ? "text-black"
                     : "text-white"
                 }`
               }
