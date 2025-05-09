@@ -6,7 +6,7 @@ import MotionAnimation from "../motion/MotionAnimation";
 
 const NewHeroSection = () => {
   return (
-    <div className="bg-gradient-to-br from-[#F7F7F766]/20 to-[#FDAD34]/20 min-h-screen w-full px-4 md:px-8 lg:px-16 py-12 md:py-20 items-center flex justify-center">
+    <div className="overflow-hidden  bg-gradient-to-br from-[#F7F7F766]/20 to-[#FDAD34]/20 min-h-screen w-full px-4 md:px-8 lg:px-16 py-12 md:py-20 items-center flex justify-center">
       <div className="container flex flex-col md:flex-row mx-auto pt-10 md:pt-0">
         {/* Left content - Text section */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8 flex flex-col justify-center">
@@ -63,7 +63,7 @@ const NewHeroSection = () => {
         </div>
 
         {/* Right content - Phone mockup */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div className="w-full md:w-1/2 h-[320px] md:h-auto flex justify-center md:justify-end">
           <MotionAnimation delay={0.7} motion="slide-left">
             <div className="relative w-64 md:w-80 2xl:w-[auto] mx-auto  ">
               <img
