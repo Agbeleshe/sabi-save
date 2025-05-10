@@ -5,7 +5,7 @@ import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
 import img from "../assets/manOnPhone.png";
 import { ArrowRight, Shield, Globe, Zap } from "lucide-react";
-import bannerImg from "../assets/temi.png";
+import bannerImg from "../assets/market.png";
 import sabiMockHand from "../assets/sabiMockHand.png";
 import MotionAnimation from "../motion/MotionAnimation";
 // import { useState } from "react";

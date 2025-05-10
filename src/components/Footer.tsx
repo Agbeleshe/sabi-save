@@ -8,8 +8,8 @@ import {
   MapPin,
 } from "lucide-react";
 import Logo from "../assets/sabiSaveLogo.png";
-import playStore from "../assets/playStore.png";
-import appStore from "../assets/appStore.png";
+import playStore from "../assets/playStore.svg";
+import appStore from "../assets/appStore.svg";
 import Button from "./Button";
 import MotionAnimation from "../motion/MotionAnimation";
 
@@ -146,13 +146,18 @@ function Footer() {
             <p className="mb-4 sm:mb-0 opacity-80">Download our app:</p>
             <MotionAnimation>
               <div className="flex space-x-4">
-                <Button href="#app-store" size="sm">
-                  <img src={playStore} height={30} width={30} />
-                  <span>App Store</span>
-                </Button>
-                <Button href="#play-store" size="sm">
-                  <img src={appStore} height={30} width={30} />
+                <Button variant="nutral" href="#app-store" size="sm">
+                  <img
+                    src={playStore}
+                    height={15}
+                    width={15}
+                    className="mr-1"
+                  />
                   <span>Play Store</span>
+                </Button>
+                <Button variant="secondary" href="#play-store" size="sm">
+                  <img src={appStore} height={15} width={15} className="mr-1" />
+                  <span>App store</span>
                 </Button>
               </div>
             </MotionAnimation>

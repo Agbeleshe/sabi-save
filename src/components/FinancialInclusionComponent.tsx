@@ -12,7 +12,7 @@ export default function FinancialInclusionComponent() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen flex items-center justify-center p-4">
+    <div className="bg-gradient-to-br from-black to-gray-800 text-white h-auto md:max-h-[500px] flex items-center justify-center p-4">
       <div className="w-full container  rounded-2xl overflow-hidden shadow-2xl">
         <div className="flex flex-col md:flex-row">
           {/* Left panel with content */}
@@ -60,7 +60,7 @@ export default function FinancialInclusionComponent() {
                       With ease, traders can conveniently save in a wallet,
                       transfer funds and manage their funds in real time.
                     </p>
-                    <div className="flex flex-wrap gap-4 mt-4">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 mt-4">
                       <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
                         <Wallet className="text-primary" />
                         <span>Digital Wallet</span>

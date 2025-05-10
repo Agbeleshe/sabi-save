@@ -1,6 +1,6 @@
 import Button from "./Button";
-import appStore from "../assets/appStore.png";
-import playStore from "../assets/playStore.png";
+import appStore from "../assets/appStore.svg";
+import playStore from "../assets/playStore.svg";
 import CircleAnimation from "../HOC/CircleAnimation";
 import MotionAnimation from "../motion/MotionAnimation";
 
@@ -34,26 +34,26 @@ function DownloadCTA() {
             <MotionAnimation motion="slide-up">
               {" "}
               <div className="flex flex-wrap flex-col md:flex-row  gap-4 animated-border">
-                <Button>
+                <Button variant={"secondary"}>
                   <div className="flex justify-start align-middle items-center  mx-auto md:min-w-[205px]">
                     <span>
                       <img
                         src={appStore}
-                        height={40}
-                        width={40}
+                        height={20}
+                        width={20}
                         alt="app store icon"
                       />
                     </span>
                     <p className="ml-2">Download for iOS</p>
                   </div>
                 </Button>
-                <Button>
+                <Button variant="nutral">
                   <div className="flex justify-start align-middle items-center mx-auto md:min-w-[205px]">
                     <span>
                       <img
                         src={playStore}
-                        height={40}
-                        width={40}
+                        height={20}
+                        width={20}
                         alt="play store icon"
                       />
                     </span>
