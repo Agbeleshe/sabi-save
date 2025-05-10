@@ -182,18 +182,22 @@ function About() {
         </div> */}
 
         <MotionAnimation>
-          <div className="bg-gradient-to-r from-red to-black p-8 rounded-xl text-white shadow-lg flex flex-col md:flex-row lg:flex-row gap-8">
+          <div className="bg-gradient-to-r from-red/10 border border-red to-[#B9B4F166]/20 p-8 rounded-xl text-white shadow-lg flex flex-col md:flex-row lg:flex-row gap-8">
             <div className="flex-1">
               <MotionAnimation delay={0.3}>
-                <h3 className="text-xl font-bold mb-4">Income Bracket</h3>
+                <h3 className="text-2xl font-bold mb-4 text-black">
+                  Income Bracket
+                </h3>
               </MotionAnimation>
               <MotionAnimation delay={0.5}>
-                <p className="text-lg">
+                <p className="text-lg text-red ">
                   Our solution primarily serves traders with a daily income of:
                 </p>
               </MotionAnimation>
               <MotionAnimation delay={0.7}>
-                <p className="text-3xl font-bold mt-2">₦1,000 – ₦10,000</p>
+                <p className="text-3xl font-bold mt-2 text-black">
+                  ₦1,000 – ₦10,000
+                </p>
               </MotionAnimation>
             </div>
             <div className="flex-1 relative w-[100%] h-[500px] md:h-[300px] ">

@@ -12,21 +12,24 @@ const NewHeroSection = () => {
         <div className="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8 flex flex-col justify-center">
           <div className="text-4xl md:text-[53px] 2xl:text-[80px] font-bold text-black leading-tight mb-6">
             <MotionAnimation>
-              <h1 className="max-w-[600px] md:max-w-[500px] 2xl:max-w-[800px]">
-                Simple and secure{" "}
-                <span className="text-primary relative">
-                  saving{" "}
-                  <CircleAnimation className="absolute h-[80px] md:h-[180px] w-[125px] md:w-[185px] top-[-40%] md:top-[-70%] right-[0%] md:right-[0%] 2xl:right-0 2xl:top-[-30%] 2xl:w-[280px]" />
-                </span>{" "}
-                wallet for market traders
-              </h1>
+              <div className="relative">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl font-bold text-black mb-6 ">
+                  Let us{" "}
+                  <span className="text-primary relative">
+                    Save{" "}
+                    <CircleAnimation className="absolute h-[80px] md:h-[180px] w-[110px] md:w-[180px] top-[-40%] md:top-[-70%] right-[-20%] md:right-[-20%] 2xl:w-[200px] 2xl:right-[-10%] 2xl:top-[-50%]" />
+                  </span>{" "}
+                  <br />
+                  daily together.
+                </h1>
+              </div>
             </MotionAnimation>
           </div>
           <MotionAnimation delay={0.3}>
             <p className="text-gray-600 text-base md:text-lg 2xl:text-[24px] mb-8 max-w-[600px] md:max-w-[500px] 2xl:max-w-[650px] leading-relaxed md:leading-[2rem] 2xl:leading-[2.5rem]">
-              We offer a transition from the traditional means of cash saving in
-              cash register by agents, to a more dynamic safe and flexible
-              platform
+              Sabi save is a digital platform that gives power to the trader to
+              save daily, send money and manage their business at their
+              convenience, and from their mobile phones for free
             </p>
           </MotionAnimation>
           <MotionAnimation delay={0.5}>
