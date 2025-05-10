@@ -130,7 +130,7 @@ function Footer() {
                       size={20}
                       className={`mr-2 ${
                         verticalAlign ? "mt-1" : ""
-                      } text-primary`}
+                      } text-white`}
                     />
                     <span className="opacity-80">{text}</span>
                   </li>

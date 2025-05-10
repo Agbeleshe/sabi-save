@@ -14,11 +14,11 @@ import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
 import solutionImg from "../assets/solutionImg.png";
 import bannerImg from "../assets/longImg.jpg";
-import tubeTumbnail from "../assets/temi.png";
-import { useState } from "react";
+// import tubeTumbnail from "../assets/temi.png";
+// import { useState } from "react";
 
 function Solution() {
-  const [videoPlaying, setVideoPlaying] = useState(false);
+  // const [videoPlaying, setVideoPlaying] = useState(false);
 
   const productFeatures = [
     {
@@ -73,9 +73,9 @@ function Solution() {
     "Additional revenue streams through commissions",
   ];
 
-  const handleVideoClick = () => {
-    setVideoPlaying(true);
-  };
+  // const handleVideoClick = () => {
+  //   setVideoPlaying(true);
+  // };
 
   return (
     <>
@@ -225,7 +225,7 @@ function Solution() {
               </p>
             </div>
           </div>
-
+          {/* 
           <div className="bg-gradient-to-r from-red to-black p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold mb-4 text-center text-white">
               Watch How SabiSave Works
@@ -290,7 +290,7 @@ function Solution() {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </Section>
 
