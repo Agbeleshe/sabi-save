@@ -1,28 +1,30 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Download, Menu, X } from "lucide-react";
+import { Download, Menu, X, Home, Info, Lightbulb, Phone } from "lucide-react";
 import Button from "./Button";
 import sabiLogo from "../assets/sabiSave3.png";
+import MobileNavigation from "./MobileNavbar";
 
 interface NavbarProps {
   isScrolled: boolean;
 }
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
-  { name: "Our Solution", path: "/solution" },
-  { name: "Contact Us", path: "/contact" },
+  { name: "Home", path: "/", icon: Home },
+  { name: "About Us", path: "/about", icon: Info },
+  { name: "Our Solution", path: "/solution", icon: Lightbulb },
+  { name: "Contact Us", path: "/contact", icon: Phone },
 ];
 
 function Navbar({ isScrolled }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const { pathname } = useLocation();
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   const getLinkClass = (isActive: boolean) =>
-    `font-medium hover:text-primary transition-colors ${
+    `font-medium hover:text-primary transition-colors flex items-center gap-1 ${
       isActive
         ? "text-primary"
         : isScrolled
@@ -43,7 +45,9 @@ function Navbar({ isScrolled }: NavbarProps) {
           <NavLink to="/" className="z-10">
             <img
               className={`h-[55px] w-[100px] md:h-[50px] ml-[-5px] md:w-[80px] ${
-                !isScrolled && pathname !== "/" ? "bg-primary/50" : ""
+                !isScrolled && pathname !== "/" && !isMenuOpen
+                  ? "bg-primary/50"
+                  : ""
               } rounded-md`}
               src={sabiLogo}
               alt="sabiSave logo"
@@ -51,7 +55,7 @@ function Navbar({ isScrolled }: NavbarProps) {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 2xl:text-[1.4rem] ">
+          <div className="hidden md:flex items-center space-x-8 2xl:text-[1.4rem]">
             {navLinks.map(({ name, path }) => (
               <NavLink
                 key={path}
@@ -66,9 +70,7 @@ function Navbar({ isScrolled }: NavbarProps) {
               href="#download"
               variant="primary"
             >
-              <span>
-                <Download size={20} className="mr-2" />
-              </span>
+              <Download size={20} className="mr-2" />
               Download App
             </Button>
           </div>
@@ -88,22 +90,7 @@ function Navbar({ isScrolled }: NavbarProps) {
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
-              {navLinks.map(({ name, path }) => (
-                <NavLink
-                  key={path}
-                  to={path}
-                  className={({ isActive }) =>
-                    `text-dark font-medium hover:text-primary transition-colors ${
-                      isActive ? "text-primary" : ""
-                    }`
-                  }
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {name}
-                </NavLink>
-              ))}
-            </div>
+            <MobileNavigation toggleMenu={toggleMenu} navLinks={navLinks} />
           </div>
         </nav>
       </div>

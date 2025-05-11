@@ -7,14 +7,14 @@ export default function TestimonialCarousel() {
     {
       quote:
         "With Sabi, I have been able to save more. Thanks to the flexible daily saving plan",
-      name: "Amina Emeka",
+      name: "Amina Ishaku",
       occupation: "Tomato Trader",
       rating: 3,
     },
     {
       quote:
         "My records are better organised, less hiccups. No need to write on cards since I started using Sabisave",
-      name: "Aliyu Kolawole",
+      name: "Ayo Kolawole",
       occupation: "Agent",
       rating: 4.5,
     },
@@ -88,7 +88,7 @@ export default function TestimonialCarousel() {
   useEffect(() => {
     if (!isMobile) startAutoScroll();
     return () => stopAutoScroll();
-  }, [isMobile]);
+  }, [isMobile, startAutoScroll]);
 
   const handleScroll = () => {
     const container = scrollRef.current;
@@ -160,47 +160,49 @@ export default function TestimonialCarousel() {
           </p>
         </MotionAnimation>
 
-        <div
-          ref={scrollRef}
-          onScroll={() => {
-            handleScroll();
-            handleMobileScrollPause();
-          }}
-          onMouseEnter={() => {
-            isHovering.current = true;
-          }}
-          onMouseLeave={() => {
-            isHovering.current = false;
-          }}
-          className="overflow-x-auto scrollbar-hide scroll-smooth"
-        >
-          <div className="flex gap-6 snap-x snap-mandatory px-2 md:px-0">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-white rounded-lg p-6 shadow-lg min-h-[200px]"
-              >
-                <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center overflow-hidden">
-                    <span className="text-white text-sm font-bold">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div className="ml-4">
-                    <p className="font-medium">{testimonial.name}</p>
-                    <p className="text-gray-500 text-sm">
-                      {testimonial.occupation}
-                    </p>
-                  </div>
-                  <div className="ml-auto flex">
-                    {renderStars(testimonial.rating)}
+        <MotionAnimation>
+          <div
+            ref={scrollRef}
+            onScroll={() => {
+              handleScroll();
+              handleMobileScrollPause();
+            }}
+            onMouseEnter={() => {
+              isHovering.current = true;
+            }}
+            onMouseLeave={() => {
+              isHovering.current = false;
+            }}
+            className="overflow-x-auto scrollbar-hide scroll-smooth"
+          >
+            <div className="flex gap-6 snap-x snap-mandatory px-2 md:px-0">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-white rounded-lg p-6 shadow-lg min-h-[200px]"
+                >
+                  <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center overflow-hidden">
+                      <span className="text-white text-sm font-bold">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div className="ml-4">
+                      <p className="font-medium">{testimonial.name}</p>
+                      <p className="text-gray-500 text-sm">
+                        {testimonial.occupation}
+                      </p>
+                    </div>
+                    <div className="ml-auto flex">
+                      {renderStars(testimonial.rating)}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        </MotionAnimation>
 
         <div className="flex justify-center mt-8 gap-2">
           {baseTestimonials.map((_, index) => (
