@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import Button from "./Button";
 import sabiLogo from "../assets/sabiSave3.png";
 interface NavbarProps {
@@ -96,6 +96,9 @@ function Navbar({ isScrolled }: NavbarProps) {
               Contact Us
             </NavLink>
             <Button href="#download" variant="primary">
+              <span>
+                <Download size={20} className="mr-2" />
+              </span>{" "}
               Download App
             </Button>
           </div>

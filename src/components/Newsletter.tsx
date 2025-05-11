@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MotionAnimation from "../motion/MotionAnimation";
+import { Send } from "lucide-react";
 
 function Newsletter() {
   const [email, setEmail] = useState("");
@@ -60,8 +61,12 @@ function Newsletter() {
                 required
                 className="flex-grow px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-dark"
               />
-              <button className="bg-black p-3 rounded-md hover:text-primary text-light border-dark">
-                {isSubmitting ? "Subscribing..." : "Subscribe"}
+              <button className=" bg-black p-3 rounded-md hover:text-primary text-light border-dark">
+                <span className="flex gap-2 mx-auto justify-center">
+                  {" "}
+                  <Send size={20} />{" "}
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
+                </span>
               </button>
             </form>
           </MotionAnimation>

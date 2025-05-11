@@ -4,10 +4,11 @@ import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
 import img from "../assets/manOnPhone.png";
-import { ArrowRight, Shield, Globe, Zap } from "lucide-react";
+import { ArrowRight, Shield, Globe, Zap, Phone, Download } from "lucide-react";
 import bannerImg from "../assets/market.png";
 import sabiMockHand from "../assets/sabiMockHand.png";
 import MotionAnimation from "../motion/MotionAnimation";
+import HowItWorks from "../components/HowItWorks";
 // import { useState } from "react";
 
 // Define TypeScript interfaces
@@ -181,8 +182,8 @@ function About() {
           })}
         </div> */}
 
-        <MotionAnimation>
-          <div className="bg-gradient-to-r from-red/10 border border-red to-[#B9B4F166]/20 p-8 rounded-xl text-white shadow-lg flex flex-col md:flex-row lg:flex-row gap-8">
+        <MotionAnimation delay={0.3} motion="slide-left">
+          <div className="bg-gradient-to-r from-red/20 border border-gray-100 to-[#B9B4F166]/20 p-8 rounded-xl text-white shadow-lg flex flex-col md:flex-row lg:flex-row gap-8">
             <div className="flex-1">
               <MotionAnimation delay={0.3}>
                 <h3 className="text-2xl font-bold mb-4 text-black">
@@ -204,7 +205,7 @@ function About() {
               <img
                 src={sabiMockHand}
                 alt="mock image"
-                className=" md:absolute right-[-94px] bottom-[-40px]"
+                className=" md:absolute right-[-103px] bottom-[-43px]"
               />
             </div>
           </div>
@@ -226,20 +227,22 @@ function About() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
+                className=" flex gap-2 px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
               >
-                Contact Us
+                <Phone size={20} /> Contact Us
               </a>
               <a
                 href="#download"
-                className="px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-primary transition-colors duration-300"
+                className=" flex gap-2 px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-primary transition-colors duration-300"
               >
-                Download App
+                <Download size={20} /> Download App
               </a>
             </div>
           </MotionAnimation>
         </div>
       </Section>
+
+      <HowItWorks />
 
       <Section background="dark">
         <div className="text-center max-w-3xl mx-auto">
