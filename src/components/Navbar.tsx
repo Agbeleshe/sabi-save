@@ -15,6 +15,11 @@ function Navbar({ isScrolled }: NavbarProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  console.log(location);
+
+  const condition =
+    !isScrolled && location !== "/" ? "bg-primary/50" : isScrolled && "bg-none";
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -25,7 +30,7 @@ function Navbar({ isScrolled }: NavbarProps) {
         <nav className="flex items-center justify-between">
           <NavLink to="/" className="z-10">
             <img
-              className="h-[55px] w-[100px] md:h-[50px] ml-[-5px]  md:w-[80px]"
+              className={`h-[55px] w-[100px] md:h-[50px] ml-[-5px]  md:w-[80px] ${condition} rounded-md`}
               src={sabiLogo}
               alt="sabiSave logo"
             />
@@ -106,7 +111,7 @@ function Navbar({ isScrolled }: NavbarProps) {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden z-10 text-dark hover:text-primary transition-colors"
+            className="md:hidden z-10 text-red hover:text-primary transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

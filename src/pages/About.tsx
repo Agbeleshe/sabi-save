@@ -201,11 +201,11 @@ function About() {
                 </p>
               </MotionAnimation>
             </div>
-            <div className="flex-1 relative w-[100%] h-[500px] md:h-[300px] ">
+            <div className="flex-1 min-h-[250px] relative w-[100%] h-[500px] md:h-[300px] ">
               <img
                 src={sabiMockHand}
                 alt="mock image"
-                className=" md:absolute right-[-103px] bottom-[-43px]"
+                className="absolute right-[-70px] bottom-[-40px]  md:right-[-103px] md:bottom-[-43px]"
               />
             </div>
           </div>
@@ -227,13 +227,13 @@ function About() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className=" flex gap-2 px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
+                className=" flex gap-2 justify-center px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
               >
                 <Phone size={20} /> Contact Us
               </a>
               <a
                 href="#download"
-                className=" flex gap-2 px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-primary transition-colors duration-300"
+                className=" flex gap-2 justify-center px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-primary transition-colors duration-300"
               >
                 <Download size={20} /> Download App
               </a>
