@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Star, StarHalf } from "lucide-react";
 import MotionAnimation from "../motion/MotionAnimation";
 
 export default function TestimonialCarousel() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const testimonials = [
+  const baseTestimonials = [
     {
       quote:
         "With Sabi, I have been able to save more. Thanks to the flexible daily saving plan",
@@ -27,14 +25,100 @@ export default function TestimonialCarousel() {
       occupation: "Yam Seller",
       rating: 3.5,
     },
-    // Adding a fourth testimonial to match the four dots in the original
     {
       quote: "Sabisave has transformed how I manage my business finances",
       name: "Bisi Adegoke",
       occupation: "Fashion Designer",
       rating: 5,
     },
+    {
+      quote:
+        "No more struggling with change or small savings, Sabi handles that easily",
+      name: "Chidi Okoro",
+      occupation: "Provision Store Owner",
+      rating: 4,
+    },
+    {
+      quote:
+        "I love how fast and easy it is to monitor my daily sales with Sabisave",
+      name: "Grace Umeh",
+      occupation: "Cosmetic Seller",
+      rating: 5,
+    },
   ];
+
+  // Clone testimonials to simulate infinite scroll
+  const testimonials = [...baseTestimonials, ...baseTestimonials];
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollInterval = useRef<NodeJS.Timeout | null>(null);
+  const manualScrollTimeout = useRef<NodeJS.Timeout | null>(null);
+  const isHovering = useRef(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.matchMedia("(max-width: 768px)").matches;
+
+  const scrollSpeed = 1;
+  const scrollDelay = 20;
+
+  const startAutoScroll = () => {
+    if (scrollInterval.current || isMobile) return;
+    scrollInterval.current = setInterval(() => {
+      if (!scrollRef.current || isHovering.current) return;
+
+      const container = scrollRef.current;
+      container.scrollLeft += scrollSpeed;
+
+      // Reset to start for infinite effect
+      const totalScrollWidth = container.scrollWidth / 2;
+      if (container.scrollLeft >= totalScrollWidth) {
+        container.scrollLeft = 0;
+      }
+    }, scrollDelay);
+  };
+
+  const stopAutoScroll = () => {
+    if (scrollInterval.current) {
+      clearInterval(scrollInterval.current);
+      scrollInterval.current = null;
+    }
+  };
+
+  useEffect(() => {
+    if (!isMobile) startAutoScroll();
+    return () => stopAutoScroll();
+  }, [isMobile]);
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const cardWidth = container.clientWidth * 0.85;
+    const scrollLeft = container.scrollLeft;
+    const index = Math.round(
+      (scrollLeft % (cardWidth * baseTestimonials.length)) / cardWidth
+    );
+
+    setActiveIndex(index);
+  };
+
+  const handleMobileScrollPause = () => {
+    if (!isMobile) return;
+    stopAutoScroll();
+    if (manualScrollTimeout.current) clearTimeout(manualScrollTimeout.current);
+    manualScrollTimeout.current = setTimeout(() => {
+      startAutoScroll();
+    }, 10000);
+  };
+
+  const goToSlide = (index: number) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const cardWidth = container.clientWidth * 0.85;
+    container.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+    setActiveIndex(index);
+  };
 
   const renderStars = (rating: number) => {
     const stars = [];
@@ -62,10 +146,6 @@ export default function TestimonialCarousel() {
     return stars;
   };
 
-  const goToSlide = (index: number) => {
-    setActiveIndex(index);
-  };
-
   return (
     <div className="bg-black py-16 px-4 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
@@ -75,53 +155,60 @@ export default function TestimonialCarousel() {
           </h2>
         </MotionAnimation>
         <MotionAnimation delay={0.3} motion="slide-up">
-          {" "}
           <p className="text-gray-400 text-center mb-12">
-            We asked our customers, what they think about SabiSave
+            We asked our customers what they think about SabiSave
           </p>
         </MotionAnimation>
 
-        <div className="flex flex-wrap justify-center gap-6">
-          {testimonials
-            .slice(activeIndex, activeIndex + 3)
-            .map((testimonial, index) => (
-              <MotionAnimation delay={0.2 * index} motion="slide-up">
-                <div
-                  key={index}
-                  className="bg-white rounded-lg p-6 w-full max-w-xs shadow-lg min-h-[200px]"
-                >
-                  <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
-
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center overflow-hidden">
-                      <span className="text-white text-lg font-bold">
-                        {testimonial.name.charAt(0)}
-                      </span>
-                    </div>
-
-                    <div className="ml-4">
-                      <p className="font-medium">{testimonial.name}</p>
-                      <p className="text-gray-500 text-sm">
-                        {testimonial.occupation}
-                      </p>
-                    </div>
-
-                    <div className="ml-auto flex">
-                      {renderStars(testimonial.rating)}
-                    </div>
+        <div
+          ref={scrollRef}
+          onScroll={() => {
+            handleScroll();
+            handleMobileScrollPause();
+          }}
+          onMouseEnter={() => {
+            isHovering.current = true;
+          }}
+          onMouseLeave={() => {
+            isHovering.current = false;
+          }}
+          className="overflow-x-auto scrollbar-hide scroll-smooth"
+        >
+          <div className="flex gap-6 snap-x snap-mandatory px-2 md:px-0">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-white rounded-lg p-6 shadow-lg min-h-[200px]"
+              >
+                <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center overflow-hidden">
+                    <span className="text-white text-sm font-bold">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div className="ml-4">
+                    <p className="font-medium">{testimonial.name}</p>
+                    <p className="text-gray-500 text-sm">
+                      {testimonial.occupation}
+                    </p>
+                  </div>
+                  <div className="ml-auto flex">
+                    {renderStars(testimonial.rating)}
                   </div>
                 </div>
-              </MotionAnimation>
+              </div>
             ))}
+          </div>
         </div>
 
         <div className="flex justify-center mt-8 gap-2">
-          {testimonials.map((_, index) => (
+          {baseTestimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full ${
-                activeIndex === index ? "bg-white" : "bg-gray-500"
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                activeIndex === index ? "bg-white scale-110" : "bg-gray-500"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
