@@ -10,6 +10,7 @@ import DownloadCTA from "../components/DownloadCTA";
 import Features from "../components/Features";
 import FinancialInclusionComponent from "../components/FinancialInclusionComponent";
 import NewHeroSection from "../components/NewHeroSection";
+import TestimonialCarousel from "../components/TestimonialCarousel";
 
 function Home() {
   // const features = [
@@ -51,6 +52,8 @@ function Home() {
       <DownloadCTA />
 
       <FAQ />
+
+      <TestimonialCarousel />
 
       {/* <Section id="features">
         <SectionTitle

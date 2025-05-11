@@ -3,22 +3,34 @@ import { NavLink, useLocation } from "react-router-dom";
 import { Download, Menu, X } from "lucide-react";
 import Button from "./Button";
 import sabiLogo from "../assets/sabiSave3.png";
+
 interface NavbarProps {
   isScrolled: boolean;
 }
 
+const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Our Solution", path: "/solution" },
+  { name: "Contact Us", path: "/contact" },
+];
+
 function Navbar({ isScrolled }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathName = useLocation();
-  const location = pathName.pathname;
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const { pathname } = useLocation();
 
-  console.log(location);
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
-  const condition =
-    !isScrolled && location !== "/" ? "bg-primary/50" : isScrolled && "bg-none";
+  const getLinkClass = (isActive: boolean) =>
+    `font-medium hover:text-primary transition-colors ${
+      isActive
+        ? "text-primary"
+        : isScrolled
+        ? "text-dark"
+        : pathname === "/"
+        ? "text-black"
+        : "text-white"
+    }`;
 
   return (
     <header
@@ -30,80 +42,33 @@ function Navbar({ isScrolled }: NavbarProps) {
         <nav className="flex items-center justify-between">
           <NavLink to="/" className="z-10">
             <img
-              className={`h-[55px] w-[100px] md:h-[50px] ml-[-5px]  md:w-[80px] ${condition} rounded-md`}
+              className={`h-[55px] w-[100px] md:h-[50px] ml-[-5px] md:w-[80px] ${
+                !isScrolled && pathname !== "/" ? "bg-primary/50" : ""
+              } rounded-md`}
               src={sabiLogo}
               alt="sabiSave logo"
             />
           </NavLink>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                ` font-medium hover:text-primary transition-colors ${
-                  isActive
-                    ? "text-primary"
-                    : isScrolled
-                    ? "text-dark"
-                    : "text-white"
-                }`
-              }
+          <div className="hidden md:flex items-center space-x-8 2xl:text-[1.4rem] ">
+            {navLinks.map(({ name, path }) => (
+              <NavLink
+                key={path}
+                to={path}
+                className={({ isActive }) => getLinkClass(isActive)}
+              >
+                {name}
+              </NavLink>
+            ))}
+            <Button
+              className="2xl:text-[1.4rem]"
+              href="#download"
+              variant="primary"
             >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                ` font-medium hover:text-primary transition-colors ${
-                  isActive
-                    ? "text-primary"
-                    : isScrolled
-                    ? "text-dark"
-                    : location === "/"
-                    ? "text-black"
-                    : "text-white"
-                }`
-              }
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/solution"
-              className={({ isActive }) =>
-                ` font-medium hover:text-primary transition-colors ${
-                  isActive
-                    ? "text-primary"
-                    : isScrolled
-                    ? "text-dark"
-                    : location === "/"
-                    ? "text-black"
-                    : "text-white"
-                }`
-              }
-            >
-              Our Solution
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                ` font-medium hover:text-primary transition-colors ${
-                  isActive
-                    ? "text-primary"
-                    : isScrolled
-                    ? "text-dark"
-                    : location === "/"
-                    ? "text-black"
-                    : "text-white"
-                }`
-              }
-            >
-              Contact Us
-            </NavLink>
-            <Button href="#download" variant="primary">
               <span>
                 <Download size={20} className="mr-2" />
-              </span>{" "}
+              </span>
               Download App
             </Button>
           </div>
@@ -124,50 +89,20 @@ function Navbar({ isScrolled }: NavbarProps) {
             }`}
           >
             <div className="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `text-dark font-medium hover:text-primary transition-colors ${
-                    isActive ? "text-primary" : ""
-                  }`
-                }
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `text-dark font-medium hover:text-primary transition-colors ${
-                    isActive ? "text-primary" : ""
-                  }`
-                }
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Us
-              </NavLink>
-              <NavLink
-                to="/solution"
-                className={({ isActive }) =>
-                  `text-dark font-medium hover:text-primary transition-colors ${
-                    isActive ? "text-primary" : ""
-                  }`
-                }
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Our Solution
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `text-dark font-medium hover:text-primary transition-colors ${
-                    isActive ? "text-primary" : ""
-                  }`
-                }
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact Us
-              </NavLink>
+              {navLinks.map(({ name, path }) => (
+                <NavLink
+                  key={path}
+                  to={path}
+                  className={({ isActive }) =>
+                    `text-dark font-medium hover:text-primary transition-colors ${
+                      isActive ? "text-primary" : ""
+                    }`
+                  }
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {name}
+                </NavLink>
+              ))}
             </div>
           </div>
         </nav>

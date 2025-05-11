@@ -9,6 +9,7 @@ import bannerImg from "../assets/market.png";
 import sabiMockHand from "../assets/sabiMockHand.png";
 import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
+import { Link } from "react-router-dom";
 // import { useState } from "react";
 
 // Define TypeScript interfaces
@@ -225,12 +226,12 @@ function About() {
           </MotionAnimation>
           <MotionAnimation delay={0.5} motion="slide-up">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className=" flex gap-2 justify-center px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
               >
                 <Phone size={20} /> Contact Us
-              </a>
+              </Link>
               <a
                 href="#download"
                 className=" flex gap-2 justify-center px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-primary transition-colors duration-300"
