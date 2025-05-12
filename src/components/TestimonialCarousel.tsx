@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Star, StarHalf } from "lucide-react";
 import MotionAnimation from "../motion/MotionAnimation";
 
@@ -62,7 +62,7 @@ export default function TestimonialCarousel() {
   const scrollSpeed = 1;
   const scrollDelay = 20;
 
-  const startAutoScroll = () => {
+  const startAutoScroll = useCallback(() => {
     if (scrollInterval.current || isMobile) return;
     scrollInterval.current = setInterval(() => {
       if (!scrollRef.current || isHovering.current) return;
@@ -76,7 +76,7 @@ export default function TestimonialCarousel() {
         container.scrollLeft = 0;
       }
     }, scrollDelay);
-  };
+  }, [isMobile, scrollSpeed, scrollDelay]);
 
   const stopAutoScroll = () => {
     if (scrollInterval.current) {

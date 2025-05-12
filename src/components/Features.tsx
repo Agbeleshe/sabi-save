@@ -152,7 +152,8 @@ const Features = () => {
   // Sample data for the FeaturesCardOne component
   const featureThreeData = {
     header: "Your money is safe",
-    description: "Registration is easy, seamless and fast.",
+    description:
+      "Registration is easy, fast and seamless, and our partnership with Opay and Meristem ensures the safety of your funds and guarantees a descent returns on your savings. .",
     img: marketWomanTwo,
     tag: "Digital Wallet",
     link: "Get it now",
@@ -160,9 +161,9 @@ const Features = () => {
 
   // Sample data for the FeaturesCardTwo component
   const featureFourData = {
-    header: "Easy to use dahsboard",
+    header: "Easy to use dashboard",
     description:
-      "A robust dashboard for the registration of traders, and for agents to monitor and manage trader accounts",
+      "A robust dashboard for the registration of traders, artisans and for agents to monitor and manage trader accounts",
     tag: "Agent Account",
     img: mockPhone,
     link: "Get it now",

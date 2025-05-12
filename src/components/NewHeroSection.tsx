@@ -20,16 +20,16 @@ const NewHeroSection = () => {
                     <CircleAnimation className="absolute h-[80px] md:h-[180px] w-[110px] md:w-[180px] top-[-40%] md:top-[-70%] right-[-20%] md:right-[-20%] 2xl:w-[200px] 2xl:right-[-10%] 2xl:top-[-50%]" />
                   </span>{" "}
                   <br />
-                  daily together.
+                  and grow together
                 </h1>
               </div>
             </MotionAnimation>
           </div>
           <MotionAnimation delay={0.3}>
             <p className="text-gray-600 text-base md:text-lg 2xl:text-[24px] mb-8 max-w-[600px] md:max-w-[500px] 2xl:max-w-[650px] leading-relaxed md:leading-[2rem] 2xl:leading-[2.5rem]">
-              Sabi save is a digital platform that gives power to the trader to
-              save daily, send money and manage their business at their
-              convenience, and from their mobile phones for free
+              Sabi save is a digital platform that provides traders and artisans
+              with an easy way to save daily and manage their business
+              conveniently from their mobile phones for free.
             </p>
           </MotionAnimation>
           <MotionAnimation delay={0.5}>
