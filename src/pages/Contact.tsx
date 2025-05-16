@@ -4,7 +4,7 @@ import ContactForm from "../components/ContactForm";
 import FAQ from "../components/FAQ";
 import Newsletter from "../components/Newsletter";
 import PageBanner from "../components/PageBanner";
-import bannerImg from "../assets/sabiSaveCustomerCare.png";
+import bannerImg from "../assets/PictureBg.png";
 
 function Contact() {
   const contactInfo = [

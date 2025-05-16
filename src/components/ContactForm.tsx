@@ -111,7 +111,7 @@ function ContactForm() {
         />
       </div>
 
-      <Button type="submit" size="lg" className="w-full sm:w-auto">
+      <Button type="submit" size="lg" className="w-full sm:w-auto text-white">
         <Send size={20} className="mx-2" />{" "}
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
