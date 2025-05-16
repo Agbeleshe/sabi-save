@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
 //import marketWoman from "../assets/MarketWoman.jpg";
 //import longImgOne from "../assets/longImg.jpg";
-import longImgTwo from "../assets/longImggTwo.jpg";
+import longImgTwo from "../assets/sabi/hajiyaTailor.jpg";
 import mockPhone from "../assets/phone.png";
-import marketWomanTwo from "../assets/marketWomanTwo.jpg";
+import marketWomanTwo from "../assets/sabi/mamaUnderSun.jpg";
 import MotionAnimation from "../motion/MotionAnimation";
 
 // Define interface for FeaturesCardOne props
@@ -59,14 +59,25 @@ const FeaturesCardOne = ({
           </a>
         </MotionAnimation>
       </div>
-      <div className="cursor-pointer overflow-hidden w-full md:w-1/2 h-64 md:h-auto">
+      <div className="md:hidden">
         <MotionAnimation motion="slide-left">
-          <img
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            src={img}
-            alt={header}
-          />
+          {" "}
+          <div className="cursor-pointer overflow-hidden w-full md:w-1/2 h-64 md:h-auto">
+            <img
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              src={img}
+              alt={header}
+            />
+          </div>
         </MotionAnimation>
+      </div>{" "}
+      {/* Laptop image */}
+      <div className="hidden md:block cursor-pointer overflow-hidden w-full md:w-1/2 h-64 md:h-auto">
+        <img
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          src={img}
+          alt={header}
+        />
       </div>
     </div>
   );
@@ -219,11 +230,11 @@ const Features = () => {
 
       <div className="flex flex-col w-full gap-5 md:flex-row mt-5">
         {/* Left column - Image */}
-        <div className="w-full hidden md:flex md:w-[40%] rounded-[20px] h-80 md:h-[600px] overflow-hidden cursor-pointer hover:scale-[1.02] transition-all ease-in-out duration-1000">
+        <div className="w-full  hidden md:flex md:w-[40%] rounded-[20px] h-80 md:h-[600px] overflow-hidden cursor-pointer hover:scale-[1.02] transition-all ease-in-out duration-1000">
           <MotionAnimation>
             <img
               src={longImgTwo}
-              className="w-full h-full object-cover"
+              className="w-auto object-cover "
               alt="Feature image"
             />
           </MotionAnimation>

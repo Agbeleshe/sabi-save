@@ -50,7 +50,7 @@ export default function MobileNavigation({
           <a href="#download" className="p-4">
             <button
               onClick={handleNav}
-              className="w-full flex justify-center gap-2 bg-primary text-black py-3 rounded-md font-medium"
+              className="w-full flex justify-center gap-2 bg-primary text-white py-3 rounded-md font-medium"
             >
               <Download size={20} /> Download App
             </button>
