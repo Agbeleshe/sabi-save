@@ -1,24 +1,23 @@
-import { useState } from "react";
 import { Wallet, Users, Globe, HandCoins } from "lucide-react";
 import ThreeDmodal from "./ThreeDmodal";
 import MotionAnimation from "../motion/MotionAnimation";
 
 export default function FinancialInclusionComponent() {
-  const [activeTab, setActiveTab] = useState("trader");
+  // const [activeTab, setActiveTab] = useState("trader");
 
-  const tabs = [
-    { id: "trader", title: "Trader", icon: <Wallet size={24} /> },
-    { id: "agent", title: "Agent", icon: <Users size={24} /> },
-  ];
+  // const tabs = [
+  //   { id: "trader", title: "Trader", icon: <Wallet size={24} /> },
+  //   { id: "agent", title: "Agent", icon: <Users size={24} /> },
+  // ];
 
   return (
-    <div className="bg-gradient-to-br from-black to-gray-800 text-white h-auto md:max-h-[500px] flex items-center justify-center p-4">
+    <div className="bg-gradient-to-br from-black to-gray-800 text-white h-auto md:max-h-[600px] flex items-center justify-center p-4">
       <div className="w-full container  rounded-2xl overflow-hidden shadow-2xl">
         <div className="flex flex-col md:flex-row">
           {/* Left panel with content */}
           <div className="p-8 md:p-12 flex-1">
             <MotionAnimation motion="slide-down">
-              <h1 className="text-4xl font-bold mb-2 bg-primary bg-clip-text text-transparent">
+              <h1 className="text-2xl  md:text-4xl font-bold mb-2 bg-primary bg-clip-text text-transparent">
                 How are we making a difference?
               </h1>
             </MotionAnimation>
@@ -31,7 +30,7 @@ export default function FinancialInclusionComponent() {
             </MotionAnimation>
 
             {/* Tabs */}
-            <MotionAnimation>
+            {/* <MotionAnimation>
               <div className="flex space-x-4 mb-6">
                 {tabs.map((tab) => (
                   <button
@@ -48,53 +47,62 @@ export default function FinancialInclusionComponent() {
                   </button>
                 ))}
               </div>
-            </MotionAnimation>
+            </MotionAnimation> */}
 
             {/* Tab content */}
-            <div className="bg-gray-700 p-6 rounded-xl">
-              {activeTab === "trader" && (
-                <MotionAnimation>
-                  <div className="space-y-4">
-                    <h2 className="text-2xl font-bold text-primary">Trader</h2>
-                    <p className="text-gray-200">
-                      With ease, traders and artisans can conveniently save in a wallet,
-                      transfer funds and manage their funds in real time.
-                    </p>
-                    <div className="flex flex-col md:flex-row flex-wrap gap-4 mt-4">
-                      <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
-                        <Wallet className="text-primary" />
-                        <span>Digital Wallet</span>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
-                        <HandCoins className="text-primary" />
-                        <span>Real-time Transfers</span>
-                      </div>
-                    </div>
-                  </div>
+            <div className="bg-gray-700 p-6 rounded-xl flex flex-col md:flex-row gap-10 md:gap-5">
+              <div className="space-y-4 flex-1">
+                <MotionAnimation delay={0.3}>
+                  <h2 className="text-2xl font-bold text-primary">Trader</h2>
                 </MotionAnimation>
-              )}
+                <MotionAnimation delay={0.5} motion="slide-up">
+                  <p className="text-gray-200">
+                    With ease, traders and artisans can conveniently save in a
+                    wallet, transfer funds and manage their funds.
+                  </p>
+                </MotionAnimation>
+                <div className="flex flex-col  flex-wrap gap-4 mt-4">
+                  <MotionAnimation delay={0.5} motion="slide-down">
+                    <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
+                      <Wallet className="text-primary" />
+                      <span>Digital Wallet</span>
+                    </div>
+                  </MotionAnimation>
+                  <MotionAnimation delay={0.7} motion="slide-down">
+                    <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
+                      <HandCoins className="text-primary" />
+                      <span>Real-time Transfers</span>
+                    </div>
+                  </MotionAnimation>
+                </div>
+              </div>
 
-              {activeTab === "agent" && (
-                <MotionAnimation>
-                  <div className="space-y-4">
-                    <h2 className="text-2xl font-bold text-primary">Agent</h2>
-                    <p className="text-gray-200">
-                      Beyond saving, we are empowering individuals as agents,
-                      and enhancing income growth.
-                    </p>
-                    <div className="flex flex-wrap gap-4 mt-4">
-                      <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
-                        <Users className="text-primary" />
-                        <span>Network Building</span>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
-                        <Globe className="text-primary" />
-                        <span>Community Impact</span>
-                      </div>
-                    </div>
-                  </div>
+              <div className="space-y-4 flex-1">
+                <MotionAnimation delay={0.3} motion="slide-left">
+                  <h2 className="text-2xl font-bold text-primary">Agent</h2>
                 </MotionAnimation>
-              )}
+
+                <MotionAnimation delay={0.5} motion="slide-up">
+                  <p className="text-gray-200">
+                    Beyond saving, we are empowering individuals as agents, and
+                    enhancing income growth.
+                  </p>
+                </MotionAnimation>
+                <div className="flex flex-col flex-wrap gap-4 mt-4">
+                  <MotionAnimation delay={0.5} motion="slide-down">
+                    <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
+                      <Users className="text-primary" />
+                      <span>Network Building</span>
+                    </div>
+                  </MotionAnimation>
+                  <MotionAnimation delay={0.7} motion="slide-down">
+                    <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
+                      <Globe className="text-primary" />
+                      <span>Community Impact</span>
+                    </div>
+                  </MotionAnimation>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -13,7 +13,7 @@ function DownloadCTA() {
             <div className="relative">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-light">
                 Get saving the{" "}
-                <span className=" text-[#FFBD59] relative">
+                <span className=" text-blueOne relative">
                   SABI{" "}
                   <CircleAnimation
                     className="w-[80px] md:w-[100px] h-[120px] absolute top-[-40px] right-[1%] md:right-[1%]"
