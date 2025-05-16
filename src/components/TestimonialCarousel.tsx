@@ -128,15 +128,11 @@ export default function TestimonialCarousel() {
     for (let i = 0; i < 5; i++) {
       if (i < fullStars) {
         stars.push(
-          <Star key={i} className="text-yellow-400 fill-primary" size={16} />
+          <Star key={i} className="text-blueTwo fill-primary" size={16} />
         );
       } else if (i === fullStars && hasHalfStar) {
         stars.push(
-          <StarHalf
-            key={i}
-            className="text-yellow-400 fill-primary"
-            size={16}
-          />
+          <StarHalf key={i} className="text-blueTwo fill-primary" size={16} />
         );
       } else {
         stars.push(<Star key={i} className="text-gray-300" size={16} />);
@@ -183,7 +179,7 @@ export default function TestimonialCarousel() {
                 >
                   <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
                   <div className="flex items-center">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center overflow-hidden">
+                    <div className="w-8 h-8 bg-blueOne rounded-full flex items-center justify-center overflow-hidden">
                       <span className="text-white text-sm font-bold">
                         {testimonial.name.charAt(0)}
                       </span>

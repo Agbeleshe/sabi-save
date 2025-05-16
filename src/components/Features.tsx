@@ -34,7 +34,7 @@ const FeaturesCardOne = ({
   link,
 }: FeaturesCardOneProps) => {
   return (
-    <div className="w-full mt-5 md:h-[500px] bg-gradient-to-br hover:scale-[1.02] transition-all ease-in-out duration-1000 cursor-pointer from-yellow-50 to-white flex flex-col md:flex-row overflow-hidden rounded-3xl md:rounded-[20px] border border-primary">
+    <div className="w-full mt-5 md:h-[500px] bg-gradient-to-br hover:scale-[1.02] transition-all ease-in-out duration-1000 cursor-pointer from-blueOne/20 to-white flex flex-col md:flex-row overflow-hidden rounded-3xl md:rounded-[20px] border border-primary/40">
       <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-between">
         <div>
           <div>
@@ -45,7 +45,7 @@ const FeaturesCardOne = ({
             </MotionAnimation>
           </div>
           <MotionAnimation delay={0.3} motion="slide-right">
-            <h1 className="text-3xl md:text-4xl text-primary font-bold my-2 md:my-3">
+            <h1 className="text-3xl md:text-4xl text-blueTwo font-bold my-2 md:my-3">
               {header}
             </h1>
             <p className="text-base md:text-md my-2 md:my-3">{description}</p>
@@ -79,7 +79,7 @@ const FeaturesCardTwo = ({
   img,
   link,
   bgColor = "bg-primary",
-  textColor = "text-black",
+  textColor = "text-white",
 }: FeaturesCardTwoProps) => {
   return (
     <div className="w-full  border border-gray-600 md:w-[60%] bg-gradient-to-br from-gray-200 to-white rounded-[20px] h-auto md:h-[600px] p-6 md:p-10 overflow-hidden cursor-pointer hover:scale-[1.02] transition-all ease-in-out duration-1000 flex flex-col">
@@ -168,7 +168,7 @@ const Features = () => {
     img: mockPhone,
     link: "Get it now",
     bgColor: "bg-primary",
-    textColor: "text-black",
+    textColor: "text-white",
   };
 
   //Removed data
