@@ -11,7 +11,7 @@ export default function FAQ() {
     {
       question: "What is SabiSave?",
       answer:
-        "SabiSave is a mobile application software and backend solution that has been built for petty traders and high volume cash handlers. The solution is both dynamic and robust, and will enable users process cash deposit and receive instant value for same, withdraw cash, verify account balances real time and reconcile banking transactions.",
+        "SabiSave is a mobile application software and backend solution that has been built for petty traders, artisans and high volume cash handlers. The solution is both dynamic and robust, and will enable users process cash deposit and receive instant value for same, withdraw cash, verify account balances real time and reconcile banking transactions.",
     },
     {
       question: "How can I register as a trader on SabiSave?",

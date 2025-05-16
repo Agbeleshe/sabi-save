@@ -123,7 +123,7 @@ function Solution() {
             </p> */}
             <MotionAnimation>
               <p className="text-xl md:text-4xl">
-                Our solution addresses the unique challenges faced by traders in
+                Our solution addresses the unique challenges faced by traders and artisans in
                 managing their finances, providing them with a secure and
                 efficient alternative to traditional cash handling methods.
               </p>
@@ -157,7 +157,7 @@ function Solution() {
           <MotionAnimation motion="slide-up">
             <SectionTitle
               title="Product Features"
-              subtitle="Discover the powerful features that make SabiSave the ideal solution for traders"
+              subtitle="Discover the powerful features that make SabiSave the ideal solution for traders and artisans"
               centered
             />
           </MotionAnimation>
@@ -205,7 +205,7 @@ function Solution() {
           <div>
             <MotionAnimation motion="slide-up">
               <h2 className="text-3xl font-bold mb-6 text-primary">
-                Benefits for Traders
+                Benefits for Traders and Artisans
               </h2>
             </MotionAnimation>
             <ul className="space-y-4">
@@ -253,7 +253,7 @@ function Solution() {
           </MotionAnimation>
           <MotionAnimation motion="slide-up">
             <p className="text-lg mb-8 text-gray-200">
-              Join thousands of traders who are already benefiting from our
+              Join thousands of traders and artisans who are already benefiting from our
               innovative financial solutions.
             </p>
           </MotionAnimation>

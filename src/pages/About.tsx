@@ -69,7 +69,7 @@ function About() {
     {
       title: "Accessibility",
       description:
-        "User-friendly interface designed for traders of all technological backgrounds",
+        "User-friendly interface designed for traders and artisans of all technological backgrounds",
       icon: Globe,
     },
     {
@@ -89,7 +89,7 @@ function About() {
       <div className="relative">
         <PageBanner
           title="About SabiSave"
-          subtitle="Revolutionizing financial solutions for traders and cash handlers"
+          subtitle="Revolutionizing financial solutions for traders and artisans"
           backgroundImage={bannerImg}
         />
       </div>
@@ -108,7 +108,7 @@ function About() {
             <MotionAnimation delay={0.3}>
               <p className="mb-6 text-lg md:text-4xl text-gray-700 leading-relaxed">
                 We provide secure, accessible and user-friendly financial
-                solutions that meet the unique needs of traders, while fostering
+                solutions that meet the unique needs of traders and artisans, while fostering
                 economic growth and financial stability.
               </p>
             </MotionAnimation>
@@ -193,7 +193,7 @@ function About() {
               </MotionAnimation>
               <MotionAnimation delay={0.5}>
                 <p className="text-lg text-red ">
-                  Our solution primarily serves traders with a daily income of:
+                  Our solution primarily serves traders and artisans with a daily income of:
                 </p>
               </MotionAnimation>
               <MotionAnimation delay={0.7}>
@@ -220,7 +220,7 @@ function About() {
           </MotionAnimation>
           <MotionAnimation delay={0.3} motion="slide-up">
             <p className="text-lg mb-8">
-              Join thousands of traders who are already benefiting from our
+              Join thousands of traders and artisans who are already benefiting from our
               innovative financial solutions.
             </p>
           </MotionAnimation>
@@ -254,7 +254,7 @@ function About() {
             <p className="text-lg mb-8">
               At SabiSave, we are committed to providing financial solutions
               that are secure, accessible, and tailored to meet the unique needs
-              of traders. Our team works tirelessly to ensure that our platform
+              of traders and artisans. Our team works tirelessly to ensure that our platform
               remains at the forefront of financial technology innovation.
             </p>
           </MotionAnimation>

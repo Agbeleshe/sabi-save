@@ -44,7 +44,7 @@ function Navbar({ isScrolled }: NavbarProps) {
         <nav className="flex items-center justify-between">
           <NavLink to="/" className="z-10">
             <img
-              className={`h-[55px] w-[100px] md:h-[50px] ml-[-5px] md:w-[80px] ${
+              className={`h-[55px] w-[60px] md:h-[60px] ml-[-5px] md:w-[60px] ${
                 !isScrolled && pathname !== "/" && !isMenuOpen
                   ? "bg-primary/50"
                   : ""
@@ -66,7 +66,7 @@ function Navbar({ isScrolled }: NavbarProps) {
               </NavLink>
             ))}
             <Button
-              className="2xl:text-[1.4rem]"
+              className="2xl:text-[1.4rem] text-white"
               href="#download"
               variant="primary"
             >

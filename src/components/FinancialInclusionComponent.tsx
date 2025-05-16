@@ -57,7 +57,7 @@ export default function FinancialInclusionComponent() {
                   <div className="space-y-4">
                     <h2 className="text-2xl font-bold text-primary">Trader</h2>
                     <p className="text-gray-200">
-                      With ease, traders can conveniently save in a wallet,
+                      With ease, traders and artisans can conveniently save in a wallet,
                       transfer funds and manage their funds in real time.
                     </p>
                     <div className="flex flex-col md:flex-row flex-wrap gap-4 mt-4">
