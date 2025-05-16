@@ -77,7 +77,7 @@ export default function HowItWorks() {
         <div className="text-center">
           <a href="#download">
             {" "}
-            <button className="flex gap-2 mx-auto bg-primary text-black hover:text-primary hover:bg-black font-bold py-3 px-8 rounded-lg transition-all duration-300">
+            <button className=" flex gap-2 mx-auto bg-primary text-white hover:text-primary hover:bg-black font-bold py-3 px-8 rounded-lg transition-all duration-300">
               <ThumbsUp /> Get started
             </button>
           </a>

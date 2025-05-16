@@ -46,7 +46,7 @@ function Navbar({ isScrolled }: NavbarProps) {
             <img
               className={`h-[55px] w-[60px] md:h-[60px] ml-[-5px] md:w-[60px] ${
                 !isScrolled && pathname !== "/" && !isMenuOpen
-                  ? "bg-primary/50"
+                  ? "bg-primary/0"
                   : ""
               } rounded-md`}
               src={sabiLogo}

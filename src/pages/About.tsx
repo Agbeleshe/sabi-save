@@ -3,9 +3,17 @@ import Section from "../components/Section";
 import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
-import img from "../assets/manOnPhone.png";
-import { ArrowRight, Shield, Globe, Zap, Phone, Download } from "lucide-react";
-import bannerImg from "../assets/market.png";
+import img from "../assets/sabi/provisionWomanOne.jpg";
+import {
+  ArrowRight,
+  Shield,
+  Globe,
+  Zap,
+  Phone,
+  Download,
+  Info,
+} from "lucide-react";
+import bannerImg from "../assets/sabi/newAiKekeMan.jpg";
 import sabiMockHand from "../assets/sabiMockHand.png";
 import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
@@ -98,8 +106,11 @@ function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <MotionAnimation>
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 relative inline-block">
-                What We Do❓
+              <h2 className="text-3xl font-bold mb-4 text-gray-800 relative flex">
+                What We Do
+                <span className="ml-3 text-blueTwo">
+                  <Info size={30} />
+                </span>
                 <MotionAnimation delay={0.5}>
                   <span className="absolute -bottom-2 left-0 w-[40%] h-1 bg-primary"></span>
                 </MotionAnimation>
@@ -108,14 +119,14 @@ function About() {
             <MotionAnimation delay={0.3}>
               <p className="mb-6 text-lg md:text-4xl text-gray-700 leading-relaxed">
                 We provide secure, accessible and user-friendly financial
-                solutions that meet the unique needs of traders and artisans, while fostering
-                economic growth and financial stability.
+                solutions that meet the unique needs of traders and artisans,
+                while fostering economic growth and financial stability.
               </p>
             </MotionAnimation>
             <MotionAnimation delay={0.5}>
               <a
                 href="#services"
-                className="inline-flex items-center bg-primary text-black px-6 py-3 rounded-lg font-medium hover:text-primary hover:bg-black transition-colors duration-300"
+                className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-medium hover:text-primary hover:bg-black transition-colors duration-300"
               >
                 Our Services <ArrowRight size={16} className="ml-2" />
               </a>
@@ -187,13 +198,14 @@ function About() {
           <div className="bg-gradient-to-r from-red/20 border border-gray-100 to-[#B9B4F166]/20 p-8 rounded-xl text-white shadow-lg flex flex-col md:flex-row lg:flex-row gap-8">
             <div className="flex-1">
               <MotionAnimation delay={0.3}>
-                <h3 className="text-2xl font-bold mb-4 text-black">
+                <h3 className="text-2xl font-bold mb-4 text-primary">
                   Income Bracket
                 </h3>
               </MotionAnimation>
               <MotionAnimation delay={0.5}>
                 <p className="text-lg text-red ">
-                  Our solution primarily serves traders and artisans with a daily income of:
+                  Our solution primarily serves traders and artisans with a
+                  daily income of:
                 </p>
               </MotionAnimation>
               <MotionAnimation delay={0.7}>
@@ -216,12 +228,14 @@ function About() {
       <Section className="py-16 bg-primary text-black">
         <div className="text-center max-w-3xl mx-auto">
           <MotionAnimation motion="slide-down">
-            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white">
+              Ready to Get Started?
+            </h2>
           </MotionAnimation>
           <MotionAnimation delay={0.3} motion="slide-up">
             <p className="text-lg mb-8">
-              Join thousands of traders and artisans who are already benefiting from our
-              innovative financial solutions.
+              Join thousands of traders and artisans who are already benefiting
+              from our innovative financial solutions.
             </p>
           </MotionAnimation>
           <MotionAnimation delay={0.5} motion="slide-up">
@@ -254,8 +268,9 @@ function About() {
             <p className="text-lg mb-8">
               At SabiSave, we are committed to providing financial solutions
               that are secure, accessible, and tailored to meet the unique needs
-              of traders and artisans. Our team works tirelessly to ensure that our platform
-              remains at the forefront of financial technology innovation.
+              of traders and artisans. Our team works tirelessly to ensure that
+              our platform remains at the forefront of financial technology
+              innovation.
             </p>
           </MotionAnimation>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

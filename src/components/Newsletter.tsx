@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import MotionAnimation from "../motion/MotionAnimation";
 import { Send } from "lucide-react";
+import Lottie from "lottie-react";
+import sendAnimation from "../assets/lottie/send.json";
 
 function Newsletter() {
   const [email, setEmail] = useState("");
@@ -29,7 +31,7 @@ function Newsletter() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <MotionAnimation motion="slide-down">
-            <h2 className="text-3xl font-bold mb-4 text-dark">
+            <h2 className="text-3xl font-bold mb-4 text-white">
               Stay Informed and Connected
             </h2>
           </MotionAnimation>
@@ -64,7 +66,12 @@ function Newsletter() {
               <button className=" bg-black p-3 rounded-md hover:text-primary text-light border-dark">
                 <span className="flex gap-2 mx-auto justify-center">
                   {" "}
-                  <Send size={20} />{" "}
+                  <Lottie
+                    animationData={sendAnimation}
+                    loop={true}
+                    autoplay
+                    style={{ width: "30px", height: "100%" }}
+                  />
                   {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </span>
               </button>
