@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import MotionAnimation from "../motion/MotionAnimation";
-import { Send } from "lucide-react";
 import Lottie from "lottie-react";
 import sendAnimation from "../assets/lottie/send.json";
 

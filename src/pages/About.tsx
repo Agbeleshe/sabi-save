@@ -3,7 +3,7 @@ import Section from "../components/Section";
 import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
-import img from "../assets/sabi/provisionWomanOne.jpg";
+import img from "../assets/sabi/newAiKekeMan.jpg";
 import {
   ArrowRight,
   Shield,
@@ -13,7 +13,7 @@ import {
   Download,
   Info,
 } from "lucide-react";
-import bannerImg from "../assets/sabi/newAiKekeMan.jpg";
+import bannerImg from "../assets/sabi/hajiyaTailor.jpg";
 import sabiMockHand from "../assets/sabiMockHand.png";
 import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
@@ -262,7 +262,9 @@ function About() {
       <Section background="dark">
         <div className="text-center max-w-3xl mx-auto">
           <MotionAnimation>
-            <h2 className="text-3xl font-bold mb-6">Our Commitment</h2>
+            <h2 className="text-3xl text-primary font-bold mb-6">
+              Our Commitment
+            </h2>
           </MotionAnimation>
           <MotionAnimation delay={0.3}>
             <p className="text-lg mb-8">

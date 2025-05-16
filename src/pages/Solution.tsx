@@ -14,12 +14,12 @@ import SectionTitle from "../components/SectionTitle";
 import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
-import solutionImg from "../assets/solutionImg.png";
-import bannerImg from "../assets/longImg.jpg";
+import solutionImg from "../assets/sabi/provisionWomanTwo.jpg";
+import bannerImg from "../assets/sabi/provisionWomanOne.jpg";
 import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
 import { Link } from "react-router-dom";
-import bgImg from "../assets/marketWomanTwo.jpg";
+import bgImg from "../assets/sabi/alhajiButcher.jpg";
 // import tubeTumbnail from "../assets/temi.png";
 // import { useState } from "react";
 
@@ -123,9 +123,10 @@ function Solution() {
             </p> */}
             <MotionAnimation>
               <p className="text-xl md:text-4xl">
-                Our solution addresses the unique challenges faced by traders and artisans in
-                managing their finances, providing them with a secure and
-                efficient alternative to traditional cash handling methods.
+                Our solution addresses the unique challenges faced by traders
+                and artisans in managing their finances, providing them with a
+                secure and efficient alternative to traditional cash handling
+                methods.
               </p>
             </MotionAnimation>
             <MotionAnimation delay={0.3}>
@@ -253,8 +254,8 @@ function Solution() {
           </MotionAnimation>
           <MotionAnimation motion="slide-up">
             <p className="text-lg mb-8 text-gray-200">
-              Join thousands of traders and artisans who are already benefiting from our
-              innovative financial solutions.
+              Join thousands of traders and artisans who are already benefiting
+              from our innovative financial solutions.
             </p>
           </MotionAnimation>
           <MotionAnimation delay={0.3} motion="slide-down">
