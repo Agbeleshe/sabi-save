@@ -1,7 +1,7 @@
 import { Wallet, Users, Globe, HandCoins } from "lucide-react";
 import ThreeDmodal from "./ThreeDmodal";
 import MotionAnimation from "../motion/MotionAnimation";
-import kekeMan from "../assets/sabi/AiGeneratedBikeman.png";
+import kekeMan from "../assets/sabi/newAiKekeMan.jpg";
 
 export default function FinancialInclusionComponent() {
   // const [activeTab, setActiveTab] = useState("trader");
@@ -59,13 +59,13 @@ export default function FinancialInclusionComponent() {
               <div className="space-y-4 flex-1">
                 <MotionAnimation delay={0.3}>
                   <h2 className="text-2xl font-bold text-primary">
-                    Trader and Artisans
+                    Traders and Artisans
                   </h2>
                 </MotionAnimation>
                 <MotionAnimation delay={0.5} motion="slide-up">
                   <p className="text-white">
                     With ease, traders and artisans can conveniently save in a
-                    wallet, transfer funds and manage their funds.
+                    wallet, transfer funds and manage their finances.
                   </p>
                 </MotionAnimation>
                 <div className="flex flex-col  flex-wrap gap-4 mt-4">
