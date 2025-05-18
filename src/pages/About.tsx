@@ -18,6 +18,7 @@ import sabiMockHand from "../assets/sabiMockHand.png";
 import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
 import { Link } from "react-router-dom";
+import Stats from "../components/Stats";
 // import { useState } from "react";
 
 // Define TypeScript interfaces
@@ -27,18 +28,6 @@ import { Link } from "react-router-dom";
 //   description: string;
 //   icon?: React.ElementType;
 // }
-
-interface StatItemProps {
-  number: string;
-  label: string;
-}
-
-const StatItem: React.FC<StatItemProps> = ({ number, label }) => (
-  <div className="text-center p-6">
-    <div className="text-4xl font-bold text-primary mb-2">{number}</div>
-    <div className="text-gray-200">{label}</div>
-  </div>
-);
 
 function About() {
   // Enhanced age groups with icons
@@ -149,21 +138,7 @@ function About() {
         </div>
 
         {/* Statistics Section */}
-        <MotionAnimation>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-16 bg-black rounded-xl p-6 shadow-inner">
-            <MotionAnimation delay={0.3} motion="slide-up">
-              <StatItem number="10K+" label="Active Users" />
-            </MotionAnimation>
-            {/* <StatItem number="5+" label="Years Experience" /> */}
-            <MotionAnimation delay={0.5} motion="slide-up">
-              <StatItem number="24/7" label="Customer Support" />{" "}
-            </MotionAnimation>
-
-            <MotionAnimation delay={0.7} motion="slide-up">
-              <StatItem number="99.9%" label="Uptime" />{" "}
-            </MotionAnimation>
-          </div>
-        </MotionAnimation>
+        <Stats />
 
         {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {ageGroups.map((group, index) => {

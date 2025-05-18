@@ -30,9 +30,11 @@ export default function FinancialInclusionComponent() {
               </p>
             </MotionAnimation>
 
-            <div className="md:hidden max-h-[300px] overflow-hidden rounded-md my-5">
-              <img src={kekeMan} alt="Keke man" />
-            </div>
+            <MotionAnimation motion="slide-left">
+              <div className="md:hidden max-h-[300px] overflow-hidden rounded-md my-5">
+                <img src={kekeMan} alt="Keke man" />
+              </div>
+            </MotionAnimation>
 
             {/* Tabs */}
             {/* <MotionAnimation>
@@ -55,62 +57,64 @@ export default function FinancialInclusionComponent() {
             </MotionAnimation> */}
 
             {/* Tab content */}
-            <div className="bg-blueTwo p-6 rounded-xl flex flex-col md:flex-row gap-10 md:gap-5">
-              <div className="space-y-4 flex-1">
-                <MotionAnimation delay={0.3}>
-                  <h2 className="text-2xl font-bold text-primary">
-                    Traders and Artisans
-                  </h2>
-                </MotionAnimation>
-                <MotionAnimation delay={0.5} motion="slide-up">
-                  <p className="text-white">
-                    With ease, traders and artisans can conveniently save in a
-                    wallet, transfer funds and manage their finances.
-                  </p>
-                </MotionAnimation>
-                <div className="flex flex-col  flex-wrap gap-4 mt-4">
-                  <MotionAnimation delay={0.5} motion="slide-down">
-                    <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
-                      <Wallet className="text-primary" />
-                      <span>Digital Wallet</span>
-                    </div>
+            <MotionAnimation motion="slide-down">
+              <div className="bg-blueTwo  p-6 rounded-xl flex flex-col md:flex-row gap-10 md:gap-5">
+                <div className="space-y-4 flex-1">
+                  <MotionAnimation delay={0.3}>
+                    <h2 className="text-2xl font-bold text-primary">
+                      Traders and Artisans
+                    </h2>
                   </MotionAnimation>
-                  <MotionAnimation delay={0.7} motion="slide-down">
-                    <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
-                      <HandCoins className="text-primary" />
-                      <span>Real-time Transfers</span>
-                    </div>
+                  <MotionAnimation delay={0.5} motion="slide-up">
+                    <p className="text-white">
+                      With ease, traders and artisans can conveniently save in a
+                      wallet, transfer funds and manage their finances.
+                    </p>
                   </MotionAnimation>
+                  <div className="flex flex-col  flex-wrap gap-4 mt-4">
+                    <MotionAnimation delay={0.5} motion="slide-down">
+                      <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
+                        <Wallet className="text-primary" />
+                        <span>Digital Wallet</span>
+                      </div>
+                    </MotionAnimation>
+                    <MotionAnimation delay={0.7} motion="slide-down">
+                      <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
+                        <HandCoins className="text-primary" />
+                        <span>Real-time Transfers</span>
+                      </div>
+                    </MotionAnimation>
+                  </div>
+                </div>
+
+                <div className="space-y-4 flex-1">
+                  <MotionAnimation delay={0.3} motion="slide-left">
+                    <h2 className="text-2xl font-bold text-primary">Agent</h2>
+                  </MotionAnimation>
+
+                  <MotionAnimation delay={0.5} motion="slide-up">
+                    <p className="text-white">
+                      Beyond saving, we are empowering individuals as agents,
+                      and enhancing income growth.
+                    </p>
+                  </MotionAnimation>
+                  <div className="flex flex-col flex-wrap gap-4 mt-4">
+                    <MotionAnimation delay={0.5} motion="slide-down">
+                      <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
+                        <Users className="text-primary" />
+                        <span>Network Building</span>
+                      </div>
+                    </MotionAnimation>
+                    <MotionAnimation delay={0.7} motion="slide-down">
+                      <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
+                        <Globe className="text-primary" />
+                        <span>Community Impact</span>
+                      </div>
+                    </MotionAnimation>
+                  </div>
                 </div>
               </div>
-
-              <div className="space-y-4 flex-1">
-                <MotionAnimation delay={0.3} motion="slide-left">
-                  <h2 className="text-2xl font-bold text-primary">Agent</h2>
-                </MotionAnimation>
-
-                <MotionAnimation delay={0.5} motion="slide-up">
-                  <p className="text-white">
-                    Beyond saving, we are empowering individuals as agents, and
-                    enhancing income growth.
-                  </p>
-                </MotionAnimation>
-                <div className="flex flex-col flex-wrap gap-4 mt-4">
-                  <MotionAnimation delay={0.5} motion="slide-down">
-                    <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
-                      <Users className="text-primary" />
-                      <span>Network Building</span>
-                    </div>
-                  </MotionAnimation>
-                  <MotionAnimation delay={0.7} motion="slide-down">
-                    <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
-                      <Globe className="text-primary" />
-                      <span>Community Impact</span>
-                    </div>
-                  </MotionAnimation>
-                </div>
-              </div>
-            </div>
+            </MotionAnimation>
           </div>
 
           {/* Right panel with image */}

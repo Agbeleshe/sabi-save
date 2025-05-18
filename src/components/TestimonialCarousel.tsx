@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Star, StarHalf } from "lucide-react";
 import MotionAnimation from "../motion/MotionAnimation";
+import butcher from "../assets/sabi/alhajiButcher.jpg";
+import tailoer from "../assets/sabi/hajiyaTailor.jpg";
+import salesWoman from "../assets/sabi/womanStanding.png";
 
 export default function TestimonialCarousel() {
   const baseTestimonials = [
@@ -8,46 +11,51 @@ export default function TestimonialCarousel() {
       quote:
         "With Sabi, I have been able to save more. Thanks to the flexible daily saving plan",
       name: "Amina Ishaku",
-      occupation: "Tomato Trader",
+      occupation: "Tailor",
       rating: 3,
+      image: tailoer,
     },
     {
       quote:
         "My records are better organised, less hiccups. No need to write on cards since I started using Sabisave",
       name: "Ayo Kolawole",
-      occupation: "Agent",
+      occupation: "Butcher",
       rating: 4.5,
+      image: butcher,
     },
     {
       quote:
         "I receive instant transaction alert and I'm able to track my account balance every minute",
       name: "Mallam Ibrahim",
-      occupation: "Yam Seller",
+      occupation: "Tomato Seller",
       rating: 3.5,
+      image: salesWoman,
     },
-    {
-      quote: "Sabisave has transformed how I manage my business finances",
-      name: "Bisi Adegoke",
-      occupation: "Fashion Designer",
-      rating: 5,
-    },
-    {
-      quote:
-        "No more struggling with change or small savings, Sabi handles that easily",
-      name: "Chidi Okoro",
-      occupation: "Provision Store Owner",
-      rating: 4,
-    },
-    {
-      quote:
-        "I love how fast and easy it is to monitor my daily sales with Sabisave",
-      name: "Grace Umeh",
-      occupation: "Cosmetic Seller",
-      rating: 5,
-    },
+    // {
+    //   quote: "Sabisave has transformed how I manage my business finances",
+    //   name: "Bisi Adegoke",
+    //   occupation: "Fashion Designer",
+    //   rating: 5,
+    //   image: "/images/testimonials/bisi.jpg",
+    // },
+    // {
+    //   quote:
+    //     "No more struggling with change or small savings, Sabi handles that easily",
+    //   name: "Chidi Okoro",
+    //   occupation: "Provision Store Owner",
+    //   rating: 4,
+    //   image: "/images/testimonials/chidi.jpg",
+    // },
+    // {
+    //   quote:
+    //     "I love how fast and easy it is to monitor my daily sales with Sabisave",
+    //   name: "Grace Umeh",
+    //   occupation: "Cosmetic Seller",
+    //   rating: 5,
+    //   image: "/images/testimonials/grace.jpg",
+    // },
   ];
 
-  // Clone testimonials to simulate infinite scroll
   const testimonials = [...baseTestimonials, ...baseTestimonials];
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -70,7 +78,6 @@ export default function TestimonialCarousel() {
       const container = scrollRef.current;
       container.scrollLeft += scrollSpeed;
 
-      // Reset to start for infinite effect
       const totalScrollWidth = container.scrollWidth / 2;
       if (container.scrollLeft >= totalScrollWidth) {
         container.scrollLeft = 0;
@@ -175,23 +182,26 @@ export default function TestimonialCarousel() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-white rounded-lg p-6 shadow-lg min-h-[200px]"
+                  className="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-[40%] lg:w-[30%] relative rounded-lg min-h-[250px] overflow-hidden shadow-lg"
+                  style={{
+                    backgroundImage: `url(${testimonial.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
                 >
-                  <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 bg-blueOne rounded-full flex items-center justify-center overflow-hidden">
-                      <span className="text-white text-sm font-bold">
-                        {testimonial.name.charAt(0)}
-                      </span>
-                    </div>
-                    <div className="ml-4">
-                      <p className="font-medium">{testimonial.name}</p>
-                      <p className="text-gray-500 text-sm">
-                        {testimonial.occupation}
-                      </p>
-                    </div>
-                    <div className="ml-auto flex">
-                      {renderStars(testimonial.rating)}
+                  <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
+                  <div className="relative z-10 p-6 h-full flex flex-col justify-between text-white">
+                    <p className="mb-6">"{testimonial.quote}"</p>
+                    <div className="flex items-center">
+                      <div>
+                        {/* <p className="font-semibold">{testimonial.name}</p> */}
+                        <p className="text-sm text-gray-300">
+                          {testimonial.occupation}
+                        </p>
+                      </div>
+                      <div className="ml-auto flex">
+                        {renderStars(testimonial.rating)}
+                      </div>
                     </div>
                   </div>
                 </div>
