@@ -1,6 +1,7 @@
 import { Wallet, Users, Globe, HandCoins } from "lucide-react";
 import ThreeDmodal from "./ThreeDmodal";
 import MotionAnimation from "../motion/MotionAnimation";
+import kekeMan from "../assets/sabi/AiGeneratedBikeman.png";
 
 export default function FinancialInclusionComponent() {
   // const [activeTab, setActiveTab] = useState("trader");
@@ -18,7 +19,7 @@ export default function FinancialInclusionComponent() {
           <div className="p-8 md:p-12 flex-1">
             <MotionAnimation motion="slide-down">
               <h1 className="text-2xl  md:text-4xl font-bold mb-2 bg-primary bg-clip-text text-transparent">
-                How are we making a difference?
+                How we are making a difference
               </h1>
             </MotionAnimation>
 
@@ -28,6 +29,10 @@ export default function FinancialInclusionComponent() {
                 creating employment opportunities.
               </p>
             </MotionAnimation>
+
+            <div className="md:hidden max-h-[300px] overflow-hidden rounded-md my-5">
+              <img src={kekeMan} alt="Keke man" />
+            </div>
 
             {/* Tabs */}
             {/* <MotionAnimation>
@@ -50,26 +55,28 @@ export default function FinancialInclusionComponent() {
             </MotionAnimation> */}
 
             {/* Tab content */}
-            <div className="bg-gray-700 p-6 rounded-xl flex flex-col md:flex-row gap-10 md:gap-5">
+            <div className="bg-blueTwo p-6 rounded-xl flex flex-col md:flex-row gap-10 md:gap-5">
               <div className="space-y-4 flex-1">
                 <MotionAnimation delay={0.3}>
-                  <h2 className="text-2xl font-bold text-primary">Trader</h2>
+                  <h2 className="text-2xl font-bold text-primary">
+                    Trader and Artisans
+                  </h2>
                 </MotionAnimation>
                 <MotionAnimation delay={0.5} motion="slide-up">
-                  <p className="text-gray-200">
+                  <p className="text-white">
                     With ease, traders and artisans can conveniently save in a
                     wallet, transfer funds and manage their funds.
                   </p>
                 </MotionAnimation>
                 <div className="flex flex-col  flex-wrap gap-4 mt-4">
                   <MotionAnimation delay={0.5} motion="slide-down">
-                    <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
+                    <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
                       <Wallet className="text-primary" />
                       <span>Digital Wallet</span>
                     </div>
                   </MotionAnimation>
                   <MotionAnimation delay={0.7} motion="slide-down">
-                    <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
+                    <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
                       <HandCoins className="text-primary" />
                       <span>Real-time Transfers</span>
                     </div>
@@ -83,20 +90,20 @@ export default function FinancialInclusionComponent() {
                 </MotionAnimation>
 
                 <MotionAnimation delay={0.5} motion="slide-up">
-                  <p className="text-gray-200">
+                  <p className="text-white">
                     Beyond saving, we are empowering individuals as agents, and
                     enhancing income growth.
                   </p>
                 </MotionAnimation>
                 <div className="flex flex-col flex-wrap gap-4 mt-4">
                   <MotionAnimation delay={0.5} motion="slide-down">
-                    <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
+                    <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
                       <Users className="text-primary" />
                       <span>Network Building</span>
                     </div>
                   </MotionAnimation>
                   <MotionAnimation delay={0.7} motion="slide-down">
-                    <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 flex-1">
+                    <div className="bg-black p-4 rounded-lg flex items-center space-x-3 flex-1">
                       <Globe className="text-primary" />
                       <span>Community Impact</span>
                     </div>
