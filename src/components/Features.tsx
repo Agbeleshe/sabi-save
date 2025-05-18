@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 //import longImgOne from "../assets/longImg.jpg";
 import longImgTwo from "../assets/sabi/hajiyaTailor.jpg";
 import mockPhone from "../assets/phone.png";
-import marketWomanTwo from "../assets/sabi/mamaUnderSun.jpg";
+import marketWomanTwo from "../assets/sabi/youngLadyWithPhone-min.jpg";
 import MotionAnimation from "../motion/MotionAnimation";
 
 // Define interface for FeaturesCardOne props
@@ -163,8 +163,7 @@ const Features = () => {
   // Sample data for the FeaturesCardOne component
   const featureThreeData = {
     header: "Your money is safe",
-    description:
-      "Registration is easy, fast and seamless, and our partnership with Opay and Meristem ensures the safety of your funds and guarantees a descent returns on your savings. .",
+    description: "Registration is easy, fast, seamless and secure.",
     img: marketWomanTwo,
     tag: "Digital Wallet",
     link: "Get it now",

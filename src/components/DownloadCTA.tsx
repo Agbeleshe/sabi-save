@@ -26,8 +26,8 @@ function DownloadCTA() {
           </MotionAnimation>
           <MotionAnimation delay={0.3} motion="slide-up">
             <p className="text-lg mb-8 text-light/80 max-w-2xl mx-auto">
-              Download the SabiSave app today and experience seamless savings
-              and access to micro-credit facilities.
+              Download sabisave app today and experience seamless savings of
+              your funds
             </p>
           </MotionAnimation>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

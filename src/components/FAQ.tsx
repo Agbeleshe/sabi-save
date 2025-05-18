@@ -14,7 +14,7 @@ export default function FAQ() {
         "SabiSave is a mobile application software and backend solution that has been built for petty traders, artisans and high volume cash handlers. The solution is both dynamic and robust, and will enable users process cash deposit and receive instant value for same, withdraw cash, verify account balances real time and reconcile banking transactions.",
     },
     {
-      question: "How can I register as a trader on SabiSave?",
+      question: "How can I register as a trader, artisan or agent?",
       answer:
         "Download our mobile app on playstore or appstore, then click on 'Sign Up', next, under 'What type of Account do you want to Open?' select 'Trader' then follow the prompt to register. Alternatively, you can visit the nearest SabiSave authorised agent to register.",
     },

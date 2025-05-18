@@ -12,7 +12,7 @@ export default function FinancialInclusionComponent() {
   // ];
 
   return (
-    <div className="bg-gradient-to-br from-black to-gray-800 text-white h-auto md:max-h-[600px] flex items-center justify-center p-4">
+    <div className="bg-black text-white h-auto md:max-h-[600px] flex items-center justify-center p-4">
       <div className="w-full container  rounded-2xl overflow-hidden shadow-2xl">
         <div className="flex flex-col md:flex-row">
           {/* Left panel with content */}

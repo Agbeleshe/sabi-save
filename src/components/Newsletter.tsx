@@ -26,7 +26,7 @@ function Newsletter() {
   };
 
   return (
-    <div className="bg-primary py-16">
+    <div className="bg-blueTwo py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <MotionAnimation motion="slide-down">
@@ -35,7 +35,7 @@ function Newsletter() {
             </h2>
           </MotionAnimation>
           <MotionAnimation motion="slide-up">
-            <p className="mb-8 text-dark/80 text-center">
+            <p className="mb-8 text-white text-center">
               Subscribe to our newsletter to receive the latest updates and news
               about SabiSave.
             </p>
