@@ -1,22 +1,18 @@
 import { Link } from "react-router-dom";
-import {
-  Instagram,
-  Twitter,
-  Facebook,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
-import Logo from "../assets/sabiSaveLogo.png";
+import { Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import Logo from "../assets/sabiSave3.png";
 import playStore from "../assets/playStore.svg";
 import appStore from "../assets/appStore.svg";
 import Button from "./Button";
 import MotionAnimation from "../motion/MotionAnimation";
 
 const socialLinks = [
-  { icon: Instagram, href: "https://instagram.com" },
-  { icon: Twitter, href: "https://twitter.com" },
-  { icon: Facebook, href: "https://facebook.com" },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/sabi_save?igsh=MXYydnJiaTBpNXd2NQ==",
+  },
+
+  { icon: Twitter, href: "https://x.com/Sabi_Save?s=08" },
 ];
 
 const quickLinks = [
