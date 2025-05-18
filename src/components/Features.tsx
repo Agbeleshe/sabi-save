@@ -173,7 +173,7 @@ const Features = () => {
   const featureFourData = {
     header: "Easy to use dashboard",
     description:
-      "A robust dashboard for the registration of traders, artisans and for agents to monitor and manage trader accounts",
+      "A robust dashboard for onboarding and safe management of the traders and artisans funds",
     tag: "Agent Account",
     img: mockPhone,
     link: "Get it now",
