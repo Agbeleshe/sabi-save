@@ -11,6 +11,7 @@ import Features from "../components/Features";
 import FinancialInclusionComponent from "../components/FinancialInclusionComponent";
 import NewHeroSection from "../components/NewHeroSection";
 import TestimonialCarousel from "../components/TestimonialCarousel";
+import Stats from "../components/Stats";
 
 function Home() {
   // const features = [
@@ -44,6 +45,8 @@ function Home() {
     <>
       {/* <HeroSection /> */}
       <NewHeroSection />
+
+      <Stats />
 
       <FinancialInclusionComponent />
 

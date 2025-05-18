@@ -19,7 +19,7 @@ export default function FAQ() {
         "Download our mobile app on playstore or appstore, then click on 'Sign Up', next, under 'What type of Account do you want to Open?' select 'Trader' then follow the prompt to register. Alternatively, you can visit the nearest SabiSave authorised agent to register.",
     },
     {
-      question: "Is agent registration free?",
+      question: "Is SabiSave free?",
       answer:
         "Yes, being an agent is completely free. Meet the requirements, register and get onboarded.",
     },

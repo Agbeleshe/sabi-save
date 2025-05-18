@@ -56,8 +56,8 @@ function Footer() {
             </MotionAnimation>
             <MotionAnimation delay={0.3}>
               <p className="mb-6 opacity-80">
-                Creating cutting-edge technology solutions for the financial
-                services sector.
+                Creating simple digital solutions for our people to save and
+                manage their funds in a better way.
               </p>
             </MotionAnimation>
 
