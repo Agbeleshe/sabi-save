@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+} from "lucide-react";
 import Logo from "../assets/sabiSave3.png";
 import playStore from "../assets/playStore.svg";
 import appStore from "../assets/appStore.svg";
@@ -13,6 +20,7 @@ const socialLinks = [
   },
 
   { icon: Twitter, href: "https://x.com/Sabi_Save?s=08" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/sabisave/" },
 ];
 
 const quickLinks = [
