@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Solution from "./pages/Solution";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import "./index.css";
 
 function App() {
   // const location = useLocation();

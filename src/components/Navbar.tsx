@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Download, Menu, X, Home, Info, Lightbulb, Phone } from "lucide-react";
+import { Menu, X, Home, Info, Lightbulb, Phone } from "lucide-react";
 import Button from "./Button";
 import sabiLogo from "../assets/sabiSave3.png";
 import MobileNavigation from "./MobileNavbar";
+import Lottie from "lottie-react";
+import lottieDownload from "../assets/lottie/download.json";
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -70,7 +72,12 @@ function Navbar({ isScrolled }: NavbarProps) {
               href="#download"
               variant="primary"
             >
-              <Download size={20} className="mr-2" />
+              <Lottie
+                animationData={lottieDownload}
+                loop={true}
+                autoplay
+                style={{ width: "20px", height: "20px", margin: 5 }}
+              />
               Download App
             </Button>
           </div>

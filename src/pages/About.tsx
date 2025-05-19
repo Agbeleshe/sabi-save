@@ -19,6 +19,7 @@ import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
 import { Link } from "react-router-dom";
 import Stats from "../components/Stats";
+import ExecutiveTeam from "../components/ExecutiveTeam";
 // import { useState } from "react";
 
 // Define TypeScript interfaces
@@ -199,6 +200,8 @@ function About() {
           </div>
         </MotionAnimation>
       </Section>
+
+      <ExecutiveTeam />
 
       <Section className="py-16 bg-primary text-black">
         <div className="text-center max-w-3xl mx-auto">

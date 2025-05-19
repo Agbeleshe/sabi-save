@@ -4,6 +4,7 @@ import MotionAnimation from "../motion/MotionAnimation";
 import butcher from "../assets/sabi/alhajiButcher.jpg";
 import tailoer from "../assets/sabi/hajiyaTailor.jpg";
 import salesWoman from "../assets/sabi/womanStanding.png";
+import provisionShop from "../assets/sabi/provisionWomanOne.jpg";
 
 export default function TestimonialCarousel() {
   const baseTestimonials = [
@@ -31,13 +32,13 @@ export default function TestimonialCarousel() {
       rating: 3.5,
       image: salesWoman,
     },
-    // {
-    //   quote: "Sabisave has transformed how I manage my business finances",
-    //   name: "Bisi Adegoke",
-    //   occupation: "Fashion Designer",
-    //   rating: 5,
-    //   image: "/images/testimonials/bisi.jpg",
-    // },
+    {
+      quote: "Sabisave has transformed how I manage my business finances",
+      name: "Bisi Adegoke",
+      occupation: "Retailer",
+      rating: 5,
+      image: provisionShop,
+    },
     // {
     //   quote:
     //     "No more struggling with change or small savings, Sabi handles that easily",

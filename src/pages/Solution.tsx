@@ -15,7 +15,7 @@ import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
 import solutionImg from "../assets/sabi/provisionWomanTwo.jpg";
-import bannerImg from "../assets/sabi/provisionWomanOne.jpg";
+import bannerImg from "../assets/sabi/womanStanding.png";
 import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
 import { Link } from "react-router-dom";
