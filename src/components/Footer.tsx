@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
-import {
-  Instagram,
-  Twitter,
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-} from "lucide-react";
+import { Instagram, Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import { PiTiktokLogoFill } from "react-icons/pi";
+
 import Logo from "../assets/sabiSave3.png";
 import playStore from "../assets/playStore.svg";
 import appStore from "../assets/appStore.svg";
@@ -18,8 +14,12 @@ const socialLinks = [
     icon: Instagram,
     href: "https://www.instagram.com/sabi_save?igsh=MXYydnJiaTBpNXd2NQ==",
   },
+  {
+    icon: PiTiktokLogoFill,
+    href: "https://www.tiktok.com/@sabi_save?is_from_webapp=1&sender_device=pc",
+  },
+  { icon: FaXTwitter, href: "https://x.com/Sabi_Save?s=08" },
 
-  { icon: Twitter, href: "https://x.com/Sabi_Save?s=08" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/sabisave/" },
 ];
 
