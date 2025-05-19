@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 //import marketWoman from "../assets/MarketWoman.jpg";
 //import longImgOne from "../assets/longImg.jpg";
-import longImgTwo from "../assets/sabi/hajiyaTailor.jpg";
+import longImgTwo from "../assets/sabi/newAiKekeMan.jpg";
 import mockPhone from "../assets/phone.png";
 import marketWomanTwo from "../assets/sabi/MockPhoneWithOUTBG.png";
 import MotionAnimation from "../motion/MotionAnimation";
