@@ -12,6 +12,7 @@ import FinancialInclusionComponent from "../components/FinancialInclusionCompone
 import NewHeroSection from "../components/NewHeroSection";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import Stats from "../components/Stats";
+import ExecutiveTeam from "../components/ExecutiveTeam";
 
 function Home() {
   // const features = [
@@ -57,6 +58,8 @@ function Home() {
       <FAQ />
 
       <TestimonialCarousel />
+
+      <ExecutiveTeam />
 
       {/* <Section id="features">
         <SectionTitle
