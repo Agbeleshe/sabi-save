@@ -21,7 +21,7 @@ export default function ExecutiveTeam() {
     <div className="w-full mx-auto py-12 px-4 max-w-[100vw] overflow-hidden">
       <MotionAnimation motion="slide-up">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-gray-800">Our Leadership</h2>
+          <h2 className="text-4xl font-bold text-gray-800">Meet the Team</h2>
         </div>
       </MotionAnimation>
 

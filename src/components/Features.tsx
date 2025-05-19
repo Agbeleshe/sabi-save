@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 //import longImgOne from "../assets/longImg.jpg";
 import longImgTwo from "../assets/sabi/hajiyaTailor.jpg";
 import mockPhone from "../assets/phone.png";
-import marketWomanTwo from "../assets/sabi/youngLadyWithPhone-min.jpg";
+import marketWomanTwo from "../assets/sabi/MockPhoneWithOUTBG.png";
 import MotionAnimation from "../motion/MotionAnimation";
 
 // Define interface for FeaturesCardOne props
@@ -39,13 +39,13 @@ const FeaturesCardOne = ({
         <div>
           <div>
             <MotionAnimation motion="slide-right">
-              <p className="text-xl inline-block bg-black text-white p-2 rounded-[10px] font-extrabold md:text-2xl mb-4 md:mb-10">
+              <p className="text-xl inline-block bg-blueTwo text-white p-2 rounded-[10px] font-extrabold md:text-2xl mb-4 md:mb-10">
                 {tag}
               </p>
             </MotionAnimation>
           </div>
           <MotionAnimation delay={0.3} motion="slide-right">
-            <h1 className="text-3xl md:text-4xl text-blueTwo font-bold my-2 md:my-3">
+            <h1 className="text-2xl md:text-4xl text-blueTwo font-bold my-2 md:my-3">
               {header}
             </h1>
             <p className="text-base md:text-md my-2 md:my-3">{description}</p>
@@ -64,7 +64,7 @@ const FeaturesCardOne = ({
           {" "}
           <div className="cursor-pointer overflow-hidden w-full md:w-1/2 h-64 md:h-auto">
             <img
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              className="object-cover hover:scale-105 transition-transform duration-700"
               src={img}
               alt={header}
             />
@@ -74,7 +74,7 @@ const FeaturesCardOne = ({
       {/* Laptop image */}
       <div className="hidden md:block cursor-pointer overflow-hidden w-full md:w-1/2 h-64 md:h-auto">
         <img
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
           src={img}
           alt={header}
         />
@@ -104,7 +104,7 @@ const FeaturesCardTwo = ({
             </p>
           </MotionAnimation>
           <MotionAnimation delay={0.3} motion="slide-down">
-            <h1 className="text-2xl md:text-4xl font-bold my-2 md:my-3">
+            <h1 className="text-2xl md:text-4xl font-bold my-2 md:my-3 text-blueTwo">
               {header}
             </h1>
           </MotionAnimation>
@@ -173,11 +173,11 @@ const Features = () => {
   const featureFourData = {
     header: "Easy to use dashboard",
     description:
-      "A robust dashboard for onboarding and safe management of the traders and artisans funds",
+      "A robust platform for onboarding and safe management of funds.",
     tag: "Agent Account",
     img: mockPhone,
     link: "Get it now",
-    bgColor: "bg-primary",
+    bgColor: "bg-blueTwo",
     textColor: "text-white",
   };
 

@@ -21,8 +21,8 @@ const Stats = () => {
   return (
     <div className="container mx-auto px-[5%]">
       <MotionAnimation motion="bounce">
-        <h1 className="text-4xl my-5 text-black mx-auto text-center">
-          Our Achievements
+        <h1 className=" text-2xl md:text-4xl my-5 text-black mx-auto text-center">
+          Where we are
         </h1>
       </MotionAnimation>
       <MotionAnimation>
