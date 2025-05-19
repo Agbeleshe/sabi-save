@@ -11,15 +11,15 @@ export default function ExecutiveTeam() {
       image: CEO,
       linkedin:
         "https://www.linkedin.com/in/dawak-gomerep-712a19126?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      email: "dawak@yourcompany.com",
+      email: "dawakgomerep@sabisave.com",
     },
     {
-      name: "Tobi Awodumila",
+      name: "Tobi Ebenezer",
       title: "Chief Technology Officer (CTO)",
       image: CTO,
       linkedin:
         "https://www.linkedin.com/in/tobi-ebenezer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      email: "tobi@yourcompany.com",
+      email: "tobiebenezer@sabisave.com",
     },
   ];
 
