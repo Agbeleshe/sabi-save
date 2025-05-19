@@ -9,11 +9,17 @@ export default function ExecutiveTeam() {
       name: "Dawak Gomerep",
       title: "Chief Executive Officer (CEO)",
       image: CEO,
+      linkedin:
+        "https://www.linkedin.com/in/dawak-gomerep-712a19126?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "dawak@yourcompany.com",
     },
     {
       name: "Tobi Awodumila",
       title: "Chief Technology Officer (CTO)",
       image: CTO,
+      linkedin:
+        "https://www.linkedin.com/in/tobi-ebenezer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "tobi@yourcompany.com",
     },
   ];
 
@@ -27,11 +33,8 @@ export default function ExecutiveTeam() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {executives.map((executive, index) => (
-          <MotionAnimation delay={0.5 * index} motion="slide-left">
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-6"
-            >
+          <MotionAnimation delay={0.5 * index} motion="slide-left" key={index}>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-6">
               <MotionAnimation delay={0.5} motion="slide-down">
                 <div className="w-40 h-40 rounded-full overflow-hidden mb-6">
                   <img
@@ -47,17 +50,27 @@ export default function ExecutiveTeam() {
                   {executive.name}
                 </h3>
               </MotionAnimation>
-              <MotionAnimation delay={1} motion="slite-up">
+              <MotionAnimation delay={1} motion="slide-up">
                 <p className="text-primary mb-4">{executive.title}</p>
               </MotionAnimation>
               <MotionAnimation delay={1.3} motion="slide-left">
                 <div className="flex space-x-3 mt-2">
-                  <button className="text-gray-600 hover:text-blue-500 transition">
+                  <a
+                    href={executive.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-blue-500 transition"
+                    aria-label={`LinkedIn profile of ${executive.name}`}
+                  >
                     <Linkedin size={20} />
-                  </button>
-                  <button className="text-gray-600 hover:text-blue-500 transition">
+                  </a>
+                  <a
+                    href={`mailto:${executive.email}`}
+                    className="text-gray-600 hover:text-blue-500 transition"
+                    aria-label={`Email ${executive.name}`}
+                  >
                     <Mail size={20} />
-                  </button>
+                  </a>
                 </div>
               </MotionAnimation>
             </div>
