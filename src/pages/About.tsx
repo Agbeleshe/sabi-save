@@ -4,15 +4,7 @@ import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
 import img from "../assets/sabi/newAiKekeMan.jpg";
-import {
-  ArrowRight,
-  Shield,
-  Globe,
-  Zap,
-  Phone,
-  Download,
-  Info,
-} from "lucide-react";
+import { Shield, Globe, Zap, Phone, Download, Info } from "lucide-react";
 import bannerImg from "../assets/sabi/hajiyaTailor.jpg";
 import sabiMockHand from "../assets/sabiMockHand.png";
 import MotionAnimation from "../motion/MotionAnimation";
@@ -20,6 +12,8 @@ import HowItWorks from "../components/HowItWorks";
 import { Link } from "react-router-dom";
 import Stats from "../components/Stats";
 import ExecutiveTeam from "../components/ExecutiveTeam";
+import FianancialServiceCard from "../components/FinancialServiceCard";
+
 // import { useState } from "react";
 
 // Define TypeScript interfaces
@@ -87,18 +81,19 @@ function About() {
       <div className="relative">
         <PageBanner
           title="About SabiSave"
-          subtitle="Revolutionizing financial solutions for traders and artisans"
+          subtitle="Our partners in growing savings, increasing income and creating sustainable wealth for tomorrow. 
+"
           backgroundImage={bannerImg}
         />
       </div>
 
       <Section className="py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid cursor-pointer grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <MotionAnimation>
               <h2 className="text-3xl font-bold mb-4 text-gray-800 relative flex">
                 What We Do
-                <span className="ml-3 text-blueTwo">
+                <span className="ml-3 text-primary">
                   <Info size={30} />
                 </span>
                 <MotionAnimation delay={0.5}>
@@ -107,19 +102,17 @@ function About() {
               </h2>
             </MotionAnimation>
             <MotionAnimation delay={0.3}>
-              <p className="mb-6 text-lg md:text-4xl text-gray-700 leading-relaxed">
-                We provide secure, accessible and user-friendly financial
-                solutions that meet the unique needs of traders and artisans,
-                while fostering economic growth and financial stability.
+              <p className="mb-6 text-lg md:text-lg text-gray-700 leading-relaxed">
+                We a digital financial solution company that provides financial
+                services to the largely unbanked traders, artisans and small
+                business owners in the informal sector. Our mobile application
+                SabiSave is a user friendly, secure and accessible platform that
+                has been designed to enable users enjoy and achieve the
+                following basic banking services:
               </p>
             </MotionAnimation>
             <MotionAnimation delay={0.5}>
-              <a
-                href="#services"
-                className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-medium hover:text-primary hover:bg-black transition-colors duration-300"
-              >
-                Our Services <ArrowRight size={16} className="ml-2" />
-              </a>
+              <FianancialServiceCard />
             </MotionAnimation>
           </div>
           <div className="flex justify-center lg:justify-end">

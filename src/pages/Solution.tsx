@@ -5,7 +5,6 @@ import {
   Zap,
   LineChart,
   Users,
-  ArrowRight,
   Phone,
   Download,
 } from "lucide-react";
@@ -20,6 +19,7 @@ import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
 import { Link } from "react-router-dom";
 import bgImg from "../assets/sabi/alhajiButcher.jpg";
+import SabiSaveHowItWorks from "../components/SabiSaveHowItWorks";
 // import tubeTumbnail from "../assets/temi.png";
 // import { useState } from "react";
 
@@ -122,21 +122,15 @@ function Solution() {
               the convenience of their mobile device.
             </p> */}
             <MotionAnimation>
-              <p className="text-xl md:text-4xl">
+              <p className="text-lg md:text-lg">
                 Our solution addresses the unique challenges faced by traders
                 and artisans in managing their finances, providing them with a
                 secure and efficient alternative to traditional cash handling
                 methods.
               </p>
             </MotionAnimation>
-            <MotionAnimation delay={0.3}>
-              <a
-                href="#features"
-                className="inline-flex items-center bg-red text-white px-6 py-3 rounded-lg font-medium hover:text-primary hover:bg-black transition-colors duration-300 mt-6"
-              >
-                Explore Features <ArrowRight size={16} className="ml-2" />
-              </a>
-            </MotionAnimation>
+
+            <SabiSaveHowItWorks />
           </div>
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
@@ -244,12 +238,12 @@ function Solution() {
         <HowItWorks />
       </Section>
 
-      <Section className="py-16 bg-red text-black">
+      <Section className="py-16 bg-primary text-black">
         <div className="text-center max-w-3xl mx-auto">
           <MotionAnimation>
             <h2 className="text-3xl font-bold mb-6 text-white">
               Ready to Transform Your{" "}
-              <span className="text-primary">Saving </span> Experience?
+              <span className="text-blueTwo">Saving </span> Experience?
             </h2>
           </MotionAnimation>
           <MotionAnimation motion="slide-up">

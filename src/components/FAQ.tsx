@@ -6,22 +6,20 @@ import MotionAnimation from "../motion/MotionAnimation";
 
 export default function FAQ() {
   const [showAll, setShowAll] = useState(false);
-
   const faqItems = [
     {
       question: "What is SabiSave?",
       answer:
-        "SabiSave is a mobile application software and backend solution that has been built for petty traders, artisans and high volume cash handlers. The solution is both dynamic and robust, and will enable users process cash deposit and receive instant value for same, withdraw cash, verify account balances real time and reconcile banking transactions.",
+        "SabiSave is a mobile application software that has been built for petty traders, artisans and small business owners in the largely unbanked informal sector. Our solution is simple, accessible and secure, and enables users save, process cash deposit, receive and send transfers, verify account balances and reconcile banking transactions in real time. Individuals can also register as agents and earn income from onboarding and managing other users on the platform.",
     },
     {
       question: "How can I register as a trader, artisan or agent?",
       answer:
-        "Download our mobile app on playstore or appstore, then click on 'Sign Up', next, under 'What type of Account do you want to Open?' select 'Trader' then follow the prompt to register. Alternatively, you can visit the nearest SabiSave authorised agent to register.",
+        "Download the mobile app on play store or app store, and register your details as a Trader or Agent. Alternatively, you can visit the nearest SabiSave authorized agent to register.",
     },
     {
       question: "Is SabiSave free?",
-      answer:
-        "Yes, being an agent is completely free. Meet the requirements, register and get onboarded.",
+      answer: "Yes, registration on SabiSave is absolutely free.",
     },
     {
       question: "How can I register as an agent on SabiSave?",
@@ -32,6 +30,31 @@ export default function FAQ() {
       question: "What qualifies me to be an agent?",
       answer:
         "You must have operated as a collector at a major market in your city for at least one year. Additionally, you must have at least 50 customers that make savings with you.",
+    },
+    {
+      question: "How do I save and perform other transactions on the app?",
+      answer:
+        "To save, simply select your preferred saving plan and make your savings via an agent or through your digital account. You can also access other services real time on the app, or through authorized agents closest to you.",
+    },
+    {
+      question: "How can I access my savings?",
+      answer:
+        "You can verify your saved money anytime. However, you will only be able to access your savings while keeping a minimum amount once a month upon request.",
+    },
+    {
+      question: "How do I register as an agent?",
+      answer:
+        "To register as an agent, download the app and fill in the necessary information including the guarantor's form. You can also register through an authorized agent.",
+    },
+    {
+      question: "How can I identify and locate a registered agent?",
+      answer:
+        "All our authorized agents will have a unique company identity and can be accessed at your local market or a designated office closest to you.",
+    },
+    {
+      question: "Do you have a contact center to resolve issues?",
+      answer:
+        "Yes, our authorized agents are the first point of call for the resolution of any challenge by a user. Our contact center is also fully equipped to provide help and support when required.",
     },
   ];
 
