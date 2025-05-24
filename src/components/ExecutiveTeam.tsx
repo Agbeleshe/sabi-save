@@ -1,6 +1,6 @@
 import { Linkedin, Mail } from "lucide-react";
-import CTO from "../assets/Team/CTO.jpg";
-import CEO from "../assets/Team/CEO.jpg";
+import CTO from "../assets/Team/manImg.jpg";
+import CEO from "../assets/Team/womanImg.jpg";
 import MotionAnimation from "../motion/MotionAnimation";
 
 export default function ExecutiveTeam() {
