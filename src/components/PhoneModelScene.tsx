@@ -57,11 +57,7 @@ function HandWithPhone({
         fontSize * scale
       }px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif`;
       ctx.textBaseline = "middle";
-      ctx.shadowColor = "rgba(255,255,255,0.5)";
-      ctx.shadowBlur = 2;
       ctx.fillText(text, x * scale, y * scale);
-      ctx.shadowColor = "transparent";
-      ctx.shadowBlur = 0;
     };
 
     const roundRect = (
@@ -82,100 +78,141 @@ function HandWithPhone({
       ctx.closePath();
     };
 
-    ctx.fillStyle = "white";
+    // Background
+    ctx.fillStyle = "#f8f9fa";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#f8f8f8";
+
+    // Status bar
+    ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, 40 * scale);
-    renderCrispText("10:30 am", 15, 25, 14);
-    renderCrispText("••• 📶 🔋", 250, 25, 14);
+    renderCrispText("10:30", 15, 25, 14, "600", "#000");
+    renderCrispText("•••", 250, 25, 14, "", "#000");
+    renderCrispText("📶", 270, 25, 14);
+    renderCrispText("🔋", 290, 25, 14);
 
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 40 * scale, canvas.width, 60 * scale);
-    ctx.fillStyle = "#000";
+    // Header section
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 40 * scale, canvas.width, 80 * scale);
+
+    // Profile icon - blue circle
+    ctx.fillStyle = "#020640";
     ctx.beginPath();
-    ctx.arc(30 * scale, 70 * scale, 20 * scale, 0, Math.PI * 2);
+    ctx.arc(30 * scale, 80 * scale, 15 * scale, 0, Math.PI * 2);
     ctx.fill();
-    renderCrispText("SS", 22, 70, 14, "bold", "#FFBD59");
-    renderCrispText("Welcome, Razaq", 60, 75, 14, "bold");
 
-    ctx.fillStyle = "#eee";
-    ctx.fillRect(0, 100 * scale, canvas.width, 1 * scale);
+    // Profile icon symbol
+    renderCrispText("💳", 23, 80, 12, "", "#fff");
 
-    ctx.fillStyle = "#000";
+    renderCrispText("Welcome, Lucy", 60, 80, 16, "600", "#000");
+    renderCrispText("🔔", 280, 80, 16, "", "#6b7280");
+
+    // Main balance card - blue background
+    ctx.fillStyle = "#020640";
     roundRect(
-      15 * scale,
-      120 * scale,
-      canvas.width - 30 * scale,
-      100 * scale,
+      20 * scale,
+      140 * scale,
+      canvas.width - 40 * scale,
+      80 * scale,
       12 * scale
     );
     ctx.fill();
-    renderCrispText("Total Savings", 35, 145, 12, "", "#999");
-    renderCrispText("N100,000.00", 35, 180, 28, "bold", "#FFBD59");
-    renderCrispText("👁️", 270, 190, 16, "", "#fff");
 
-    renderCrispText("Quick Links:", 15, 240, 14, "bold");
+    renderCrispText("Total Savings", 35, 165, 12, "", "#a5b4fc");
+    renderCrispText("₦100,000.00", 35, 190, 24, "700", "#ffffff");
+    renderCrispText("👁", 280, 190, 16, "", "#a5b4fc");
 
-    ctx.fillStyle = "#f9f9f9";
+    // Quick Links section
+    renderCrispText("Quick Links:", 20, 250, 14, "600", "#000");
+
+    // Save more button
+    ctx.fillStyle = "#f8f9fa";
     roundRect(
-      15 * scale,
-      260 * scale,
-      canvas.width - 30 * scale,
+      20 * scale,
+      270 * scale,
+      canvas.width - 40 * scale,
       50 * scale,
-      10 * scale
+      8 * scale
     );
     ctx.fill();
-    ctx.fillStyle = "#000";
-    ctx.beginPath();
-    ctx.arc(35 * scale, 285 * scale, 18 * scale, 0, Math.PI * 2);
-    ctx.fill();
-    renderCrispText("💰", 20, 285, 20, "", "#FFBD59");
-    renderCrispText("Save more", 70, 290, 14);
-    renderCrispText("›", 290, 290, 14);
 
-    ctx.fillStyle = "#f9f9f9";
+    // Blue circle for save icon
+    ctx.fillStyle = "#020640";
+    ctx.beginPath();
+    ctx.arc(45 * scale, 295 * scale, 15 * scale, 0, Math.PI * 2);
+    ctx.fill();
+    renderCrispText("💰", 38, 295, 12, "", "#fff");
+
+    renderCrispText("Save more", 75, 295, 14, "", "#000");
+    renderCrispText("›", 285, 295, 16, "", "#9ca3af");
+
+    // Withdraw button
+    ctx.fillStyle = "#f8f9fa";
     roundRect(
-      15 * scale,
-      320 * scale,
-      canvas.width - 30 * scale,
+      20 * scale,
+      330 * scale,
+      canvas.width - 40 * scale,
       50 * scale,
-      10 * scale
+      8 * scale
     );
     ctx.fill();
-    ctx.fillStyle = "#000";
+
+    // Blue circle for withdraw icon
+    ctx.fillStyle = "#020640";
     ctx.beginPath();
-    ctx.arc(35 * scale, 345 * scale, 18 * scale, 0, Math.PI * 2);
+    ctx.arc(45 * scale, 355 * scale, 15 * scale, 0, Math.PI * 2);
     ctx.fill();
-    renderCrispText("💳", 22, 342, 20, "", "#FFBD59");
-    renderCrispText("Withdraw", 90, 350, 14);
-    renderCrispText("›", 270, 350, 14);
+    renderCrispText("💳", 38, 355, 12, "", "#fff");
 
-    renderCrispText("Account number", 15, 400, 12, "", "#666");
-    renderCrispText("8024301860", 15, 425, 14, "bold");
-    renderCrispText("Account name", 15, 455, 12, "", "#666");
-    renderCrispText("Ibraheem Razaq", 15, 480, 14, "bold");
+    renderCrispText("Withdraw", 75, 355, 14, "", "#000");
+    renderCrispText("›", 285, 355, 16, "", "#9ca3af");
 
-    ctx.fillStyle = "#f5f5f5";
+    // Account details section
+    renderCrispText("Account number", 20, 410, 12, "", "#6b7280");
+    renderCrispText("8024301860", 20, 430, 14, "600", "#000");
+
+    renderCrispText("Account name", 20, 465, 12, "", "#6b7280");
+    renderCrispText("Lucy Raymond", 20, 485, 14, "600", "#000");
+
+    // Copy details button
+    ctx.fillStyle = "#f1f5f9";
     roundRect(
-      15 * scale,
-      500 * scale,
-      canvas.width - 30 * scale,
+      20 * scale,
+      510 * scale,
+      canvas.width - 40 * scale,
       40 * scale,
-      10 * scale
+      8 * scale
     );
     ctx.fill();
-    renderCrispText("📋 Copy details", 120, 525, 14);
+    ctx.strokeStyle = "#e2e8f0";
+    ctx.lineWidth = 1;
+    ctx.stroke();
 
-    ctx.fillStyle = "#fff";
+    renderCrispText("📋", 140, 530, 14, "", "#020640");
+    renderCrispText("Copy details", 160, 530, 14, "", "#020640");
+
+    // Bottom navigation
+    ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 580 * scale, canvas.width, 60 * scale);
-    ctx.fillStyle = "#eee";
-    ctx.fillRect(0, 580 * scale, canvas.width, 1 * scale);
-    renderCrispText("🏠", 50, 605, 20, "", "#FFBD59");
-    renderCrispText("Home", 45, 625, 12, "", "#FFBD59");
-    renderCrispText("📜", 160, 605, 20, "", "#999");
-    renderCrispText("History", 150, 625, 12, "", "#999");
-    renderCrispText("👤", 270, 605, 20, "", "#999");
-    renderCrispText("Account", 260, 625, 12, "", "#999");
+
+    // Navigation border
+    ctx.strokeStyle = "#e5e7eb";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(0, 580 * scale);
+    ctx.lineTo(canvas.width, 580 * scale);
+    ctx.stroke();
+
+    // Home (active)
+    renderCrispText("🏠", 55, 600, 18, "", "#020640");
+    renderCrispText("Home", 47, 620, 10, "500", "#020640");
+
+    // History
+    renderCrispText("📜", 160, 600, 18, "", "#9ca3af");
+    renderCrispText("History", 147, 620, 10, "500", "#9ca3af");
+
+    // Account
+    renderCrispText("👤", 265, 600, 18, "", "#9ca3af");
+    renderCrispText("Account", 252, 620, 10, "500", "#9ca3af");
 
     const canvasTexture = new THREE.CanvasTexture(canvas);
     canvasTexture.anisotropy = 16;
@@ -235,7 +272,7 @@ function HandWithPhone({
   return (
     <group ref={handRef} position={position} rotation={[0.3, 0, 0]}>
       <group ref={phoneRef} position={[0, 0, 0.3 * phoneScale]}>
-        <mesh material={phoneMaterial}>
+        <mesh material={phoneMaterial} castShadow receiveShadow>
           <boxGeometry args={[phoneWidth, phoneHeight, phoneDepth]} />
         </mesh>
         <mesh
@@ -262,7 +299,7 @@ export default function PhoneModelScene({
 
   return (
     <HandWithPhone
-      position={[0, 0, 0]}
+      position={[0, -0.5, 0]}
       imageUrl={phoneImageUrl}
       phoneScale={phoneScale}
     />

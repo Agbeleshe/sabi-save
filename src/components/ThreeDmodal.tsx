@@ -2,12 +2,13 @@ import React, { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import PhoneModelScene from "./PhoneModelScene";
+import { useTheme } from "next-themes"; // assuming next-themes for dark/light mode
 
-// Loading animation
+// Loading spinner
 const LoadingSpinner = () => (
   <div className="h-full flex flex-col items-center justify-center">
     <div className="w-12 h-12 border-4 border-[#FFBD59] border-t-transparent rounded-full animate-spin mb-4"></div>
-    <p className="text-gray-600">Loading 3D Model...</p>
+    <p className="text-gray-600 dark:text-gray-300">Loading 3D Model...</p>
   </div>
 );
 
@@ -39,18 +40,21 @@ class ErrorBoundary extends React.Component<
 
 const ThreeDmodal = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const { theme } = useTheme(); // "light" or "dark"
+
+  const isDarkMode = theme === "dark";
+
   return (
     <div className="h-[400px] lg:h-[450px] relative">
-      {/* 3D model container */}
-      <div className="absolute inset-0  pointer-events-none rounded-xl"></div>
+      <div className="absolute inset-0 pointer-events-none rounded-xl"></div>
       <ErrorBoundary
         fallback={
           <div className="h-full flex items-center justify-center">
-            <div className="text-center p-8 bg-gray-50 rounded-lg shadow-md">
-              <p className="text-xl font-medium text-gray-800 mb-2">
+            <div className="text-center p-8 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md">
+              <p className="text-xl font-medium text-gray-800 dark:text-gray-200 mb-2">
                 Oops! Something went wrong
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-400">
                 We're unable to display the 3D model right now
               </p>
             </div>
@@ -70,17 +74,28 @@ const ThreeDmodal = () => {
             dpr={[1, 2]}
           >
             <PerspectiveCamera makeDefault position={[0, 0, 6]} fov={45} />
-            <ambientLight intensity={0.8} />
+            <ambientLight
+              intensity={0.7}
+              color={isDarkMode ? "#ffffff" : "#333333"}
+            />
             <spotLight
               position={[10, 10, 10]}
               angle={0.15}
               penumbra={1}
               intensity={1}
               castShadow
+              color={isDarkMode ? "#FFBD59" : "#FFA500"}
             />
-            <directionalLight position={[-50, 20, -56]} intensity={0.6} />
+            <directionalLight
+              position={[-50, 20, -56]}
+              intensity={0.5}
+              color={isDarkMode ? "#CCCCCC" : "#666666"}
+            />
+            <hemisphereLight
+              intensity={0.3}
+              groundColor={isDarkMode ? "#222222" : "#FFBD59"}
+            />
             <PhoneModelScene />
-            <hemisphereLight intensity={0.3} groundColor="#FFBD59" />
             <OrbitControls
               enableZoom={false}
               autoRotate={false}

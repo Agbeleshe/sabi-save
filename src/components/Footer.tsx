@@ -45,7 +45,7 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    text: "+2347013907862",
+    text: "+234 701 390 7862",
     href: "https://wa.me/2347013907862",
   },
   { icon: Mail, text: "info@sabisave.com" },
