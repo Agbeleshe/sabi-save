@@ -22,16 +22,6 @@ export default function FAQ() {
       answer: "Yes, registration on SabiSave is absolutely free.",
     },
     {
-      question: "How can I register as an agent on SabiSave?",
-      answer:
-        "Download our mobile app on playstore or appstore. Click on 'Sign Up', next, under 'What type of Account do you want to Open?', select 'Agent' then follow the prompt to register. Once registered, your request will be approved within 24-48 hours.",
-    },
-    {
-      question: "What qualifies me to be an agent?",
-      answer:
-        "You must have operated as a collector at a major market in your city for at least one year. Additionally, you must have at least 50 customers that make savings with you.",
-    },
-    {
       question: "How do I save and perform other transactions on the app?",
       answer:
         "To save, simply select your preferred saving plan and make your savings via an agent or through your digital account. You can also access other services real time on the app, or through authorized agents closest to you.",

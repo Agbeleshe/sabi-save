@@ -14,7 +14,7 @@ const userTypes = [
     title: "Digital Wallet",
     subtitle: "For Traders, Artisans and Small business owners",
     description:
-      "A comprehensive mobile wallet solution designed specifically for entrepreneurs and small business owners to manage their finances efficiently.",
+      "A user friendly and secure mobile wallet that enables users to perform basic banking services in real time.",
   },
   {
     icon: <Settings className="w-12 h-12 text-green-600" />,
@@ -28,11 +28,11 @@ const userTypes = [
 const steps = [
   {
     number: 1,
-    color: "yellow",
-    bgColor: "bg-yellow-100",
-    textColor: "text-yellow-200",
+    color: "green",
+    bgColor: "bg-green-200",
+    textColor: "text-green-300",
     title: "Download the mobile application",
-    description: "Get the app from your preferred app store",
+    description: "Get the app from your preferred app store for free.",
     icon: <Download color="orange" size={50} />,
   },
   {

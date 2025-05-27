@@ -11,7 +11,6 @@ import Features from "../components/Features";
 import FinancialInclusionComponent from "../components/FinancialInclusionComponent";
 import NewHeroSection from "../components/NewHeroSection";
 import TestimonialCarousel from "../components/TestimonialCarousel";
-import Stats from "../components/Stats";
 import ExecutiveTeam from "../components/ExecutiveTeam";
 
 function Home() {
@@ -47,7 +46,7 @@ function Home() {
       {/* <HeroSection /> */}
       <NewHeroSection />
 
-      <Stats />
+      {/* <Stats /> */}
 
       <FinancialInclusionComponent />
 

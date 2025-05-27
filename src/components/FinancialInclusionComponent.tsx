@@ -89,7 +89,9 @@ export default function FinancialInclusionComponent() {
 
                 <div className="space-y-4 flex-1">
                   <MotionAnimation delay={0.3} motion="slide-left">
-                    <h2 className="text-2xl font-bold text-primary">Agent</h2>
+                    <h2 className="text-2xl font-bold text-primary">
+                      Agent Partners{" "}
+                    </h2>
                   </MotionAnimation>
 
                   <MotionAnimation delay={0.5} motion="slide-up">

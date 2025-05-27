@@ -163,7 +163,7 @@ const Features = () => {
   // Sample data for the FeaturesCardOne component
   const featureThreeData = {
     header: "Your money is safe",
-    description: "Registration is easy, fast, seamless and secure.",
+    description: "Registration is easy, fast and seamless.",
     img: marketWomanTwo,
     tag: "Digital Wallet",
     link: "Get it now",
@@ -173,7 +173,7 @@ const Features = () => {
   const featureFourData = {
     header: "Easy to use dashboard",
     description:
-      "A robust platform for onboarding and safe management of funds.",
+      "A robust platform for onboarding users, and save management of funds.",
     tag: "Agent Account",
     img: mockPhone,
     link: "Get it now",

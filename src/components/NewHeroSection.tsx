@@ -30,9 +30,9 @@ const NewHeroSection = () => {
           </div>
           <MotionAnimation delay={0.3}>
             <p className="text-white md:bg-transparent p-2 rounded-lg font-bold text-[20px] md:text-lg 2xl:text-[24px] mb-8 max-w-[350px] md:max-w-[500px] 2xl:max-w-[650px] leading-relaxed md:leading-[2rem] 2xl:leading-[2.5rem]">
-              Sabi save is a digital platform that provides traders and artisans
-              with an easy way to save daily and manage their business
-              conveniently from their mobile phones for free.
+              SabiSave is a digital platform that provides traders and artisans
+              with a convenient and secure way to save daily and manage their
+              finances from their mobile phones.
             </p>
           </MotionAnimation>
 

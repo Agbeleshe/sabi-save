@@ -3,14 +3,13 @@ import Section from "../components/Section";
 import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
-import img from "../assets/sabi/newAiKekeMan.jpg";
+import img from "../assets/sabi/alhajiButcher.jpg";
 import { Shield, Globe, Zap, Phone, Download, Info } from "lucide-react";
 import bannerImg from "../assets/sabi/hajiyaTailor.jpg";
-import sabiMockHand from "../assets/sabiMockHand.png";
+// import sabiMockHand from "../assets/sabiMockHand.png";
 import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
 import { Link } from "react-router-dom";
-import Stats from "../components/Stats";
 import ExecutiveTeam from "../components/ExecutiveTeam";
 import FianancialServiceCard from "../components/FinancialServiceCard";
 
@@ -131,8 +130,10 @@ function About() {
           </div>
         </div>
 
+        <HowItWorks />
+
         {/* Statistics Section */}
-        <Stats />
+        {/* <Stats /> */}
 
         {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {ageGroups.map((group, index) => {
@@ -162,7 +163,7 @@ function About() {
             );
           })}
         </div> */}
-
+        {/* 
         <MotionAnimation delay={0.3} motion="slide-left">
           <div className="bg-gradient-to-r from-red/20 border border-gray-100 to-[#B9B4F166]/20 p-8 rounded-xl text-white shadow-lg flex flex-col md:flex-row lg:flex-row gap-8">
             <div className="flex-1">
@@ -191,45 +192,10 @@ function About() {
               />
             </div>
           </div>
-        </MotionAnimation>
+        </MotionAnimation> */}
       </Section>
 
-      <ExecutiveTeam />
-
-      <Section className="py-16 bg-primary text-black">
-        <div className="text-center max-w-3xl mx-auto">
-          <MotionAnimation motion="slide-down">
-            <h2 className="text-3xl font-bold mb-6 text-white">
-              Ready to Get Started?
-            </h2>
-          </MotionAnimation>
-          <MotionAnimation delay={0.3} motion="slide-up">
-            <p className="text-lg mb-8">
-              Join thousands of traders and artisans who are already benefiting
-              from our innovative financial solutions.
-            </p>
-          </MotionAnimation>
-          <MotionAnimation delay={0.5} motion="slide-up">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className=" flex gap-2 justify-center px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
-              >
-                <Phone size={20} /> Contact Us
-              </Link>
-              <a
-                href="#download"
-                className=" flex gap-2 justify-center px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-primary transition-colors duration-300"
-              >
-                <Download size={20} /> Download App
-              </a>
-            </div>
-          </MotionAnimation>
-        </div>
-      </Section>
-
-      <HowItWorks />
-
+      {/* our commitment */}
       <Section background="dark">
         <div className="text-center max-w-3xl mx-auto">
           <MotionAnimation>
@@ -267,6 +233,40 @@ function About() {
               );
             })}
           </div>
+        </div>
+      </Section>
+
+      <ExecutiveTeam />
+
+      <Section className="py-16 bg-primary text-black">
+        <div className="text-center max-w-3xl mx-auto">
+          <MotionAnimation motion="slide-down">
+            <h2 className="text-3xl font-bold mb-6 text-white">
+              Ready to Get Started?
+            </h2>
+          </MotionAnimation>
+          <MotionAnimation delay={0.3} motion="slide-up">
+            <p className="text-lg mb-8">
+              Join thousands of traders and artisans who are already benefiting
+              from our innovative financial solutions.
+            </p>
+          </MotionAnimation>
+          <MotionAnimation delay={0.5} motion="slide-up">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className=" flex gap-2 justify-center px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
+              >
+                <Phone size={20} /> Contact Us
+              </Link>
+              <a
+                href="#download"
+                className=" flex gap-2 justify-center px-8 py-3 bg-black text-white rounded-lg font-medium hover:text-primary transition-colors duration-300"
+              >
+                <Download size={20} /> Download App
+              </a>
+            </div>
+          </MotionAnimation>
         </div>
       </Section>
 
