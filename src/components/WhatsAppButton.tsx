@@ -81,33 +81,38 @@ function WhatsAppButton() {
       {/* Modal Popover */}
       {showModal && (
         <div className="fixed bottom-20 left-0 right-0 z-50 flex justify-center">
-          <MotionAnimation motion="fadeInUp" duration={0.3}>
-            <div
-              className="bg-white p-6 rounded-lg shadow-xl w-80 text-center transform transition-all duration-300"
-              style={{
-                transition: "transform 0.3s ease-in-out",
-                opacity: showModal ? 1 : 0,
-              }}
-            >
+          <div
+            className="bg-white p-6 rounded-lg shadow-xl w-80 text-center transform transition-all duration-300 absolute left-5 bottom-0"
+            style={{
+              transition: "transform 0.3s ease-in-out",
+              opacity: showModal ? 1 : 0,
+            }}
+          >
+            <MotionAnimation motion="slide-up" duration={0.5}>
               <p className="text-lg mb-4">
-                Do you want to be redirected to WhatsApp?
+                Do you want to be redirected to{" "}
+                <span className="text-blueTwo font-extrabold">Sabi</span>
+                <span className="text-primary font-extrabold">Save</span>{" "}
+                WhatsApp?
               </p>
+            </MotionAnimation>
+            <MotionAnimation motion="slide-up" duration={0.7}>
               <div className="flex justify-around">
                 <button
                   onClick={handleRedirect}
-                  className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+                  className="bg-primary text-white min-w-[100px] px-4 py-2 rounded-lg hover:bg-primary/80 transition-colors"
                 >
                   Yes
                 </button>
                 <button
                   onClick={handleCloseModal}
-                  className="px-4 py-2 bg-red-500 text-white bg-black rounded-lg hover:bg-red-600 transition"
+                  className="bg-gray-300 text-gray-800 min-w-[100px] px-4 py-2 rounded-lg hover:bg-gray-400 transition-colors"
                 >
                   No
                 </button>
               </div>
-            </div>
-          </MotionAnimation>
+            </MotionAnimation>
+          </div>
         </div>
       )}
     </div>
