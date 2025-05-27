@@ -43,7 +43,11 @@ const contactInfo = [
     text: "123 Financial District, Lagos, Nigeria",
     verticalAlign: true,
   },
-  { icon: Phone, text: "+234 123 456 7890" },
+  {
+    icon: Phone,
+    text: "+2347013907862",
+    href: "https://wa.me/2347013907862",
+  },
   { icon: Mail, text: "info@sabisave.com" },
 ];
 
@@ -121,25 +125,40 @@ function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6">Contact</h4>
             <ul className="space-y-4">
-              {contactInfo.map(({ icon: Icon, text, verticalAlign }, index) => (
-                <MotionAnimation delay={0.3 * index} motion="slide-up">
-                  {" "}
-                  <li
+              {contactInfo.map(
+                ({ icon: Icon, text, verticalAlign, href }, index) => (
+                  <MotionAnimation
+                    delay={0.3 * index}
+                    motion="slide-up"
                     key={index}
-                    className={`flex items-${
-                      verticalAlign ? "start" : "center"
-                    }`}
                   >
-                    <Icon
-                      size={20}
-                      className={`mr-2 ${
-                        verticalAlign ? "mt-1" : ""
-                      } text-white`}
-                    />
-                    <span className="opacity-80">{text}</span>
-                  </li>
-                </MotionAnimation>
-              ))}
+                    <li
+                      className={`flex items-${
+                        verticalAlign ? "start" : "center"
+                      }`}
+                    >
+                      <Icon
+                        size={20}
+                        className={`mr-2 ${
+                          verticalAlign ? "mt-1" : ""
+                        } text-white`}
+                      />
+                      {href ? (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="opacity-80 hover:text-primary transition-colors"
+                        >
+                          {text}
+                        </a>
+                      ) : (
+                        <span className="opacity-80">{text}</span>
+                      )}
+                    </li>
+                  </MotionAnimation>
+                )
+              )}
             </ul>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 //import marketWoman from "../assets/MarketWoman.jpg";
 //import longImgOne from "../assets/longImg.jpg";
 import longImgTwo from "../assets/sabi/newAiKekeMan.jpg";
-import mockPhone from "../assets/phone.png";
+import agentDashboard from "../assets/sabi/AgentDashboard.png";
 import marketWomanTwo from "../assets/sabi/MockPhoneWithOUTBG.png";
 import MotionAnimation from "../motion/MotionAnimation";
 
@@ -128,7 +128,7 @@ const FeaturesCardTwo = ({
             <img
               src={img}
               alt={`${header} image`}
-              className="w-2/3 md:w-full max-h-64 md:max-h-96 object-contain"
+              className="w-2/3 md:w-full max-h-64 md:max-h-96 object-contain mx-auto"
             />
           </MotionAnimation>
         </div>
@@ -175,7 +175,7 @@ const Features = () => {
     description:
       "A robust platform for onboarding users, and save management of funds.",
     tag: "Agent Account",
-    img: mockPhone,
+    img: agentDashboard,
     link: "Get it now",
     bgColor: "bg-blueTwo",
     textColor: "text-white",

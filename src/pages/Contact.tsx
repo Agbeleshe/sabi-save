@@ -16,7 +16,7 @@ function Contact() {
     {
       icon: <Phone size={24} className="text-primary" />,
       title: "Phone Number",
-      details: "+234 123 456 7890",
+      details: "+234 701 390 7862",
     },
     {
       icon: <Mail size={24} className="text-primary" />,
