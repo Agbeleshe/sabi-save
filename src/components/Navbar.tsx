@@ -42,6 +42,7 @@ function Navbar({ isScrolled }: NavbarProps) {
         isScrolled ? "bg-light shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           <NavLink to="/" className="z-10">

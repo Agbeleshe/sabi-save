@@ -7,10 +7,10 @@ import About from "./pages/About";
 import Solution from "./pages/Solution";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppButton from "./components/WhatsAppButton";
 import "./index.css";
 
 function App() {
-  // const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,13 +19,11 @@ function App() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="min-h-screen bg-light flex flex-col">
+    <div className="min-h-screen relative bg-light flex flex-col">
       <Navbar isScrolled={isScrolled} />
       <ScrollToTop />
       <main className="flex-grow">
@@ -36,6 +34,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+
+      <WhatsAppButton />
       <Footer />
     </div>
   );
