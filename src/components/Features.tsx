@@ -2,8 +2,8 @@ import { ArrowRight } from "lucide-react";
 //import marketWoman from "../assets/MarketWoman.jpg";
 //import longImgOne from "../assets/longImg.jpg";
 import longImgTwo from "../assets/sabi/newAiKekeMan.jpg";
-import agentDashboard from "../assets/sabi/AgentDashboard.png";
-import marketWomanTwo from "../assets/sabi/MockPhoneWithOUTBG.png";
+import agentDashboard from "../assets/sabi/LatestAdminDashboard.png";
+import marketWomanTwo from "../assets/sabi/LatestMockWithouthBG.png";
 import MotionAnimation from "../motion/MotionAnimation";
 
 // Define interface for FeaturesCardOne props

@@ -24,7 +24,7 @@ export default function FinancialInclusionComponent() {
             </MotionAnimation>
 
             <MotionAnimation delay={0.3} motion="slide-right">
-              <p className="text-gray-300 mb-8 text-lg">
+              <p className="text-gray-300 mb-8 text-lg ">
                 Our solution is truly local, driving financial inclusion and
                 creating employment opportunities.
               </p>
@@ -66,7 +66,7 @@ export default function FinancialInclusionComponent() {
                     </h2>
                   </MotionAnimation>
                   <MotionAnimation delay={0.5} motion="slide-up">
-                    <p className="text-white">
+                    <p className="text-white min-h-[100px]">
                       With ease, traders and artisans can conveniently save in a
                       wallet, transfer funds and manage their finances.
                     </p>
@@ -95,7 +95,7 @@ export default function FinancialInclusionComponent() {
                   </MotionAnimation>
 
                   <MotionAnimation delay={0.5} motion="slide-up">
-                    <p className="text-white">
+                    <p className="text-white min-h-[100px]">
                       Beyond saving, we are empowering individuals as agents,
                       and enhancing income growth.
                     </p>
