@@ -20,9 +20,9 @@ export default function MobileNavigation({
   const handleNav = () => toggleMenu(false);
 
   return (
-    <div className="flex flex-col max-w-sm bg-white h-full w-full text-black shadow-lg">
+    <div className="flex flex-col max-w-sm h-full min-w-[100vw] text-black shadow-lg">
       {/* Header */}
-      <div className="flex justify-between items-center p-4 h-[80px] border-b border-gray-200" />
+      <div className="flex w-[100vw] justify-between items-center p-8 h-[130px] " />
 
       {/* Navigation Items */}
       <div className="flex flex-col py-2">

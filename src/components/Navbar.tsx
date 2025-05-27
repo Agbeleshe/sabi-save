@@ -42,19 +42,30 @@ function Navbar({ isScrolled }: NavbarProps) {
         isScrolled ? "bg-light shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           <NavLink to="/" className="z-10">
-            <img
-              className={`h-[55px] w-[60px] md:h-[60px] ml-[-5px] md:w-[60px] ${
-                !isScrolled && pathname !== "/" && !isMenuOpen
-                  ? "bg-primary/0"
-                  : ""
-              } rounded-md`}
-              src={sabiLogo}
-              alt="sabiSave logo"
-            />
+            {isScrolled ? (
+              <img
+                className={`h-[55px] w-[60px] md:h-[60px] ml-[-5px] md:w-[60px] ${
+                  !isScrolled && pathname !== "/" && !isMenuOpen
+                    ? "bg-primary/0"
+                    : ""
+                } rounded-md`}
+                src={sabiLogo}
+                alt="sabiSave logo"
+              />
+            ) : (
+              <img
+                className={`h-[100px] w-[100px] md:h-[100px] ml-[-5px] md:w-[100px] ${
+                  !isScrolled && pathname !== "/" && !isMenuOpen
+                    ? "bg-primary/0"
+                    : ""
+                } rounded-md`}
+                src={sabiLogo}
+                alt="sabiSave logo"
+              />
+            )}
           </NavLink>
 
           {/* Desktop Navigation */}
