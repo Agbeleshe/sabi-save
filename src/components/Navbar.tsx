@@ -57,7 +57,7 @@ function Navbar({ isScrolled }: NavbarProps) {
               />
             ) : (
               <img
-                className={`h-[100px] w-[100px] md:h-[100px] ml-[-5px] md:w-[100px] ${
+                className={`h-[100px] w-[100px] md:h-[70px] ml-[-5px] md:w-[70px] ${
                   !isScrolled && pathname !== "/" && !isMenuOpen
                     ? "bg-primary/0"
                     : ""
