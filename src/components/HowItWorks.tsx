@@ -33,7 +33,7 @@ const steps = [
     textColor: "text-green-300",
     title: "Download the mobile application",
     description: "Get the app from your preferred app store for free.",
-    icon: <Download color="orange" size={50} />,
+    icon: <Download color="green" size={50} />,
   },
   {
     number: 2,

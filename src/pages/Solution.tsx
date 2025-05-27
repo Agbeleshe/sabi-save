@@ -13,8 +13,8 @@ import SectionTitle from "../components/SectionTitle";
 import Newsletter from "../components/Newsletter";
 import DownloadCTA from "../components/DownloadCTA";
 import PageBanner from "../components/PageBanner";
-import solutionImg from "../assets/sabi/provisionWomanTwo.jpg";
-import bannerImg from "../assets/sabi/womanStanding.png";
+import solutionImg from "../assets/sabi/newAiKekeMan.jpg";
+import bannerImg from "../assets/sabi/youngLadyWithPhone-min.jpg";
 import MotionAnimation from "../motion/MotionAnimation";
 import HowItWorks from "../components/HowItWorks";
 import { Link } from "react-router-dom";
@@ -44,15 +44,11 @@ function Solution() {
     {
       icon: <RefreshCw size={28} className="text-white" />,
       title: "Real-time Updates",
-      description: "Instant transaction confirmations and balance updates",
+      description:
+        "Instant transaction confirmations and balance updates on app and SMS",
       bgIcon: <RefreshCw className="text-gray-800" size={200} />,
     },
-    {
-      icon: <Zap size={28} className="text-white" />,
-      title: "Micro-credit Access",
-      description: "Eligibility for micro-loans based on saving history",
-      bgIcon: <Zap className="text-gray-800" size={200} />,
-    },
+
     {
       icon: <LineChart size={28} className="text-white" />,
       title: "Financial Analytics",
@@ -65,12 +61,19 @@ function Solution() {
       description: "Access to authorized agents for in-person assistance",
       bgIcon: <Users className="text-gray-800" size={200} />,
     },
+    {
+      icon: <Zap size={28} className="text-white" />,
+      title: "Income and Comission",
+      description:
+        "Earn by saving more, and increase your comission as you register more users.",
+      bgIcon: <Zap className="text-gray-800" size={200} />,
+    },
   ];
 
   const traderBenefits = [
     "Elimination of cash handling risks",
     "Secure digital storage of savings",
-    "Access to micro-credit facilities",
+    "Earn interest and comission",
     "Transparent transaction history",
     "Convenience of mobile banking",
     "Financial inclusion in the digital economy",
@@ -94,7 +97,7 @@ function Solution() {
       {/* Banner Section */}
       <PageBanner
         title="SabiSave Solution"
-        subtitle="Transform Your Trading Experience with Secure Digital Finance"
+        subtitle="Transform Your Saving and Trading Experience with Secure Digital Finance"
         backgroundImage={bannerImg}
       />
 
@@ -103,7 +106,8 @@ function Solution() {
           <div>
             <MotionAnimation>
               <h2 className="text-3xl font-bold mb-4 text-gray-800 relative inline-block">
-                Smart Financial Solutions 💰
+                Smart Financial Solutions{" "}
+                <span className={"text-green-700"}> ₦</span>
                 <MotionAnimation delay={0.3}>
                   <span className="absolute -bottom-2 left-0 w-[40%] h-1 bg-red"></span>
                 </MotionAnimation>
@@ -124,9 +128,9 @@ function Solution() {
             <MotionAnimation>
               <p className="text-lg md:text-lg">
                 Our solution addresses the unique challenges faced by traders
-                and artisans in managing their finances, providing them with a
-                secure and efficient alternative to traditional cash handling
-                methods.
+                and artisans in saving and managing their finances, providing
+                them with a secure and efficient alternative to traditional cash
+                handling and collection system.
               </p>
             </MotionAnimation>
 
