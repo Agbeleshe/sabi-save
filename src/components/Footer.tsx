@@ -40,7 +40,7 @@ const legalLinks = [
 const contactInfo = [
   {
     icon: MapPin,
-    text: "123 Financial District, Lagos, Nigeria",
+    text: "Opposite Civil Defense Head Office Abattoir Road, Giring Jos, Plateau State",
     verticalAlign: true,
   },
   {
