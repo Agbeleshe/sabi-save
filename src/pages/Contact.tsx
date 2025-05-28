@@ -11,7 +11,8 @@ function Contact() {
     {
       icon: <MapPin size={24} className="text-primary" />,
       title: "Office Address",
-      details: "123 Financial District, Victoria Island, Lagos, Nigeria",
+      details:
+        "Opposite Civil Defense Head Office Abattoir Road, Giring Jos, Plateau State",
     },
     {
       icon: <Phone size={24} className="text-primary" />,
@@ -72,7 +73,7 @@ function Contact() {
                 className="absolute top-0 left-0 bottom-0 right-0 w-[100%] h-[100%] border-none"
                 loading="lazy"
                 allowFullScreen
-                src="https://maps.google.com/maps?q=123+Financial+District%2C+Victoria+Island%2C+Lagos%2C+Nigeria&output=embed"
+                src="https://www.google.com/maps/embed/v1/place?q=Opposite+Civil+Defense+Head+Office++Abattoir+Road,+Giring++Jos, Plateau State,+Nigeria&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
               ></iframe>
             </div>
           </div>
