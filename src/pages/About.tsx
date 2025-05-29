@@ -102,7 +102,7 @@ function About() {
             </MotionAnimation>
             <MotionAnimation delay={0.3}>
               <p className="mb-6 text-lg md:text-lg text-gray-700 leading-relaxed">
-                We a digital financial solution company that provides financial
+                We are a digital financial solution company that provides financial
                 services to the largely unbanked traders, artisans and small
                 business owners in the informal sector. Our mobile application
                 SabiSave is a user friendly, secure and accessible platform that

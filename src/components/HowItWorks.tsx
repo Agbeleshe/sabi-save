@@ -78,7 +78,7 @@ export default function HowItWorks() {
       <MotionAnimation motion="slide-up">
         <SectionTitle
           title="How SabiSave Works"
-          subtitle="The application has been developed for two kind of users"
+          subtitle="The application has been developed for two user groups"
           centered
         />
       </MotionAnimation>
