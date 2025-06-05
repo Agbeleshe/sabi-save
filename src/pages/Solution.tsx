@@ -97,7 +97,7 @@ function Solution() {
       {/* Banner Section */}
       <PageBanner
         title="SabiSave Solution"
-        subtitle="Transform Your Saving and Trading Experience with Secure Digital Finance"
+        subtitle="Transform Your Saving and Trading Experience with our Secure Digital Solution"
         backgroundImage={bannerImg}
       />
 
