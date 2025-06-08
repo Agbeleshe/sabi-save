@@ -31,10 +31,8 @@ const quickLinks = [
 ];
 
 const legalLinks = [
-  { href: "#terms", label: "Terms and Conditions" },
+  { href: "/terms", label: "Terms and Conditions" },
   { href: "/privacy", label: "Privacy Policy" },
-  { href: "#cookie", label: "Cookie Policy" },
-  { href: "#safety", label: "Safety and Security" },
 ];
 
 const contactInfo = [

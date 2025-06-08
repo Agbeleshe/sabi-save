@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
 import "./index.css";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,6 +35,7 @@ function App() {
           <Route path="/solution" element={<Solution />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
 
           {/* Catch-all route for any undefined paths */}
           <Route path="*" element={<Home />} />
