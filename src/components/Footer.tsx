@@ -32,7 +32,7 @@ const quickLinks = [
 
 const legalLinks = [
   { href: "#terms", label: "Terms and Conditions" },
-  { href: "#privacy", label: "Privacy Policy" },
+  { href: "/privacy", label: "Privacy Policy" },
   { href: "#cookie", label: "Cookie Policy" },
   { href: "#safety", label: "Safety and Security" },
 ];
@@ -112,9 +112,9 @@ function Footer() {
                 <MotionAnimation delay={0.3 * index} motion="slide-up">
                   {" "}
                   <li key={href}>
-                    <a href={href} className={linkClass}>
+                    <Link to={href} className={linkClass}>
                       {label}
-                    </a>
+                    </Link>
                   </li>
                 </MotionAnimation>
               ))}
