@@ -41,7 +41,7 @@ function WhatsAppButton() {
   };
 
   const handleRedirect = () => {
-    const phoneNumber = "2348136593992"; // Replace with your actual WhatsApp number
+    const phoneNumber = "2347013907862"; // Replace with your actual WhatsApp number
     const message = "Hello! I'm interested in your services.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message

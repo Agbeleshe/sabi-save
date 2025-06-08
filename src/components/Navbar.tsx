@@ -45,7 +45,7 @@ function Navbar({ isScrolled }: NavbarProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           <NavLink to="/" className="z-10">
-            {isScrolled ? (
+            {isScrolled || pathname !== "/" ? (
               <img
                 className={`h-[55px] w-[60px] md:h-[60px] ml-[-5px] md:w-[60px] ${
                   !isScrolled && pathname !== "/" && !isMenuOpen
